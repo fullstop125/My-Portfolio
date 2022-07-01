@@ -97,13 +97,10 @@ ul {
 }
 
 .work-card {
-
- 
   width: 100%;
-  border: 1px solid #DFE1E6;
-  border-radius: 16px  ;
-  margin: 44px 0px;
-
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  margin: 44px 0;
 }
 
 .project-container {
@@ -186,13 +183,14 @@ ul {
   padding: 0;
   margin: 0;
 }
-.project-img{
+
+.project-img {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
+
 .tags ul {
   display: flex;
   flex-direction: row;
