@@ -288,9 +288,13 @@ ul {
   background-color: #6070FF;
   background-position: right;
   border-radius: 15% 0 0 0;
- 
-  
 }
+
+.contact-me {
+  color: #fff;
+  text-align: center;
+}
+
 .cont-input {
   font-family: var(--main-font-family);
   text-align: center;
@@ -311,7 +315,8 @@ form {
   border-radius: 8px;
   background: #fff;
   margin-bottom: 20px;
-
+  color: #172b4d;
+  font-weight: 400;
 }
 
 .email {
@@ -322,6 +327,7 @@ form {
   border-radius: 8px;
   background: #fff;
   margin-bottom: 20px;
+  color: #172b4d;
 }
 
 .comment {
@@ -332,13 +338,16 @@ form {
   border-radius: 8px;
   background: #fff;
   margin-bottom: 20px;
+  color: #b3bac5;
 }
-.submit{
-  background: #FFFFFF;
-border-radius: 8px;
-width: 140px;
-height: 48px;
-}
-.contact-me{
-  text-align: center;
+.submit {
+  background: #fff;
+  border-radius: 8px;
+  width: 140px;
+  height: 48px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
 }
