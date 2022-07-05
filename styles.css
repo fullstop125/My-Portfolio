@@ -56,7 +56,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .about {
@@ -278,7 +277,6 @@ ul {
   margin-left: 1rem;
 }
 
-
 #reach-out {
   align-items: center;
   background-image: url(/images/about-image/contact-form-shapes-mobile.svg);
@@ -311,7 +309,6 @@ form {
   flex-direction: column;
   width: 75%;
   margin: 40px auto 0 auto;
-  
 }
 
 .username {
@@ -324,7 +321,6 @@ form {
   margin-bottom: 20px;
   color: #172b4d;
   font-weight: 400;
-
 }
 
 .email {
