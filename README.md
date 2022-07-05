@@ -12,41 +12,13 @@
 - CSS
 
 
-## Live Demo (if available)
-
-
-![image](https://user-images.githubusercontent.com/35464104/176719311-ba6f7eb7-9802-46db-a76f-e5057c180f31.png)
-
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
 
 👤 **Momanyi Hassan**
 
 - GitHub: [@fullstop125](https://github.com/fullstop125)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/momanyi-hassan-32a489180)
+- LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
 - Twitter: [@moseshassany](https://twitter.com/moseshassany)
 
 
