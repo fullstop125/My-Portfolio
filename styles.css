@@ -1,10 +1,9 @@
-
 :root {
   --main-bg-color: #6070ff;
   --title-color: #172b4d;
   --sub-title-color: #344563;
   --media-color: #7f8cff;
-  --main-font-family: 'Poppins', sans-serif;
+  --main-font-family: "Poppins", sans-serif;
   --background: #f7f7f9;
 }
 
@@ -52,7 +51,7 @@ body {
 }
 
 .main-content {
-  background-image: url('images/background.png');
+  background-image: url("images/background.png");
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -239,7 +238,7 @@ ul {
   height: 4.45rem;
   padding-left: 0.75rem;
   padding-right: 2.5rem;
-  border-bottom: 1px solid  #dfe1e6;
+  border-bottom: 1px solid #dfe1e6;
 }
 
 .skill-label-container:first-child {
@@ -277,13 +276,44 @@ ul {
   color: #253858;
   margin-left: 1rem;
 }
-.reach-out {
+
+#reach-out {
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 80px;
-  
+  align-items: center;
 }
-.cont-input{
-  font-family:var(--main-font-family) ;
+.cont-input {
+  font-family: var(--main-font-family);
   text-align: center;
+}
+
+form {
+  margin-right: 30px;
+}
+
+.username {
+  width: 327px;
+  height: 48px;
+  padding: 5px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.email {
+  width: 327px;
+  height: 48px;
+  padding: 5px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.comment {
+  width: 327px;
+  height: 110px;
+  padding: 5px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #fff;
 }
