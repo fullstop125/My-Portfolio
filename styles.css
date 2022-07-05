@@ -278,9 +278,18 @@ ul {
 }
 
 #reach-out {
-  display: flex;
-  flex-direction: column;
+ 
   align-items: center;
+  background-image: url(/images/about-image/contact-form-shapes-mobile.svg);
+  margin: 0%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #6070FF;
+  background-position: right;
+  border-radius: 15% 0 0 0;
+ 
+  
 }
 .cont-input {
   font-family: var(--main-font-family);
@@ -289,31 +298,47 @@ ul {
 
 form {
   margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 .username {
-  width: 327px;
+  width: 100%;
   height: 48px;
   padding: 5px;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
   background: #fff;
+  margin-bottom: 20px;
+
 }
 
 .email {
-  width: 327px;
+  width: 100%;
   height: 48px;
   padding: 5px;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
   background: #fff;
+  margin-bottom: 20px;
 }
 
 .comment {
-  width: 327px;
+  width: 100%;
   height: 110px;
   padding: 5px;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
   background: #fff;
+  margin-bottom: 20px;
+}
+.submit{
+  background: #FFFFFF;
+border-radius: 8px;
+width: 140px;
+height: 48px;
+}
+.contact-me{
+  text-align: center;
 }
