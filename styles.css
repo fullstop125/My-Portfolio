@@ -281,4 +281,9 @@ ul {
   display: flex;
   flex-direction: column;
   border-top-left-radius: 80px;
+  
+}
+.cont-input{
+  font-family:var(--main-font-family) ;
+  text-align: center;
 }
