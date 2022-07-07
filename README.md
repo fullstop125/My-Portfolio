@@ -14,7 +14,6 @@
 
 
 
-
 ## Authors
 
 👤 **Momanyi Hassan**
@@ -36,7 +35,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- To my coding partners  for supporting and guiding me in my journey to complete this project.
+- To my coding partner  for supporting and guiding me in my journey to complete this project.
 
 ## 📝 License
 
