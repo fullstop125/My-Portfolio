@@ -37,6 +37,10 @@ body {
   cursor: pointer;
 }
 
+.desc-nav {
+  display: none;
+}
+
 .intro {
   color: var(--title-color);
   font-size: 2.5rem;
@@ -228,8 +232,27 @@ ul {
 }
 
 .view-btn:hover {
-  color: var(--white-color);
-  background-color: var(--btn-primary-color);
+  background-color: #4053fc;
+  color: #fff;
+  border-color: #4053fc;
+}
+
+.submit {
+  background: #fff;
+  border-radius: 8px;
+  width: 140px;
+  height: 48px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+}
+
+.submit:hover {
+  background-color: #4053fc;
+  color: #fff;
+  border-color: #4053fc;
 }
 
 .skill-label-container {
@@ -280,7 +303,7 @@ ul {
 
 #reach-out {
   align-items: center;
-  background-image: url(/images/about-image/contact-form-shapes-mobile.svg);
+  background-image: url("/images/about-image/contact-form-shapes-mobile.svg");
   margin-top: 50px;
   width: 100%;
   background-repeat: no-repeat;
@@ -346,14 +369,126 @@ form {
   color: #b3bac5;
 }
 
-.submit {
-  background: #fff;
-  border-radius: 8px;
-  width: 140px;
-  height: 48px;
-  letter-spacing: 0.03em;
-  color: #6070ff;
-  font-size: 17px;
-  font-weight: 600;
-  border: none;
+@media only screen and (min-width: 768px) {
+  .main-content {
+    background-image: url("images/about-image/bg_Header.png");
+    background-size: 100%;
+    background-color: #fff;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .desc-nav {
+    display: flex;
+  }
+
+  .desc-nav a {
+    font-size: 15px;
+    color: #344563;
+    padding: 20px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  /* ### Work ### */
+  .project-img {
+    width: 300px;
+  }
+
+  .work-card {
+    overflow: hidden;
+  }
+
+  .about-project {
+    width: 49%;
+    margin: 1%;
+  }
+
+  .project-title h4 {
+    font-size: 40px;
+  }
+
+  .role {
+    font-size: 18px;
+    float: right;
+  }
+
+  .client-name {
+    font-size: 18px;
+  }
+
+  .work-card p {
+    font-size: 16px;
+  }
+
+  /* ### about ### */
+
+  .about-section {
+    grid-template-columns: 10% 30% 50% 10%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .intro h1 {
+    color: #091e42;
+  }
+
+  .skills-section {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-left: 37px;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .skill-list li {
+    height: 120px;
+    width: 150px;
+    margin-left: 12px;
+  }
+
+  .skill-list li a {
+    padding-top: 76px;
+    margin-left: -63px;
+    padding-left: 9px;
+  }
+
+  /* ### contact ### */
+  .reach-out {
+    background-image: url("/images/about-image/bg_contact.png");
+    background-size: 100%;
+  }
+
+  .reach-out p {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #a7aeff;
+    border-radius: 24px;
+    gap: 15px;
+  }
+
+  .project-1 {
+    height: 300px;
+    width: 300px;
+  }
 }

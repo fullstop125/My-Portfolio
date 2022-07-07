@@ -2,7 +2,7 @@
 
 # Portfolio-app
 
-> This is a personal portfolio project built with HTML, CSS. It's a mobile version of the complete portfolio.
+> This is a personal portfolio project built with HTML, CSS. It's a mobile amd desktop version of the complete portfolio whereby it is responsive.
 
 
 
@@ -34,7 +34,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- To my coding partners  for supporting and guiding me in my journey to complete this project.
+- To my coding partner  for supporting and guiding me in my journey to complete this project.
 
 ## 📝 License
 
