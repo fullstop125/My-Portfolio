@@ -2,7 +2,7 @@
 
 # Portfolio-app
 
-> This is a personal portfolio project built with HTML, CSS. It's a mobile version of the complete portfolio.
+> This is a personal portfolio project built with HTML, CSS. It's a mobile amd desktop version of the complete portfolio whereby it is responsive.
 
 
 
@@ -12,30 +12,6 @@
 - CSS
 
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
 
 
 
