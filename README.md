@@ -12,14 +12,17 @@
 - CSS
 
 
+desktop-version
 
+
+ master
 
 ## Authors
 
 👤 **Momanyi Hassan**
 
 - GitHub: [@fullstop125](https://github.com/fullstop125)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/momanyi-hassan-32a489180)
+- LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
 - Twitter: [@moseshassany](https://twitter.com/moseshassany)
 
 
