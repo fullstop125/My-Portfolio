@@ -2,8 +2,7 @@
 
 # Portfolio-app
 
-> This is a personal portfolio project built with HTML, CSS. It's a mobile amd desktop version of the complete portfolio whereby it is responsive.
-
+> This is a personal portfolio project built with HTML and CSS. It is a responsive design for both mobile and desktop.
 
 
 ## Built With
@@ -31,11 +30,11 @@ Feel free to check the [issues page](https://github.com/fullstop125/my-portfolio
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a ⭐️ if you like this project! Thank you
 
 ## Acknowledgments
 
-- To my coding partner  for supporting and guiding me in my journey to complete this project.
+- To my coding partner for collaborating, supporting and guiding me in my journey to complete this project.
 
 ## 📝 License
 
