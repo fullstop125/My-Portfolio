@@ -523,7 +523,7 @@ form {
     flex: 1;
     height: 350px;
   }
-  
+
   @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
 
   .bird {
@@ -604,7 +604,7 @@ form {
     }
 
     20% {
-      transform: translateY(0vh) translateX(30vw) scale(0.5);
+      transform: translateY(0) translateX(30vw) scale(0.5);
     }
 
     30% {
@@ -616,15 +616,15 @@ form {
     }
 
     50% {
-      transform: translateY(0vh) translateX(90vw) scale(0.6);
+      transform: translateY(0) translateX(90vw) scale(0.6);
     }
 
     60% {
-      transform: translateY(0vh) translateX(110vw) scale(0.6);
+      transform: translateY(0) translateX(110vw) scale(0.6);
     }
 
     100% {
-      transform: translateY(0vh) translateX(110vw) scale(0.6);
+      transform: translateY(0) translateX(110vw) scale(0.6);
     }
   }
 
@@ -634,7 +634,7 @@ form {
     }
 
     10% {
-      transform: translateY(0vh) translateX(10vw) scale(0.4);
+      transform: translateY(0) translateX(10vw) scale(0.4);
     }
 
     20% {
@@ -650,15 +650,15 @@ form {
     }
 
     50% {
-      transform: translateY(0vh) translateX(90vw) scale(0.45);
+      transform: translateY(0) translateX(90vw) scale(0.45);
     }
 
     51% {
-      transform: translateY(0vh) translateX(110vw) scale(0.45);
+      transform: translateY(0) translateX(110vw) scale(0.45);
     }
 
     100% {
-      transform: translateY(0vh) translateX(110vw) scale(0.45);
+      transform: translateY(0) translateX(110vw) scale(0.45);
     }
   }
 
