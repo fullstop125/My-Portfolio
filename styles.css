@@ -51,7 +51,7 @@ body {
 }
 
 .img-1 {
-  background-image: url("/images/about-image/multi-post-stories-project-2.png");
+  background-image: url("/images/about-image/Snapshoot_Portfolio.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -69,7 +69,16 @@ body {
 }
 
 .img-3 {
-  background-image: url("/images/about-image/tonic-project.png");
+  background-image: url("/images/about-image/multi-post-stories-project-2.png");
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-4 {
+  background-image: url("/images/about-image/tonic-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -223,12 +232,6 @@ ul {
   margin: 0;
 }
 
-.project-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .tags ul {
   display: flex;
   flex-direction: row;
@@ -340,8 +343,6 @@ ul {
   align-items: center;
   margin-top: 50px;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-color: #6070ff;
   background-position: right;
   border-radius: 80px 0 0 0;
@@ -414,6 +415,22 @@ form {
     margin: 200px auto;
   }
 
+  .menu-icon {
+    display: none;
+  }
+
+  .desc-nav {
+    display: flex;
+  }
+
+  .desc-nav a {
+    font-size: 15px;
+    color: #344563;
+    padding: 20px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
   .first-section {
     background-image: url("./images/about-image/bg_Header.png");
     background-repeat: no-repeat;
@@ -458,8 +475,10 @@ form {
     border-radius: 24px;
     gap: 15px;
     background-color: #fff;
-    height: 350px;
-    width: 90%;
+    height: 400px;
+    width: 80%;
+    overflow: hidden;
+    flex: 1;
   }
 
   .about-project {
@@ -469,30 +488,42 @@ form {
 
   .img-1 {
     background-image: url("./images/about-image/big1.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 350px;
   }
 
   .img-2 {
     background-image: url("./images/about-image/big2.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 350px;
   }
 
   .img-3 {
-    background-image: url("./images/about-image/big3.png");
-    background-size: contain;
+    background-image: url("./images/about-image/big4.png");
+    background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 350px;
   }
 
   .img-4 {
-    background-image: url("./images/about-image/big4.png");
-    background-size: contain;
+    background-image: url("/images/about-image/big3.png");
+    background-size: cover;
     background-repeat: no-repeat;
-  }
-
-  .view-btn {
-    margin-left: 1px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 350px;
   }
 
   .middle-section {
