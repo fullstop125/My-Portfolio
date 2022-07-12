@@ -51,7 +51,7 @@ body {
 }
 
 .img-1 {
-  background-image: url("/images/about-image/Snapshoot_Portfolio.png");
+  background-image: url("./images/about-image/Snapshoot_Portfolio.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body {
 }
 
 .img-3 {
-  background-image: url("/images/about-image/multi-post-stories-project-2.png");
+  background-image: url("./images/about-image/multi-post-stories-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@ body {
 }
 
 .img-4 {
-  background-image: url("/images/about-image/tonic-project-2.png");
+  background-image: url("./images/about-image/tonic-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
