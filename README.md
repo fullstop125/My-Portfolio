@@ -14,8 +14,7 @@
 
 [Momanyi's Portfolio](https://fullstop125.github.io/My-Portfolio/)
 
-## Screenshots
-![alt text](http://url/to/img.png)
+
 
 ## Authors
 
