@@ -515,7 +515,7 @@ form {
   }
 
   .img-4 {
-    background-image: url("/images/about-image/big3.png");
+    background-image: url("./images/about-image/big3.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
