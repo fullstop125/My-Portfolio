@@ -10,9 +10,10 @@
 .header {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  margin-top: 30px;
   justify-content: space-between;
   margin: 4px 0;
+  background-color: white;
 }
 
 body {
@@ -20,10 +21,22 @@ body {
   margin: 0;
   font-family: var(--main-font-family);
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+
+}
 
 .logo {
+  display: block;
   padding: 10px 12px;
   margin: 0 12px;
+
+
 }
 
 .logo-text {
@@ -85,11 +98,42 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+nav{
+  width: 100%;
+}
 .desc-nav {
   display: none;
-}
+  position: absolute;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 28px;
 
+
+
+}
+.fa {
+ color: #6070FF;
+}
+#x-icon{
+ display: none;
+}
+.desc-nav li {
+  display: flex;
+  flex-direction: column; 
+  margin: 0 10px;
+  color: #FFFFFF;
+  margin-top: 40px;
+}
+.desc-nav li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 44px;
+}
 .intro {
   color: var(--title-color);
   font-size: 2.5rem;
