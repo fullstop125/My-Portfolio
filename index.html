@@ -15,15 +15,15 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
+    <header class="header" id="header">
+      <div class="logo" id="logo">
         <a class="logo-text" href="#">My Logo</a>
       </div>
       <nav>
-        <ul class="desc-nav">
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="desc-nav" id="desc-nav">
+          <li id="list-items-1"><a href="#main-container">Portfolio</a></li>
+          <li id="list-items-2"><a  href="#about">About</a></li>
+          <li id="list-items-3"><a  href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="menu-icon">
@@ -31,7 +31,7 @@
         <i class="fa fa-xmark menu-icon" id="x-icon"></i> 
       </div>
     </header>
-    <main class="main-content">
+    <main class="main-content" id="main-container">
       <section class="first-section">
         <div class="container">
           <div class="bird-container bird-container--one">
@@ -322,7 +322,7 @@
           <div class="project-img img-3"></div>
         </div>
       </section>
-      <section class="middle-section">
+      <section class="middle-section" id="about">
         <div class="first-part">
           <h1 class="intro">
             About <br />
@@ -429,7 +429,7 @@
         </div>
       </section>
       <!--contact section-->
-      <section id="reach-out">
+      <section id="reach-out" id="contact">
         <div class="form-style">
           <h2 class="contact-me" id="contact">Contact me</h2>
           <p class="cont-input">
@@ -469,5 +469,7 @@
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
