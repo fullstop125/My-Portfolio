@@ -2,13 +2,14 @@
 
 # Portfolio-app
 
-> This is a personal portfolio project built with HTML and CSS. It is a responsive design in both mobile and desktop.
+> This is a personal portfolio project built with HTML ,CSS and Javascript. It is a responsive design in both mobile and desktop.
 
 
 ## Built With
 
 - HTML
 - CSS
+- JavaScript
 
 ## Live Demo
 
@@ -27,9 +28,6 @@
 👤 **Samiullah**
 
 - GitHub: [@samiullah997](https://github.com/samiullah997)
-- LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
-- Twitter: [@moseshassany](https://twitter.com/moseshassany)
-
 
 ## 🤝 Contributing
 
