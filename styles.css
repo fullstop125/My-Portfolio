@@ -7,7 +7,7 @@
   --background: #f7f7f9;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -15,11 +15,8 @@
 .header {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
   justify-content: space-between;
-  margin: 4px 0;
   background-color: #fff;
-
 }
 
 body {
@@ -36,15 +33,12 @@ ul {
 
 a {
   text-decoration: none;
-
 }
 
 .logo {
   display: block;
   padding: 10px 12px;
   margin: 0 12px;
-
-
 }
 
 .logo-text {
@@ -112,16 +106,15 @@ nav {
 }
 
 .desc-nav {
-  display: block;
+  display: none;
   position: absolute;
   width: 100%;
   margin-top: 50px;
   margin-left: 28px;
-
 }
 
 .fa {
-  color: #6070FF;
+  color: #6070ff;
 }
 
 #x-icon {
@@ -143,9 +136,8 @@ nav {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 600;
   font-size: 32px;
   line-height: 44px;
 }
@@ -184,10 +176,6 @@ nav {
   display: flex;
   padding: 12px 0;
   margin-left: 35px;
-}
-
-ul {
-  list-style-type: none;
 }
 
 .social-media-icons {
@@ -397,7 +385,7 @@ ul {
   margin-left: 1rem;
 }
 
-#reach-out {
+.reach-out {
   align-items: center;
   margin-top: 50px;
   width: 100%;
@@ -489,6 +477,7 @@ form {
     margin-left: 0;
     margin-right: 50px;
   }
+
   .desc-nav li {
     display: block;
   }
@@ -807,7 +796,7 @@ form {
     align-self: center;
   }
 
-  #reach-out {
+  .reach-out {
     background-color: #6070ff;
   }
 
