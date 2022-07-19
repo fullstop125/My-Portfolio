@@ -1,7 +1,6 @@
 
 # Portfolio-app
 
-> This is a personal portfolio project built with HTML ,CSS and Javascript. It is a responsive design in both mobile and desktop.
 
 ## Built With
 
