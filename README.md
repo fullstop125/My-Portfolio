@@ -14,14 +14,19 @@
 
 [Momanyi's Portfolio](https://fullstop125.github.io/My-Portfolio/)
 
-## Screenshots
-![alt text](http://url/to/img.png)
 
 ## Authors
 
 👤 **Momanyi Hassan**
 
 - GitHub: [@fullstop125](https://github.com/fullstop125)
+- LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
+- Twitter: [@moseshassany](https://twitter.com/moseshassany)
+
+
+👤 **Samiullah**
+
+- GitHub: [@samiullah997](https://github.com/samiullah997)
 - LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
 - Twitter: [@moseshassany](https://twitter.com/moseshassany)
 
