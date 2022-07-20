@@ -9,18 +9,16 @@ const listItems3 = document.getElementById('list-items-3');
 
 function myFunction(x) {
   if (x.matches) {
-    menuIcon.addEventListener('click', () => {
-      menuIcon.style.display = 'none';
-      xIcon.style.display = 'block';
-      header.style.height = '812px';
-      header.style.background = '#6070ff';
-      descNav.style.display = 'block';
-      logo.style.display = 'none';
-      listItems1.style.display = 'block';
-      listItems2.style.display = 'block';
-      listItems3.style.display = 'block';
-      xIcon.style.color = '#fff';
-    });
+    menuIcon.style.display = 'none';
+    xIcon.style.display = 'block';
+    header.style.height = '812px';
+    header.style.background = '#6070ff';
+    descNav.style.display = 'block';
+    logo.style.display = 'none';
+    listItems1.style.display = 'block';
+    listItems2.style.display = 'block';
+    listItems3.style.display = 'block';
+    xIcon.style.color = '#fff';
 
     xIcon.addEventListener('click', () => {
       menuIcon.style.display = 'block';
@@ -50,6 +48,7 @@ function myFunction(x) {
     });
   }
 }
-
-const x = window.matchMedia('(max-width: 768px)');
-myFunction(x); // Call listener function at run time
+menuIcon.addEventListener('click', () => {
+  const x = window.matchMedia('(max-width: 768px)');
+  myFunction(x);
+});
