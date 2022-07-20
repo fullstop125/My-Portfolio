@@ -6,12 +6,12 @@ let logo = document.getElementById('logo');
 let listItems1 = document.getElementById('list-items-1');
 let listItems2 = document.getElementById('list-items-2');
 let listItems3 = document.getElementById('list-items-3');
-
-
-
+menuIcon.addEventListener('click',()=>{
+  const x = window.matchMedia('(max-width: 768px)');
+  myFunction(x);
+});
 function myFunction(x) {
     if (x.matches) {
-        menuIcon.addEventListener('click',()=>{
             menuIcon.style.display = 'none';
             xIcon.style.display = 'block';
             header.style.height = '812px';
@@ -21,8 +21,8 @@ function myFunction(x) {
             listItems1.style.display = 'block';
             listItems2.style.display = 'block';
             listItems3.style.display = 'block';
-            xIcon.style.color = '#fff'
-        });
+            xIcon.style.color = '#fff';
+        
         
         xIcon.addEventListener('click',()=>{
             menuIcon.style.display = 'block';
@@ -53,6 +53,5 @@ function myFunction(x) {
       });
     }
   }
-  
-  const x = window.matchMedia('(max-width: 768px)');
-  myFunction(x); // Call listener function at run time
+ 
+ 
