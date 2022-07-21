@@ -5,8 +5,7 @@ const listItems2 = document.getElementById('list-items-2');
 const listItems3 = document.getElementById('list-items-3');
 
 function myFunction(x) {
-  if (x.matches) {
-    // menuIcon.style.display = 'none';
+  if (x.matches) { // If media query matches
     xIcon.style.display = 'block';
     document.getElementById('window').style.display = 'block';
     xIcon.style.color = '#fff';
