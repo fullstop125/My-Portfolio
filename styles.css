@@ -25,14 +25,76 @@ body {
   font-family: var(--main-font-family);
 }
 
-ul {
-  list-style: none;
+/* popup window start */
+
+.window {
+  display: none;
+  background-color: #6070ff;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   padding: 0;
-  margin: 0;
+  mix-blend-mode: multiply;
+}
+
+.close-button {
+  border: 0;
+  background: none;
+  color: #fff;
+  margin-left: 325px;
+  margin-top: 62px;
+}
+
+button {
+  border-color: #7f8cff;
+  color: #7f8cff;
+  font-size: 17px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  width: fit-content;
+  transition: all 0.5s ease-out;
 }
 
 a {
   text-decoration: none;
+}
+
+.list-popup {
+  margin-left: 28px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  gap: 40px;
+}
+
+li {
+  list-style: none;
+}
+
+.list-popup li {
+  margin-top: 20px;
+}
+
+.list-popup li a {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+/* popup window End */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .logo {
@@ -66,7 +128,7 @@ a {
 }
 
 .img-1 {
-  background-image: url("/images/about-image/Snapshoot_Portfolio.png");
+  background-image: url("./images/about-image/Snapshoot_Portfolio.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -84,7 +146,7 @@ a {
 }
 
 .img-3 {
-  background-image: url("/images/about-image/multi-post-stories-project-2.png");
+  background-image: url("./images/about-image/multi-post-stories-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -93,7 +155,7 @@ a {
 }
 
 .img-4 {
-  background-image: url("/images/about-image/tonic-project-2.png");
+  background-image: url("./images/about-image/tonic-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -575,7 +637,7 @@ form {
   }
 
   .img-4 {
-    background-image: url("/images/about-image/big3.png");
+    background-image: url("./images/about-image/big3.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;

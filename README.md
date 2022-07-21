@@ -1,19 +1,15 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Portfolio-app
-
-> This is a personal portfolio project built with HTML and CSS. It is a responsive design in both mobile and desktop.
-
 
 ## Built With
 
 - HTML
 - CSS
+- JavaScript
 
 ## Live Demo
 
 [Momanyi's Portfolio](https://fullstop125.github.io/My-Portfolio/)
-
 
 ## Authors
 
@@ -23,13 +19,9 @@
 - LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
 - Twitter: [@moseshassany](https://twitter.com/moseshassany)
 
-
 👤 **Samiullah**
 
 - GitHub: [@samiullah997](https://github.com/samiullah997)
-- LinkedIn: [momanyi-hassan](https://linkedin.com/in/momanyi-hassan-32a489180)
-- Twitter: [@moseshassany](https://twitter.com/moseshassany)
-
 
 ## 🤝 Contributing
 

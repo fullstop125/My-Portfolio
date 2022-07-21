@@ -1,474 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body >
-    <header class="header" id="header">
-      <div class="logo" id="logo">
-        <a class="logo-text" href="#">My Logo</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Hassan's Full-stack web development portfolio ." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="logo" id="logo">
+      <a class="logo-text" href="#">My Logo</a>
+    </div>
+    <div class="window" id="window">
+      <div class="popup">
+        <section class="bg">
+        </section>
+        <div class="all">
+          <button type="button" class="close-button" id="close-button">
+            X
+          </button>
+          <ul class="list-popup">
+            <li><a id="closer1" href="#work-card">Portifolio</a></li>
+            <li><a id="closer2" href="#about">About</a></li>
+            <li><a id="closer3" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <nav>
+    </div>
+    <nav>
         <ul class="desc-nav" id="desc-nav">
-          <li id="list-items-1"><a href="#main-container">Portfolio</a></li>
+          <li id="list-items-1"><a href="#work-card">Portfolio</a></li>
           <li id="list-items-2"><a  href="#about">About</a></li>
           <li id="list-items-3"><a  href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="menu-icon">
-        <i class="fa fa-bars menu-icon" id="menu-icon"></i> 
-        <i class="fa fa-xmark menu-icon" id="x-icon"></i> 
+    <div class="menu-icon">
+      <i class="fa fa-bars menu-icon" id="menu-icon"></i>
+      <i class="fa fa-xmark menu-icon" id="x-icon"></i>
+    </div>
+  </header>
+  <main class="main-content" id="main-container">
+    <section class="first-section">
+      <div class="container">
+        <div class="bird-container bird-container--one">
+          <div class="bird bird--one"></div>
+        </div>
+
+        <div class="bird-container bird-container--two">
+          <div class="bird bird--two"></div>
+        </div>
+
+        <div class="bird-container bird-container--three">
+          <div class="bird bird--three"></div>
+        </div>
+
+        <div class="bird-container bird-container--four">
+          <div class="bird bird--four"></div>
+        </div>
       </div>
-    </header>
-    <main class="main-content" id="main-container">
-      <section class="first-section">
-        <div class="container">
-          <div class="bird-container bird-container--one">
-            <div class="bird bird--one"></div>
-          </div>
-          
-          <div class="bird-container bird-container--two">
-            <div class="bird bird--two"></div>
-          </div>
-          
-          <div class="bird-container bird-container--three">
-            <div class="bird bird--three"></div>
-          </div>
-          
-          <div class="bird-container bird-container--four">
-            <div class="bird bird--four"></div>
-          </div>
-          
-        </div>
-        <div class="container">
-        
-          
-          <div class="bird-container bird-container--one">
-            <div class="bird bird--one"></div>
-          </div>
-          
-          <div class="bird-container bird-container--two">
-            <div class="bird bird--two"></div>
-          </div>
-          
-          <div class="bird-container bird-container--three">
-            <div class="bird bird--three"></div>
-          </div>
-          
-          <div class="bird-container bird-container--four">
-            <div class="bird bird--four"></div>
-          </div>
-          
-        </div>
-        
-        <section class="header-info">
-          <h2 class="intro">I'm Momanyi <br />Glad to See you!</h2>
-          <p class="about">
-            I’m a software developer! I can help you build a product , feature
-            or website Look through some of my work and experience! If you like
-            what you see and have a project you need coded, don’t hestiate to
-            contact me.
-          </p>
-          <section class="social-media-container">
-            <h4 class="social-media-title">Let's Connect</h4>
-            <ul class="social-media-content">
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="images/icons/twitter.png"
-                    alt="Twitter Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="images/icons/linkedin.png"
-                    alt="LinkedIn Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="images/icons/media.png"
-                    alt="Media Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="images/icons/github.png"
-                    alt="Github Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="images/icons/victory.png"
-                    alt="Victory Icon"
-                  />
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-      </section>
-      <section class="work-card">
-        <div class="project-container">
-          <div class="project-img img-1"></div>
-          <div class="about-project">
-            <div class="project-title">
-              <h4>Tonic</h4>
-            </div>
-            <div class="project-info">
-              <ul>
-                <li class="role">Canopy</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">Back End Dev</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">2015</li>
-              </ul>
-            </div>
-            <div class="project-description">
-              <p>
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-            </div>
-            <div class="tags">
-              <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
-              </ul>
-            </div>
-            <div class="btn-container">
-              <button type="submit" class="view-btn">See Project</button>
-            </div>
-          </div>
+      <div class="container">
+        <div class="bird-container bird-container--one">
+          <div class="bird bird--one"></div>
         </div>
 
-        <div class="project-container">
-          <div class="about-project">
-            <div class="project-title">
-              <h4>Multi-Post Stories</h4>
-            </div>
-            <div class="project-info">
-              <ul>
-                <li class="role">Facebook</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">Full Stack Dev</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">2015</li>
-              </ul>
-            </div>
-            <div class="project-description">
-              <p>
-                Experimental content creation feature that allows users to add
-                to an existing story over the course of a day without spamming
-                their friends.
-              </p>
-            </div>
-            <div class="tags">
-              <ul>
-                <li>html</li>
-                <li>Ruby on rails</li>
-                <li>css</li>
-                <li>javascript</li>
-              </ul>
-            </div>
-            <div class="btn-container">
-              <button type="submit" class="view-btn">See Project</button>
-            </div>
-          </div>
-          <div class="project-img img-2"></div>
+        <div class="bird-container bird-container--two">
+          <div class="bird bird--two"></div>
         </div>
 
-        <div class="project-container">
-          <div class="project-img img-4"></div>
-          <div class="about-project">
-            <div class="project-title">
-              <h4>Facebook 360</h4>
-            </div>
-            <div class="project-info">
-              <ul>
-                <li class="role">Facebook</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">Full Stack Dev</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">2015</li>
-              </ul>
-            </div>
-            <div class="project-description">
-              <p>
-                Exploring the future of media in Facebook's first Virtual
-                Reality app; a place to discover and enjoy 360 photos and videos
-                on Gear VR.
-              </p>
-            </div>
-            <div class="tags">
-              <ul>
-                <li>html</li>
-                <li>Ruby on rails</li>
-                <li>css</li>
-                <li>javascript</li>
-              </ul>
-            </div>
-            <div class="btn-container">
-              <button type="submit" class="view-btn">See Project</button>
-            </div>
-          </div>
+        <div class="bird-container bird-container--three">
+          <div class="bird bird--three"></div>
         </div>
 
-        <div class="project-container">
-          <div class="about-project">
-            <div class="project-title">
-              <h4>Uber Navigation</h4>
-            </div>
-            <div class="project-info">
-              <ul>
-                <li class="role">Uber</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">Lead Developer</li>
-                <li>
-                  <img
-                    src="./images/about-image/Counter.png"
-                    class="small-dot"
-                    alt="counter.png"
-                  />
-                </li>
-                <li class="client-name">2018</li>
-              </ul>
-            </div>
-            <div class="project-description">
-              <p>
-                A smart assistant to make driving more safe, efficient, and fun
-                by unlocking your most expensive computer: your car.
-              </p>
-            </div>
-            <div class="tags">
-              <ul>
-                <li>html</li>
-                <li>Ruby on rails</li>
-                <li>css</li>
-                <li>javascript</li>
-              </ul>
-            </div>
-            <div class="btn-container">
-              <button type="submit" class="view-btn">See Project</button>
-            </div>
-          </div>
-          <div class="project-img img-3"></div>
+        <div class="bird-container bird-container--four">
+          <div class="bird bird--four"></div>
         </div>
-      </section>
-      <section class="middle-section" id="about">
-        <div class="first-part">
-          <h1 class="intro">
-            About <br />
-            Myself
-          </h1>
+      </div>
 
-          <p class="about">
-            I'm a software developer! I can help you build a product , feature
-            or website Look through some of my work and experience! If you like
-            what you see and have a project you need coded, don't hestiate to
-            contact me.
-          </p>
-
-          <div class="social-media-container-bottom">
-            <h4 class="social-media-title">Let's Connect</h4>
-            <ul class="social-media-content">
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="./images/icons/twitter.png"
-                    alt="Twitter Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="./images/icons/linkedin.png"
-                    alt="LinkedIn Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="./images/icons/media.png"
-                    alt="Media Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="./images/icons/github.png"
-                    alt="Github Icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    class="social-media-icons"
-                    src="./images/icons/victory.png"
-                    alt="Victory Icon"
-                  />
-                </a>
-              </li>
-            </ul>
-            <div class="btn-container">
-              <button type="submit" class="view-btn">Get my resume</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-section">
-          <div class="skill-label-container">
-            <h3 class="label">languages</h3>
-            <img src="./images/icons/arrow-down.svg" alt="arrow-down-icon" />
-          </div>
-          <ul class="skill-list">
+      <section class="header-info">
+        <h2 class="intro">I'm Momanyi <br />Glad to See you!</h2>
+        <p class="about">
+          I’m a software developer! I can help you build a product , feature
+          or website Look through some of my work and experience! If you like
+          what you see and have a project you need coded, don’t hestiate to
+          contact me.
+        </p>
+        <section class="social-media-container">
+          <h4 class="social-media-title">Let's Connect</h4>
+          <ul class="social-media-content">
             <li>
-              <img
-                src="./images/about-image/Ellipse-html.svg"
-                alt="html-logo"
-              />
-              <span>HTML</span>
+              <a href="#">
+                <img class="social-media-icons" src="images/icons/twitter.png" alt="Twitter Icon" />
+              </a>
             </li>
             <li>
-              <img src="./images/about-image/Ellipse-css.svg" alt="css-logo" />
-              <span>CSS</span>
+              <a href="#">
+                <img class="social-media-icons" src="images/icons/linkedin.png" alt="LinkedIn Icon" />
+              </a>
             </li>
             <li>
-              <img
-                src="./images/about-image/Ellipse-js.svg"
-                alt="javascript-logo"
-              />
-              <span>JavaScript</span>
+              <a href="#">
+                <img class="social-media-icons" src="images/icons/media.png" alt="Media Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="images/icons/github.png" alt="Github Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="images/icons/victory.png" alt="Victory Icon" />
+              </a>
             </li>
           </ul>
-          <div class="skill-label-container">
-            <p class="label">frameworks</p>
-            <img src="./images/icons/arrow-right.svg" alt="arrowright-icon" />
-          </div>
-          <ul class="skill-list"></ul>
-          <div class="skill-label-container">
-            <p class="label">skills</p>
-            <img src="./images/icons/arrow-right.svg" alt="arrowright-icon" />
-          </div>
-          <ul class="skill-list"></ul>
-        </div>
+        </section>
       </section>
-      <!--contact section-->
-      <section class="reach-out" id="contact">
-        <div class="form-style">
-          <h2 class="contact-me">Contact me</h2>
-          <p class="cont-input">
-            If you have an application you are interested in developing, a
-            feature that you need built or a project that needs coding. I'd love
-            to help with it
-          </p>
-
-          <form action="https://formspree.io/f/xbjwvonn" method="post">
-            <input
-              class="username"
-              type="text"
-              name="username"
-              placeholder="username"
-              required
-              maxlength="30"
-            />
-
-            <input
-              class="email"
-              type="email"
-              name="email_address"
-              placeholder="user@gmail.com"
-              required
-            />
-
-            <textarea
-              class="comment"
-              name="comments"
-              placeholder="Write your message here"
-              required
-              maxlength="500"
-            ></textarea>
-
-            <button class="submit" type="submit">Get It Touch</button>
-          </form>
+    </section>
+    <section class="work-card" id="work-card">
+      <div class="project-container">
+        <div class="project-img img-1"></div>
+        <div class="about-project">
+          <div class="project-title">
+            <h4>Tonic</h4>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li class="role">Canopy</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">Back End Dev</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">2015</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>
+              A daily selection of privately personalized reads; no accounts
+              or sign-ups required.
+            </p>
+          </div>
+          <div class="tags">
+            <ul>
+              <li>html</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ul>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="view-btn">See Project</button>
+          </div>
         </div>
-      </section>
-    </main>
-    <script type="module" defer src="./script.js"></script>
-  </body>
+      </div>
+
+      <div class="project-container">
+        <div class="about-project">
+          <div class="project-title">
+            <h4>Multi-Post Stories</h4>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li class="role">Facebook</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">Full Stack Dev</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">2015</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>
+              Experimental content creation feature that allows users to add
+              to an existing story over the course of a day without spamming
+              their friends.
+            </p>
+          </div>
+          <div class="tags">
+            <ul>
+              <li>html</li>
+              <li>Ruby on rails</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ul>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="view-btn">See Project</button>
+          </div>
+        </div>
+        <div class="project-img img-2"></div>
+      </div>
+
+      <div class="project-container">
+        <div class="project-img img-4"></div>
+        <div class="about-project">
+          <div class="project-title">
+            <h4>Facebook 360</h4>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li class="role">Facebook</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">Full Stack Dev</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">2015</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>
+              Exploring the future of media in Facebook's first Virtual
+              Reality app; a place to discover and enjoy 360 photos and videos
+              on Gear VR.
+            </p>
+          </div>
+          <div class="tags">
+            <ul>
+              <li>html</li>
+              <li>Ruby on rails</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ul>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="view-btn">See Project</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-container">
+        <div class="about-project">
+          <div class="project-title">
+            <h4>Uber Navigation</h4>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li class="role">Uber</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">Lead Developer</li>
+              <li>
+                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
+              </li>
+              <li class="client-name">2018</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>
+              A smart assistant to make driving more safe, efficient, and fun
+              by unlocking your most expensive computer: your car.
+            </p>
+          </div>
+          <div class="tags">
+            <ul>
+              <li>html</li>
+              <li>Ruby on rails</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ul>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="view-btn">See Project</button>
+          </div>
+        </div>
+        <div class="project-img img-3"></div>
+      </div>
+    </section>
+    <section class="middle-section" id="about">
+      <div class="first-part">
+        <h2 class="intro">
+          About <br />
+          Myself
+        </h2>
+
+        <p class="about">
+          I'm a software developer! I can help you build a product , feature
+          or website Look through some of my work and experience! If you like
+          what you see and have a project you need coded, don't hestiate to
+          contact me.
+        </p>
+
+        <div class="social-media-container-bottom">
+          <h5 class="social-media-title">Let's Connect</h5>
+          <ul class="social-media-content">
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="./images/icons/twitter.png" alt="Twitter Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="./images/icons/linkedin.png" alt="LinkedIn Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="./images/icons/media.png" alt="Media Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="./images/icons/github.png" alt="Github Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="social-media-icons" src="./images/icons/victory.png" alt="Victory Icon" />
+              </a>
+            </li>
+          </ul>
+          <div class="btn-container">
+            <button type="submit" class="view-btn">Get my resume</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-section">
+        <div class="skill-label-container">
+          <h3 class="label">languages</h3>
+          <img src="./images/icons/arrow-down.svg" alt="arrow-down-icon" />
+        </div>
+        <ul class="skill-list">
+          <li>
+            <img src="./images/about-image/Ellipse-html.svg" alt="html-logo" />
+            <span>HTML</span>
+          </li>
+          <li>
+            <img src="./images/about-image/Ellipse-css.svg" alt="css-logo" />
+            <span>CSS</span>
+          </li>
+          <li>
+            <img src="./images/about-image/Ellipse-js.svg" alt="javascript-logo" />
+            <span>JavaScript</span>
+          </li>
+        </ul>
+        <div class="skill-label-container">
+          <p class="label">frameworks</p>
+          <img src="./images/icons/arrow-right.svg" alt="arrowright-icon" />
+        </div>
+        <ul class="skill-list"></ul>
+        <div class="skill-label-container">
+          <p class="label">skills</p>
+          <img src="./images/icons/arrow-right.svg" alt="arrowright-icon" />
+        </div>
+        <ul class="skill-list"></ul>
+      </div>
+    </section>
+    <!--contact section-->
+    <section class="reach-out" id="contact">
+      <div class="form-style">
+        <h2 class="contact-me">Contact me</h2>
+        <p class="cont-input">
+          If you have an application you are interested in developing, a
+          feature that you need built or a project that needs coding. I'd love
+          to help with it
+        </p>
+
+        <form action="https://formspree.io/f/xbjwvonn" method="post">
+          <input class="username" type="text" name="username" placeholder="username" required maxlength="30" />
+
+          <input class="email" type="email" name="email_address" placeholder="user@gmail.com" required />
+
+          <textarea class="comment" name="comments" placeholder="Write your message here" required
+            maxlength="500"></textarea>
+
+          <button class="submit" type="submit">Get It Touch</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>
