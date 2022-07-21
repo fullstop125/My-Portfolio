@@ -25,6 +25,150 @@ body {
   font-family: var(--main-font-family);
 }
 
+/* Modal Section Start */
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  transition: 2000ms ease-in-out;
+  background: #C1C7D0;
+  mix-blend-mode: multiply;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  transition: 2000ms ease-in-out;
+  top: 0px;
+  bottom: 0px;
+  z-index: 10;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  position: absolute;
+  width: 343px;
+  height: 713px;
+  left: calc(50% - 343px/2);
+  top: 28px;
+  background: #FFFFFF;
+  border: 1px solid #DFE1E6;
+  border-radius: 16px;
+}
+
+.modal-container .modal-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-container .modal-title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172B4D;
+}
+
+.btn-close {
+  width: 24px;
+  height: 24px;
+  font-size: 30px;
+  color: #67798E;
+  cursor: pointer;
+}
+
+.header-list ul {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.circle-dot {
+  width: 8px;
+  height: 8px;
+  background: #C1C7D0;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.modal-img {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  background-position: center;
+}
+
+.modal-desc {
+  width: 100%;
+  height: 220px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.modal-tech-list ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.modal-tech-list ul li {
+  background: #EBEBFF;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-buttons button {
+  height: 100%;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+}
+
+
+/* Modal Section End */
+
 /* popup window start */
 
 .window {
@@ -127,8 +271,7 @@ ul {
   width: 100%;
 }
 
-.img-1 {
-  background-image: url("./images/about-image/Snapshoot_Portfolio.png");
+.img {
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -137,7 +280,6 @@ ul {
 }
 
 .img-2 {
-  background-image: url("./images/about-image/multi-post-stories-project.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -146,7 +288,6 @@ ul {
 }
 
 .img-3 {
-  background-image: url("./images/about-image/multi-post-stories-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -155,7 +296,6 @@ ul {
 }
 
 .img-4 {
-  background-image: url("./images/about-image/tonic-project-2.png");
   height: 300px;
   width: 300px;
   background-repeat: no-repeat;
@@ -550,6 +690,59 @@ form {
     line-height: 20px;
     text-decoration: none;
   }
+
+  /* Modal Section Start */
+
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: 2000ms ease-in-out;
+    background: #C1C7D0;
+    mix-blend-mode: multiply;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: 2000ms ease-in-out;
+    z-index: 10;
+  }
+
+  .modal-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+    position: absolute;
+    width: 762px;
+    height: 567px;
+    left: calc(32% - 343px/2);
+    top: 15px;
+    background: #FFFFFF;
+    border: 1px solid #DFE1E6;
+    border-radius: 16px;
+  }
+
+  .modal-img {
+    width: 724px;
+    height: 310px;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+  }
+
+
+  /* Modal Section End */
 
   .first-section {
     background-image: url("./images/about-image/bg_Header.png");
