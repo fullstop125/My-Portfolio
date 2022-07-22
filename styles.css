@@ -277,36 +277,14 @@ ul {
 }
 
 .img {
-  height: 300px;
-  width: 300px;
+  height: 267px;
+  width: 365px;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
 }
 
-.img-2 {
-  height: 300px;
-  width: 300px;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.img-3 {
-  height: 300px;
-  width: 300px;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.img-4 {
-  height: 300px;
-  width: 300px;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 nav {
   width: 100%;
@@ -415,6 +393,7 @@ nav {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  gap: 20px;
 }
 
 .project-title {
@@ -738,6 +717,7 @@ form {
   .modal-img {
     width: 724px;
     height: 340px;
+    object-fit: cover;
   }
 
   .modal-footer {
@@ -750,6 +730,7 @@ form {
   .modal-tech-list ul {
     margin-top: 0px;
   }
+
   .footer-list hr {
     margin: 0;
   }
@@ -770,7 +751,7 @@ form {
     gap: 10px;
   }
 
-  .footer-list hr{
+  .footer-list hr {
     gap: 10px;
   }
 
@@ -819,6 +800,7 @@ form {
     margin-right: auto;
     border: 1px solid #dfe1e6;
     border-radius: 24px;
+    padding: 35px;
     gap: 15px;
     background-color: #fff;
     height: 400px;
@@ -832,44 +814,14 @@ form {
     flex: 1;
   }
 
-  .img-1 {
+  .img {
+    height: 448px;
+    width: 544px;
     background-image: url("./images/about-image/big1.png");
-    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    height: 350px;
-  }
-
-  .img-2 {
-    background-image: url("./images/about-image/big2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 350px;
-  }
-
-  .img-3 {
-    background-image: url("./images/about-image/big4.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 350px;
-  }
-
-  .img-4 {
-    background-image: url("./images/about-image/big3.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 350px;
+    flex: 2;
   }
 
   @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
