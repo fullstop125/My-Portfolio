@@ -223,7 +223,6 @@ button {
   top: 3px;
 }
 
-
 /* Modal Section End */
 
 /* popup window start */
@@ -775,11 +774,7 @@ form {
     gap: 10px;
   }
 
-
-
-
   /* Modal Section End */
-
   .first-section {
     background-image: url("./images/about-image/bg_Header.png");
     background-repeat: no-repeat;
