@@ -3,6 +3,9 @@ const xIcon = document.getElementById('close-button');
 const listItems1 = document.getElementById('list-items-1');
 const listItems2 = document.getElementById('list-items-2');
 const listItems3 = document.getElementById('list-items-3');
+const form = document.getElementById('form');
+const errorMsg = document.querySelector('small');
+const email = document.getElementById('email');
 
 function myFunction(x) {
   if (x.matches) { // If media query matches
@@ -184,4 +187,13 @@ cardData.forEach((items, i) => {
     document.getElementById('overlay').classList.add('active');
     setData(items);
   });
+});
+
+// form validation code
+form.addEventListener('submit', (e) => {
+  const emailValue = email.value;
+  if (emailValue !== emailValue.toLowerCase()) {
+    e.preventDefault();
+    errorMsg.classList.add('display-content');
+  }
 });

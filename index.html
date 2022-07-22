@@ -276,12 +276,13 @@
           to help with it
         </p>
 
-        <form action="https://formspree.io/f/xbjwvonn" method="post">
+        <form action="https://formspree.io/f/xbjwvonn" id="form" method="post">
           <input class="username" type="text" name="username" placeholder="username" required maxlength="30" />
 
-          <input class="email" type="email" name="email_address" placeholder="user@gmail.com" required />
+          <input class="email" type="email" id = "email" name="email_address" placeholder="user@gmail.com" required />
+          <small>form not sent , Please enter your email address in small letters!!</small>
 
-          <textarea class="comment" name="comments" placeholder="Write your message here" required
+          <textarea class="comment"  id = "comment" name="comments" placeholder="Write your message here" required
             maxlength="500"></textarea>
 
           <button class="submit" type="submit">Get It Touch</button>
