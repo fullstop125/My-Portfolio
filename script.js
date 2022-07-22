@@ -198,23 +198,31 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// form localStorage Setting
-
-document.getElementById('submit').addEventListener('click', () => {
-  const formDataObj = {
-    name: document.getElementById('formName').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('comment').value,
+const userName = form.elements.name;
+const userEmail = form.elements.email;
+const userMessage = form.elements.comment;
+function populateStorage() {
+  const userInput = {
+    name: form.elements.name.value,
+    email: form.elements.email.value,
+    message: form.elements.comment.value,
   };
-  const formObj = JSON.stringify(formDataObj);
-  localStorage.setItem('formData', formObj);
-});
-document.getElementById('reset').addEventListener('click', () => {
-  localStorage.removeItem('formData');
-});
-
-const formObject = localStorage.getItem('formData');
-const objectData = JSON.parse(formObject);
-document.getElementById('formName').value = objectData.name;
-document.getElementById('email').value = objectData.email;
-document.getElementById('comment').value = objectData.message;
+  localStorage.setItem('userInput', JSON.stringify(userInput));
+}
+function setForm() {
+  const storedInput = JSON.parse(localStorage.getItem('userInput'));
+  const currentUserName = storedInput.name;
+  const currentUserEmail = storedInput.email;
+  const currentMessage = storedInput.comment;
+  form.elements.name.value = currentUserName;
+  form.elements.email.value = currentUserEmail;
+  form.elements.comment.value = currentMessage;
+}
+if (!localStorage.getItem('userInput')) {
+  populateStorage();
+} else {
+  setForm();
+}
+userName.onchange = populateStorage;
+userEmail.onchange = populateStorage;
+userMessage.onchange = populateStorage;
