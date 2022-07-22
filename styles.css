@@ -747,6 +747,13 @@ form {
     justify-content: center;
   }
 
+  .modal-tech-list ul {
+    margin-top: 0px;
+  }
+  .footer-list hr {
+    margin: 0;
+  }
+
   .footer-desc {
     width: 431px;
     height: 105px;
