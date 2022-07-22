@@ -710,6 +710,8 @@ form {
     height: 100%;
     transition: 2000ms ease-in-out;
     z-index: 10;
+    align-items: center;
+    justify-content: center;
   }
 
   .modal-container {
@@ -720,9 +722,9 @@ form {
     gap: 12px;
     position: absolute;
     width: 762px;
-    height: 567px;
+    height: 593px;
     left: calc(32% - 343px/2);
-    top: 15px;
+    top: 4px;
     background: #FFFFFF;
     border: 1px solid #DFE1E6;
     border-radius: 16px;
@@ -730,15 +732,34 @@ form {
 
   .modal-img {
     width: 724px;
-    height: 310px;
+    height: 340px;
   }
 
   .modal-footer {
     display: flex;
+    height: 100%;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
+  }
 
+  .footer-desc {
+    width: 431px;
+    height: 105px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-list hr{
+    gap: 10px;
   }
 
 
