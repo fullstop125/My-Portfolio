@@ -197,3 +197,32 @@ form.addEventListener('submit', (e) => {
     errorMsg.classList.add('display-content');
   }
 });
+
+const userName = form.elements.name;
+const userEmail = form.elements.email;
+const userMessage = form.elements.comment;
+function populateStorage() {
+  const userInput = {
+    name: form.elements.name.value,
+    email: form.elements.email.value,
+    message: form.elements.comment.value,
+  };
+  localStorage.setItem('userInput', JSON.stringify(userInput));
+}
+function setForm() {
+  const storedInput = JSON.parse(localStorage.getItem('userInput'));
+  const currentUserName = storedInput.name;
+  const currentUserEmail = storedInput.email;
+  const currentMessage = storedInput.comment;
+  form.elements.name.value = currentUserName;
+  form.elements.email.value = currentUserEmail;
+  form.elements.comment.value = currentMessage;
+}
+if (!localStorage.getItem('userInput')) {
+  populateStorage();
+} else {
+  setForm();
+}
+userName.onchange = populateStorage;
+userEmail.onchange = populateStorage;
+userMessage.onchange = populateStorage;
