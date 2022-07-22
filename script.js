@@ -197,3 +197,26 @@ form.addEventListener('submit', (e) => {
     errorMsg.classList.add('display-content');
   }
 });
+
+// form localStorage Setting
+
+
+
+document.getElementById('submit').addEventListener('click', () => {
+  let formDataObj = {
+    name: document.getElementById('formName').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('comment').value
+  };
+  let formObj = JSON.stringify(formDataObj);
+  localStorage.setItem('formData', formObj);
+});
+document.getElementById('reset').addEventListener('click', () => {
+  localStorage.removeItem('formData');
+});
+
+let formObject = localStorage.getItem('formData');
+let objectData = JSON.parse(formObject);
+document.getElementById('formName').value=objectData.name;
+document.getElementById('email').value=objectData.email;
+document.getElementById('comment').value=objectData.message;

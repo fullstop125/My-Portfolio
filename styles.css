@@ -658,6 +658,11 @@ small {
   display: block;
 }
 
+form div {
+  display: flex;
+  flex-direction: row;
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     margin-left: 10%;
@@ -1090,5 +1095,10 @@ small {
 
   .display-content {
     display: block;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: row;
   }
 }

@@ -72,32 +72,36 @@
           <li id="client-year">2015</li>
         </ul>
       </div>
-      <img class="modal-img" src="#" alt="modal image" id="modal-image"> 
+      <img class="modal-img" src="#" alt="modal image" id="modal-image">
       <div class="modal-footer">
         <div class="footer-desc">
-      <p class="modal-desc" id="modal-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has
-        been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essent</p>
-      </div>
-      <div class="footer-list">
-        <div class="modal-tech-list">
-          <ul id="ul">
+          <p class="modal-desc" id="modal-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+            Lorem Ipsum has
+            been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting,
+            remaining essent</p>
+        </div>
+        <div class="footer-list">
+          <div class="modal-tech-list">
+            <ul id="ul">
 
-          </ul>
+            </ul>
+          </div>
+          <hr>
+          <div class="modal-buttons">
+            <a id="see-live" href="#">
+              <div class="see-live">See Live <img class="icon" src="./images/icons/live-icon.svg" alt="Live Icon"></div>
+            </a>
+            <a id="see-source" href="#">
+              <div class="see-live">See Source <img class="icon" src="./images/icons/git-icon.svg" alt=" source-image">
+              </div>
+            </a>
+          </div>
         </div>
-        <hr>
-        <div class="modal-buttons">
-          <a id="see-live" href="#">
-            <div class="see-live" >See Live <img class="icon" src="./images/icons/live-icon.svg" alt="Live Icon"></div>
-          </a>
-          <a id="see-source" href="#">
-            <div class="see-live" >See Source <img class="icon" src="./images/icons/git-icon.svg" alt=" source-image"></div>
-          </a>
-        </div>
-      </div>
       </div>
     </div>
   </div>
@@ -275,17 +279,19 @@
           feature that you need built or a project that needs coding. I'd love
           to help with it
         </p>
-
         <form action="https://formspree.io/f/xbjwvonn" id="form" method="post">
-          <input class="username" type="text" name="username" placeholder="username" required maxlength="30" />
+          <input class="username" id="formName" type="text" name="username" placeholder="username" required
+            maxlength="30" />
 
-          <input class="email" type="email" id = "email" name="email_address" placeholder="user@gmail.com" required />
+          <input class="email" type="email" id="email" name="email_address" placeholder="user@gmail.com" required />
           <small>form not sent , Please enter your email address in small letters!!</small>
 
-          <textarea class="comment"  id = "comment" name="comments" placeholder="Write your message here" required
+          <textarea class="comment" id="comment" name="comments" placeholder="Write your message here" required
             maxlength="500"></textarea>
-
-          <button class="submit" type="submit">Get It Touch</button>
+          <div>
+            <button class="submit" type="submit" id="submit">Get It Touch</button>
+            <button class="submit" type="reset" id="reset">Reset</button>
+          </div>
         </form>
       </div>
     </section>
