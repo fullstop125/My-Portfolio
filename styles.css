@@ -1100,5 +1100,6 @@ form div {
   form div {
     display: flex;
     flex-direction: row;
+    gap: 10px;
   }
 }
