@@ -37,17 +37,74 @@
       </div>
     </div>
     <nav>
-        <ul class="desc-nav" id="desc-nav">
-          <li id="list-items-1"><a href="#work-card">Portfolio</a></li>
-          <li id="list-items-2"><a  href="#about">About</a></li>
-          <li id="list-items-3"><a  href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <ul class="desc-nav" id="desc-nav">
+        <li id="list-items-1"><a href="#work-card">Portfolio</a></li>
+        <li id="list-items-2"><a href="#about">About</a></li>
+        <li id="list-items-3"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <div class="menu-icon">
       <i class="fa fa-bars menu-icon" id="menu-icon"></i>
       <i class="fa fa-xmark menu-icon" id="x-icon"></i>
     </div>
   </header>
+
+
+  <!-- Modal Section Start -->
+
+  <div class="modal" id="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Tonic</h2>
+        <span class="btn-close" id="btn-close">&times;</span>
+      </div>
+      <div class="header-list">
+
+        <ul>
+          <li id="role">CANOPY</li>
+          <li>
+            <div class="circle-dot"></div>
+          </li>
+          <li id="client-name">Back End Dev</li>
+          <li>
+            <div class="circle-dot"></div>
+          </li>
+          <li id="client-year">2015</li>
+        </ul>
+      </div>
+      <img class="modal-img" src="#" alt="modal image" id="modal-image"> 
+      <div class="modal-footer">
+        <div class="footer-desc">
+      <p class="modal-desc" id="modal-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has
+        been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essent</p>
+      </div>
+      <div class="footer-list">
+        <div class="modal-tech-list">
+          <ul id="ul">
+
+          </ul>
+        </div>
+        <hr>
+        <div class="modal-buttons">
+          <a id="see-live" href="#">
+            <div class="see-live" >See Live <img class="icon" src="./images/icons/live-icon.svg" alt="Live Icon"></div>
+          </a>
+          <a id="see-source" href="#">
+            <div class="see-live" >See Source <img class="icon" src="./images/icons/git-icon.svg" alt=" source-image"></div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <!-- Modal Section End -->
+
+
   <main class="main-content" id="main-container">
     <section class="first-section">
       <div class="container">
@@ -126,163 +183,9 @@
       </section>
     </section>
     <section class="work-card" id="work-card">
-      <div class="project-container">
-        <div class="project-img img-1"></div>
-        <div class="about-project">
-          <div class="project-title">
-            <h4>Tonic</h4>
-          </div>
-          <div class="project-info">
-            <ul>
-              <li class="role">Canopy</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">Back End Dev</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">2015</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>
-              A daily selection of privately personalized reads; no accounts
-              or sign-ups required.
-            </p>
-          </div>
-          <div class="tags">
-            <ul>
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-          </div>
-          <div class="btn-container">
-            <button type="submit" class="view-btn">See Project</button>
-          </div>
-        </div>
-      </div>
 
-      <div class="project-container">
-        <div class="about-project">
-          <div class="project-title">
-            <h4>Multi-Post Stories</h4>
-          </div>
-          <div class="project-info">
-            <ul>
-              <li class="role">Facebook</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">Full Stack Dev</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">2015</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>
-              Experimental content creation feature that allows users to add
-              to an existing story over the course of a day without spamming
-              their friends.
-            </p>
-          </div>
-          <div class="tags">
-            <ul>
-              <li>html</li>
-              <li>Ruby on rails</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-          </div>
-          <div class="btn-container">
-            <button type="submit" class="view-btn">See Project</button>
-          </div>
-        </div>
-        <div class="project-img img-2"></div>
-      </div>
-
-      <div class="project-container">
-        <div class="project-img img-4"></div>
-        <div class="about-project">
-          <div class="project-title">
-            <h4>Facebook 360</h4>
-          </div>
-          <div class="project-info">
-            <ul>
-              <li class="role">Facebook</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">Full Stack Dev</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">2015</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>
-              Exploring the future of media in Facebook's first Virtual
-              Reality app; a place to discover and enjoy 360 photos and videos
-              on Gear VR.
-            </p>
-          </div>
-          <div class="tags">
-            <ul>
-              <li>html</li>
-              <li>Ruby on rails</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-          </div>
-          <div class="btn-container">
-            <button type="submit" class="view-btn">See Project</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-container">
-        <div class="about-project">
-          <div class="project-title">
-            <h4>Uber Navigation</h4>
-          </div>
-          <div class="project-info">
-            <ul>
-              <li class="role">Uber</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">Lead Developer</li>
-              <li>
-                <img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />
-              </li>
-              <li class="client-name">2018</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>
-              A smart assistant to make driving more safe, efficient, and fun
-              by unlocking your most expensive computer: your car.
-            </p>
-          </div>
-          <div class="tags">
-            <ul>
-              <li>html</li>
-              <li>Ruby on rails</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-          </div>
-          <div class="btn-container">
-            <button type="submit" class="view-btn">See Project</button>
-          </div>
-        </div>
-        <div class="project-img img-3"></div>
-      </div>
     </section>
+
     <section class="middle-section" id="about">
       <div class="first-part">
         <h2 class="intro">
