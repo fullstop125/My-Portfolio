@@ -646,6 +646,17 @@ form {
   color: #b3bac5;
 }
 
+small {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  display: none;
+}
+
+.display-content {
+  display: block;
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     margin-left: 10%;
@@ -1067,5 +1078,16 @@ form {
     align-items: center;
     margin-inline: auto;
     background-position: 1rem 2rem;
+  }
+
+  small {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: none;
+  }
+
+  .display-content {
+    display: block;
   }
 }
