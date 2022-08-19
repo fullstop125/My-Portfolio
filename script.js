@@ -52,7 +52,7 @@ menuIcon.addEventListener('click', () => {
 const cardData = [
   {
     title: 'To-Do-List App',
-    imag: 'to-do.png',
+    imag: 'todo.png',
     role: 'Management',
     clientName: 'Back End Dev',
     clientYear: '2022',
