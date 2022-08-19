@@ -51,15 +51,15 @@ menuIcon.addEventListener('click', () => {
 
 const cardData = [
   {
-    title: 'Tonic1',
-    imag: 'tonic-project-2.svg',
-    role: 'Canopy',
+    title: 'To-Do-List App',
+    imag: 'to-do.svg',
+    role: 'Management',
     clientName: 'Back End Dev',
-    clientYear: '2015',
-    projectDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    tags: ['html', 'css', 'javascript'],
-    seeLive: 'https://fullstop125.github.io/My-Portfolio/',
-    seeSource: 'https://github.com/fullstop125/My-Portfolio/blob/master/README.md',
+    clientYear: '2022',
+    projectDescription: 'A simple To Do list to track all activities that are completed and those that are yet to be completed.',
+    tags: ['html', 'css', 'Javascript'],
+    seeLive: 'https://fullstop125.github.io/To-Do-List/',
+    seeSource: 'https://github.com/fullstop125/To-Do-List',
   },
   {
     title: 'Tonic2',
