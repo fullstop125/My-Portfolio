@@ -799,6 +799,7 @@ form div {
     background-size: cover;
     padding: 10px;
     background-color: #B1E1FF;
+    border-radius: 2%;
   }
 
   .social-media-container {
