@@ -8,7 +8,8 @@ const errorMsg = document.querySelector('small');
 const email = document.getElementById('email');
 
 function myFunction(x) {
-  if (x.matches) { // If media query matches
+  if (x.matches) {
+    // If media query matches
     xIcon.style.display = 'block';
     document.getElementById('window').style.display = 'block';
     xIcon.style.color = '#fff';
@@ -51,70 +52,76 @@ menuIcon.addEventListener('click', () => {
 
 const cardData = [
   {
+    title: 'Space Travelers Hub',
+    imag: 'spacehub.png',
+    role: 'Space',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A website for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.',
+    tags: ['html', 'css', 'javascript', 'react', 'redux', 'jest'],
+    seeLive: 'https://spacehubrocket.netlify.app/',
+    seeSource: 'https://github.com/fullstop125/space-hub',
+  },
+  {
+    title: 'Bookstore CMS',
+    imag: 'bookstore.png',
+    role: 'Bookstore',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A website that allows you to add and remove books from a list. All data is preserved thanks to the external Bookstore API service.',
+    tags: ['javascript', 'API', 'react', 'redux', 'jest', 'bootstrap'],
+    seeLive: 'https://bookstorecmsreact.netlify.app/',
+    seeSource: 'https://github.com/fullstop125/bookstore/',
+  },
+  {
+    title: 'Dynasty Entertainment',
+    imag: 'anime.png',
+    role: 'Entertainment',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A website that renders a collecion of animes. It also allows you to like and comment on the animes. Data is preserved thanks to the external Involvement API. Anime data is provided by Animedb API.',
+    tags: ['html', 'css', 'javascript', 'API', 'webpack', 'jest'],
+    seeLive: 'https://fullstop125.github.io/capstone-project-anime-db/',
+    seeSource: 'https://github.com/fullstop125/capstone-project-anime-db',
+  },
+  {
+    title: 'MATH MAGICIANS',
+    imag: 'react-app.png',
+    role: 'Mathematics',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.',
+    tags: ['JavaScript', 'react', 'redux', 'jest'],
+    seeLive: 'https://calculatorappjs.netlify.app/',
+    seeSource: 'https://github.com/fullstop125/math-magicians',
+  },
+  {
+    title: 'Leaderboard',
+    imag: 'leaderboard.png',
+    role: 'performance',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A website that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.',
+    tags: ['JavaScript', 'webpack', 'jest', 'API', 'bootstrap '],
+    seeLive: 'https://fullstop125.github.io/Leader-Board/',
+    seeSource: 'https://github.com/fullstop125/Leader-Board',
+  },
+  {
     title: 'To-Do-List App',
     imag: 'todo.png',
     role: 'Management',
     clientName: 'Back End Dev',
     clientYear: '2022',
-    projectDescription: 'A simple To Do list to track all activities that are completed and those that are yet to be completed.',
-    tags: ['html', 'css', 'Javascript'],
+    projectDescription:
+      'A simple To Do list to track all activities that are completed and those that are yet to be completed.',
+    tags: ['html', 'css', 'JavaScript'],
     seeLive: 'https://fullstop125.github.io/To-Do-List/',
     seeSource: 'https://github.com/fullstop125/To-Do-List',
-  },
-  {
-    title: 'Tonic2',
-    imag: 'Snapshoot_Portfolio.svg',
-    role: 'Canopy',
-    clientName: 'Back End Dev',
-    clientYear: '2015',
-    projectDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    tags: ['html', 'css', 'javascript'],
-    seeLive: 'https://fullstop125.github.io/My-Portfolio/',
-    seeSource: 'https://github.com/fullstop125/My-Portfolio/blob/master/README.md',
-  },
-  {
-    title: 'Tonic3',
-    imag: 'tonic-project-2.svg',
-    role: 'Canopy',
-    clientName: 'Back End Dev',
-    clientYear: '2015',
-    projectDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    tags: ['html', 'css', 'javascript'],
-    seeLive: 'https://fullstop125.github.io/My-Portfolio/',
-    seeSource: 'https://github.com/fullstop125/My-Portfolio/blob/master/README.md',
-  },
-  {
-    title: 'Tonic4',
-    imag: 'Snapshoot_Portfolio.svg',
-    role: 'Canopy',
-    clientName: 'Back End Dev',
-    clientYear: '2015',
-    projectDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    tags: ['html', 'css', 'javascript'],
-    seeLive: 'https://fullstop125.github.io/My-Portfolio/',
-    seeSource: 'https://github.com/fullstop125/My-Portfolio/blob/master/README.md',
-  },
-  {
-    title: 'Tonic5',
-    imag: 'tonic-project-2.svg',
-    role: 'Canopy',
-    clientName: 'Back End Dev',
-    clientYear: '2015',
-    projectDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    tags: ['html', 'css', 'javascript'],
-    seeLive: 'https://fullstop125.github.io/My-Portfolio/',
-    seeSource: 'https://github.com/fullstop125/My-Portfolio/blob/master/README.md',
-  },
-  {
-    title: 'Tonic6',
-    imag: 'Snapshoot_Portfolio.svg',
-    role: 'Canopy',
-    clientName: 'Back End Dev',
-    clientYear: '2015',
-    projectDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    tags: ['html', 'css', 'javascript'],
-    seeLive: 'https://fullstop125.github.io/My-Portfolio/',
-    seeSource: 'https://github.com/fullstop125/My-Portfolio/blob/master/README.md',
   },
 ];
 
@@ -131,11 +138,13 @@ cardData.forEach((dataItems, pos) => {
   content += '<ul>';
   content += `<li class="role">${dataItems.role}</li>`;
   content += '<li>';
-  content += '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+  content
+    += '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-name">${dataItems.clientName}</li>`;
   content += '<li>';
-  content += '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+  content
+    += '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-year">${dataItems.clientYear}</li>`;
   content += '</ul>';
@@ -170,7 +179,9 @@ function setData(data) {
   document.getElementById('role').innerText = data.role;
   document.getElementById('client-name').innerText = data.clientName;
   document.getElementById('client-year').innerText = data.clientYear;
-  document.getElementById('modal-image').setAttribute('src', './images/about-image/'.concat(data.imag));
+  document
+    .getElementById('modal-image')
+    .setAttribute('src', './images/about-image/'.concat(data.imag));
   document.getElementById('modal-desc').innerText = data.projectDescription;
   document.getElementById('ul').innerHTML = '';
   data.tags.forEach((tagItems) => {
@@ -182,11 +193,13 @@ function setData(data) {
 }
 
 cardData.forEach((items, i) => {
-  document.getElementById('see-project-'.concat(i)).addEventListener('click', () => {
-    document.getElementById('modal').classList.add('active');
-    document.getElementById('overlay').classList.add('active');
-    setData(items);
-  });
+  document
+    .getElementById('see-project-'.concat(i))
+    .addEventListener('click', () => {
+      document.getElementById('modal').classList.add('active');
+      document.getElementById('overlay').classList.add('active');
+      setData(items);
+    });
 });
 
 // form validation code
