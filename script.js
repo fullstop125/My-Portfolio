@@ -123,6 +123,19 @@ const cardData = [
     seeLive: 'https://fullstop125.github.io/To-Do-List/',
     seeSource: 'https://github.com/fullstop125/To-Do-List',
   },
+
+  {
+    title: 'Metrics Web App',
+    imag: 'metrics.png',
+    role: 'Metrics',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A website that displays a list of metrics (numeric values) that are submitted by different users. It also allows you to submit your data. All data is preserved thanks to the external Leaderboard API service.',
+    tags: ['html', 'css', 'React' 'API'],
+    seeLive: 'https://metrics-app.netlify.app/',
+    seeSource: 'https://github.com/fullstop125/metrics-webapp',
+  },
 ];
 
 const setCardData = document.getElementById('work-card');
