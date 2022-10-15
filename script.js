@@ -132,7 +132,7 @@ const cardData = [
     clientYear: '2022',
     projectDescription:
       'A website that displays a list of metrics (numeric values) that are submitted by different users. It also allows you to submit your data. All data is preserved thanks to the external Leaderboard API service.',
-    tags: ['html', 'css', 'React' 'API']
+    tags: ['html', 'css', 'React', 'API'],
     seeLive: 'https://metrics-app.netlify.app/',
     seeSource: 'https://github.com/fullstop125/metrics-webapp',
   },
@@ -151,13 +151,13 @@ cardData.forEach((dataItems, pos) => {
   content += '<ul>';
   content += `<li class="role">${dataItems.role}</li>`;
   content += '<li>';
-  content
-    += '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+  content +=
+    '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-name">${dataItems.clientName}</li>`;
   content += '<li>';
-  content
-    += '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+  content +=
+    '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-year">${dataItems.clientYear}</li>`;
   content += '</ul>';
