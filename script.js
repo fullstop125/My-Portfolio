@@ -132,7 +132,7 @@ const cardData = [
     clientYear: '2022',
     projectDescription:
       'A website that displays a list of metrics (numeric values) that are submitted by different users. It also allows you to submit your data. All data is preserved thanks to the external Leaderboard API service.',
-    tags: ['html', 'css', 'React' 'API'],
+    tags: ['html', 'css', 'React' 'API']
     seeLive: 'https://metrics-app.netlify.app/',
     seeSource: 'https://github.com/fullstop125/metrics-webapp',
   },
