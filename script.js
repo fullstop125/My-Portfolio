@@ -63,6 +63,7 @@ const cardData = [
     seeLive: 'https://spacehubrocket.netlify.app/',
     seeSource: 'https://github.com/fullstop125/space-hub',
   },
+
   {
     title: 'Bookstore CMS',
     imag: 'bookstore.png',
@@ -113,6 +114,18 @@ const cardData = [
     seeSource: 'https://github.com/fullstop125/math-magicians',
   },
   {
+    title: 'Micro-Finance Budget Mobile App',
+    imag: 'micro-finance.png',
+    role: 'Finance',
+    clientName: 'Back End Dev',
+    clientYear: '2022',
+    projectDescription:
+      'A mobile app that allows users to create an account, log in, and add budget to their favourite spending. The app is built using Ruby on Rails as the back end .',
+    tags: ['html', 'css', 'bootstrap', 'rails ', 'ruby', 'rspec'],
+    seeLive: 'https://micro-finance.herokuapp.com/',
+    seeSource: 'https://github.com/fullstop125/budget-app',
+  },
+  {
     title: 'Leaderboard',
     imag: 'leaderboard.png',
     role: 'performance',
@@ -136,6 +149,7 @@ const cardData = [
     seeLive: 'https://fullstop125.github.io/To-Do-List/',
     seeSource: 'https://github.com/fullstop125/To-Do-List',
   },
+
 ];
 
 const setCardData = document.getElementById('work-card');
