@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,800&display=swap');
 :root {
   --main-bg-color: #6070ff;
   --title-color: #172b4d;
@@ -24,6 +25,8 @@ body {
   margin: 0;
   font-family: var(--main-font-family);
 }
+
+
 
 /* Modal Section Start */
 .overlay {
@@ -81,7 +84,7 @@ body {
 }
 
 .modal-container .modal-title {
-  font-family: 'Poppins'sans-serif;
+  font-family: 'Poppins' sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -127,7 +130,7 @@ ul {
 .modal-desc {
   width: 100%;
   height: auto;
-  font-family: 'Poppins'sans-serif;
+  font-family: 'Poppins' sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -197,7 +200,7 @@ button {
 .modal-buttons button {
   height: 100%;
   text-align: center;
-  font-family: 'Poppins'sans-serif;
+  font-family: 'Poppins' sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -208,7 +211,7 @@ button {
   border: 1px solid #6070ff;
   padding: 10px;
   border-radius: 8px;
-  font-family: 'Poppins'sans-serif;
+  font-family: 'Poppins' sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -274,16 +277,15 @@ a {
 /* popup window End */
 
 .logo {
-  display: block;
+  display: none;
   padding: 10px 12px;
   margin: 0 12px;
 }
 
 .logo-text {
-  color: var(--main-bg-color);
-  font-size: 1.125rem;
+  font-size: 20px;
   font-weight: 700;
-  text-decoration: none;
+  color: #344563;
 }
 
 .logo-text:hover {
@@ -291,7 +293,7 @@ a {
 }
 
 .first-section {
-  background-image: url("./images/about-image/bg_Header-Mobile.png");
+  background:url("./images/bg_Header-Mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -346,10 +348,12 @@ nav {
 
 .intro {
   color: var(--title-color);
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 500;
   line-height: 52px;
   margin-left: 20px;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: 'Alegreya', serif;
 }
 
 .menu-icon {
@@ -585,11 +589,9 @@ nav {
 .reach-out {
   align-items: center;
   margin-top: 50px;
-  width: 100%;
   background-color: #6070ff;
   background-position: right;
   border-radius: 80px 0 0 0;
-  padding-bottom: 50px;
 }
 
 .contact-me {
@@ -763,7 +765,7 @@ form div {
     border: 1px solid #6070ff;
     padding: 10px;
     border-radius: 8px;
-    font-family: 'Poppins'sans-serif;
+    font-family: 'Poppins' sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -794,7 +796,9 @@ form div {
 
   /* Modal Section End */
   .first-section {
-    background-image: url("./images/about-image/bg_Header.png");
+    background: url("./images/bg_Header.png"),linear-gradient(to right,
+    #fdbb2d,
+    #22c1c3);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px;
@@ -854,7 +858,7 @@ form div {
   .img {
     height: 448px;
     width: 544px;
-    background-image: url("./images/about-image/big1.png");
+    background-image: url("./images/big1.png");
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -1078,15 +1082,17 @@ form div {
   }
 
   .form-style {
-    background-image: url("/images/about-image/contact-form-background-shapes.png");
+    background: url("./images/contact-form-background-shapes.png"),linear-gradient(to right,
+    #fdbb2d,
+    #22c1c3);
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 80%;
+    border-radius: 80px 0 0 0;
+    background-position: 0 0;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-inline: auto;
-    background-position: 1rem 2rem;
   }
 
   small {
@@ -1104,5 +1110,57 @@ form div {
     display: flex;
     flex-direction: row;
     gap: 10px;
+  }
+
+  .logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  span {
+    line-height: .7;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .45);
+    animation: span 3s ease-in infinite alternate;
+  }
+
+  .letter {
+    display: inline-flex;
+    height: 11px;
+    width: 10px;
+    border: 2.5px solid #FF1EAD;
+    border-radius: 14px;
+    box-shadow:
+      0 0 2px rgba(0, 0, 0, .75),
+      inset 0 0 2px rgba(0, 0, 0, .45);
+
+    animation: letter 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes span {
+
+    0%,
+    30% {
+      margin: 0 15px;
+    }
+
+    70%,
+    100% {
+      margin: 0 5px;
+    }
+  }
+
+  @keyframes letter {
+
+    0%,
+    30% {
+      width: 27px;
+    }
+
+    70%,
+    100% {
+      width: 30vw;
+    }
   }
 }

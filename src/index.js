@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+import './style.css';
 const menuIcon = document.getElementById('menu-icon');
 const xIcon = document.getElementById('close-button');
 const listItems1 = document.getElementById('list-items-1');
@@ -156,7 +158,7 @@ const setCardData = document.getElementById('work-card');
 
 cardData.forEach((dataItems, pos) => {
   let content = '<div class="project-container">';
-  content += `<div style="background-image:url(./images/about-image/${dataItems.imag});" class="project-img img"></div>`;
+  content += `<div style="background-image:url(./src/images/about-image/${dataItems.imag});" class="project-img img"></div>`;
   content += '<div class="about-project">';
   content += '<div class="project-title">';
   content += `<h4>${dataItems.title}</h4>`;
@@ -266,3 +268,4 @@ if (!localStorage.getItem('userInput')) {
 userName.onchange = populateStorage;
 userEmail.onchange = populateStorage;
 userMessage.onchange = populateStorage;
+
