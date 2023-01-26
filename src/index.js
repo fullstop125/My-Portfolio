@@ -1,5 +1,4 @@
-import * as THREE from 'three';
-import './style.css';
+
 const menuIcon = document.getElementById('menu-icon');
 const xIcon = document.getElementById('close-button');
 const listItems1 = document.getElementById('list-items-1');
@@ -53,6 +52,18 @@ menuIcon.addEventListener('click', () => {
 });
 
 const cardData = [
+  {
+    title: 'Eventify',
+    imag: 'eventify.png',
+    role: 'Events',
+    clientName: 'Back End Dev',
+    clientYear: '2023',
+    projectDescription:
+      'Eventify is web application that allows users to  create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.',
+    tags: ['html', 'Tailwind', 'Ruby ', 'react', 'redux', 'jest'],
+    seeLive: 'https://spacehubrocket.netlify.app/',
+    seeSource: 'https://github.com/fullstop125/space-hub',
+  },
   {
     title: 'Space Travelers Hub',
     imag: 'spacehub.png',
@@ -158,7 +169,7 @@ const setCardData = document.getElementById('work-card');
 
 cardData.forEach((dataItems, pos) => {
   let content = '<div class="project-container">';
-  content += `<div style="background-image:url(./src/images/about-image/${dataItems.imag});" class="project-img img"></div>`;
+  content += `<div style="background-image:url(../images/about-image/${dataItems.imag});" class="project-img img"></div>`;
   content += '<div class="about-project">';
   content += '<div class="project-title">';
   content += `<h4>${dataItems.title}</h4>`;
@@ -168,12 +179,12 @@ cardData.forEach((dataItems, pos) => {
   content += `<li class="role">${dataItems.role}</li>`;
   content += '<li>';
   content +=
-    '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+    '<img src="../images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-name">${dataItems.clientName}</li>`;
   content += '<li>';
   content +=
-    '<img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+    '<img src="../images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-year">${dataItems.clientYear}</li>`;
   content += '</ul>';
@@ -210,7 +221,7 @@ function setData(data) {
   document.getElementById('client-year').innerText = data.clientYear;
   document
     .getElementById('modal-image')
-    .setAttribute('src', './images/about-image/'.concat(data.imag));
+    .setAttribute('src', '../images/about-image/'.concat(data.imag));
   document.getElementById('modal-desc').innerText = data.projectDescription;
   document.getElementById('ul').innerHTML = '';
   data.tags.forEach((tagItems) => {
@@ -265,7 +276,7 @@ if (!localStorage.getItem('userInput')) {
 } else {
   setForm();
 }
-userName.onchange = populateStorage;
-userEmail.onchange = populateStorage;
-userMessage.onchange = populateStorage;
+userName.onChange = populateStorage;
+userEmail.onChange = populateStorage;
+userMessage.onChange = populateStorage;
 
