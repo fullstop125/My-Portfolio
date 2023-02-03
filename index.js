@@ -15,34 +15,49 @@ function myFunction(x) {
     document.getElementById('window').style.display = 'block';
     xIcon.style.color = '#fff';
 
-    xIcon.addEventListener('click', () => {
-      document.getElementById('window').style.display = 'none';
-    });
+    // xIcon.addEventListener('click', () => {
+    //   document.getElementById('window').style.display = 'none';
+    // });
 
-    document.getElementById('closer1').addEventListener('click', () => {
-      document.getElementById('window').style.display = 'none';
-    });
-    document.getElementById('closer2').addEventListener('click', () => {
-      document.getElementById('window').style.display = 'none';
-    });
-    document.getElementById('closer3').addEventListener('click', () => {
-      document.getElementById('window').style.display = 'none';
-    });
+    // document.getElementById('closer1').addEventListener('click', () => {
+    //   document.getElementById('window').style.display = 'none';
+    // });
+    // document.getElementById('closer2').addEventListener('click', () => {
+    //   document.getElementById('window').style.display = 'none';
+    // });
+    // document.getElementById('closer3').addEventListener('click', () => {
+    //   document.getElementById('window').style.display = 'none';
+    // });
+    const closeWindow = () => { document.getElementById('window').style.display = 'none' };
+
+    xIcon.addEventListener('click', closeWindow);
+    document.getElementById('closer1').addEventListener('click', closeWindow);
+    document.getElementById('closer2').addEventListener('click', closeWindow);
+    document.getElementById('closer3').addEventListener('click', closeWindow);
   } else {
-    listItems1.addEventListener('click', () => {
-      listItems1.style.textDecoration = 'underline';
-      listItems2.style.textDecoration = 'none';
-      listItems3.style.textDecoration = 'none';
-    });
-    listItems2.addEventListener('click', () => {
-      listItems1.style.textDecoration = 'none';
-      listItems2.style.textDecoration = 'underline';
-      listItems3.style.textDecoration = 'none';
-    });
-    listItems3.addEventListener('click', () => {
-      listItems1.style.textDecoration = 'none';
-      listItems2.style.textDecoration = 'none';
-      listItems3.style.textDecoration = 'underline';
+    // listItems1.addEventListener('click', () => {
+    //   listItems1.style.textDecoration = 'underline';
+    //   listItems2.style.textDecoration = 'none';
+    //   listItems3.style.textDecoration = 'none';
+    // });
+    // listItems2.addEventListener('click', () => {
+    //   listItems1.style.textDecoration = 'none';
+    //   listItems2.style.textDecoration = 'underline';
+    //   listItems3.style.textDecoration = 'none';
+    // });
+    // listItems3.addEventListener('click', () => {
+    //   listItems1.style.textDecoration = 'none';
+    //   listItems2.style.textDecoration = 'none';
+    //   listItems3.style.textDecoration = 'underline';
+    // });
+    const listItems = [listItems1, listItems2, listItems3];
+    listItems.forEach(item => {
+      item.addEventListener('click', () => {
+        listItems.forEach(listItem => {
+          listItem.style.textDecoration = 'none';
+        });
+        item.style.textDecoration = 'underline';
+      });
     });
   }
 }
@@ -243,9 +258,17 @@ cardData.forEach((items, i) => {
 });
 
 // form validation code
+// form.addEventListener('submit', (e) => {
+//   const emailValue = email.value;
+//   if (emailValue !== emailValue.toLowerCase()) {
+//     e.preventDefault();
+//     errorMsg.classList.add('display-content');
+//   }
+// });
+
 form.addEventListener('submit', (e) => {
   const emailValue = email.value;
-  if (emailValue !== emailValue.toLowerCase()) {
+  if (!emailValue.toLowerCase().includes(emailValue)) {
     e.preventDefault();
     errorMsg.classList.add('display-content');
   }

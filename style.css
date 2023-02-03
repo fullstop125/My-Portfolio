@@ -683,7 +683,6 @@ form div {
 svg {
   display: block;
   font: 3.5em 'Montserrat';
-  width: 960px;
   
 }
 
@@ -691,7 +690,11 @@ svg {
   .header {
     
     background: linear-gradient(to right, rgb(177, 225, 255), rgb(34, 193, 195), rgb(253, 187, 45));
-    height: 56px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
   }
 
   .header-info {
@@ -758,9 +761,10 @@ svg {
     gap: 12px;
     position: absolute;
     width: 762px;
-    height: 593px;
-    left: calc(32% - 343px / 2);
-    top: 4px;
+    left : calc(50% - 762px / 2); 
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
+    top: calc(40% - 500px / 2);
     background: linear-gradient(to right, #f3e7e9, #e3eeff);
     border: 1px solid #dfe1e6;
     border-radius: 16px;
@@ -1058,8 +1062,13 @@ svg {
 
   .cont-input {
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    color: var(--sub-title-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 50px 0;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .first-part {
@@ -1227,6 +1236,14 @@ svg {
   margin-right: 20px;
 }
 
+.contact-me {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-left: 20px;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: 'Alegreya', serif;
+
 }
 
 .container {
@@ -1274,6 +1291,8 @@ svg {
 
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
+}
+
 }
 
 /* https://cdn.dribbble.com/users/1192437/screenshots/5039546/media/e31a26852f18b3ec8e4fba56ce343feb.gif */
