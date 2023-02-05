@@ -1,4 +1,3 @@
-
 const menuIcon = document.getElementById('menu-icon');
 const xIcon = document.getElementById('close-button');
 const listItems1 = document.getElementById('list-items-1');
@@ -14,7 +13,7 @@ function myFunction(x) {
     xIcon.style.display = 'block';
     document.getElementById('window').style.display = 'block';
     xIcon.style.color = '#fff';
-    const closeWindow = () => { document.getElementById('window').style.display = 'none' };
+    const closeWindow = () => { document.getElementById('window').style.display = 'none'; };
 
     xIcon.addEventListener('click', closeWindow);
     document.getElementById('closer1').addEventListener('click', closeWindow);
@@ -22,9 +21,9 @@ function myFunction(x) {
     document.getElementById('closer3').addEventListener('click', closeWindow);
   } else {
     const listItems = [listItems1, listItems2, listItems3];
-    listItems.forEach(item => {
+    listItems.forEach((item) => {
       item.addEventListener('click', () => {
-        listItems.forEach(listItem => {
+        listItems.forEach((listItem) => {
           listItem.style.textDecoration = 'none';
         });
         item.style.textDecoration = 'underline';
@@ -164,13 +163,13 @@ cardData.forEach((dataItems, pos) => {
   content += '<ul>';
   content += `<li class="role">${dataItems.role}</li>`;
   content += '<li>';
-  content +=
-    '<img src="../images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+  content
+    += '<img src="../images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-name">${dataItems.clientName}</li>`;
   content += '<li>';
-  content +=
-    '<img src="../images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
+  content
+    += '<img src="../images/about-image/Counter.png" class="small-dot" alt="counter.png" />';
   content += '</li>';
   content += `<li class="client-year">${dataItems.clientYear}</li>`;
   content += '</ul>';
@@ -264,4 +263,3 @@ if (!localStorage.getItem('userInput')) {
 userName.onChange = populateStorage;
 userEmail.onChange = populateStorage;
 userMessage.onChange = populateStorage;
-

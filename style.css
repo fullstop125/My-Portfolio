@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,800&display=swap');
+
 :root {
   --main-bg-color: #6070ff;
   --title-color: #172b4d;
@@ -22,7 +23,6 @@
 }
 
 body {
-  
   font-family: var(--main-font-family);
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .modal-container .modal-title {
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -130,7 +130,7 @@ ul {
 .modal-desc {
   width: 100%;
   height: auto;
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -202,7 +202,7 @@ button {
 .modal-buttons button {
   height: 100%;
   text-align: center;
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -213,7 +213,7 @@ button {
   border: 1px solid #6070ff;
   padding: 10px;
   border-radius: 8px;
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -279,10 +279,10 @@ a {
 /* popup window End */
 
 .logo {
-    display: grid;
-    grid-template-columns: repeat(3,111px);
-    padding: 0 9px;
-    font-size: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 111px);
+  padding: 0 9px;
+  font-size: 10px;
 }
 
 .logo-text {
@@ -297,7 +297,7 @@ a {
 }
 
 .first-section {
-  background:url("../images/bg_Header-Mobile.png");
+  background: url("../images/bg_Header-Mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #b1e1ff;
@@ -311,11 +311,11 @@ a {
 }
 
 .img {
-      height: 267px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: -2%;
-    border-radius: 10px;
+  height: 267px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -2%;
+  border-radius: 10px;
 }
 
 nav {
@@ -352,17 +352,17 @@ nav {
 
 .intro {
   color: var(--title-color);
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-left: 20px;
-    text-shadow: 1px 1px 1px #000000;
-    font-family: 'Alegreya', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-left: 20px;
+  text-shadow: 1px 1px 1px #000;
+  font-family: 'Alegreya', serif;
 }
 
 .menu-icon {
-    padding: 8px;
-    display: flex;
-    margin-left: -38px;
+  padding: 8px;
+  display: flex;
+  margin-left: -38px;
 }
 
 .about {
@@ -411,7 +411,7 @@ nav {
   border-radius: 16px;
   padding: 16px;
   margin: 20px auto 20px auto;
-  background:linear-gradient(to right, rgb(201, 230, 209), rgb(217, 209, 230));
+  background: linear-gradient(to right, rgb(201, 230, 209), rgb(217, 209, 230));
 }
 
 .about-project {
@@ -486,11 +486,11 @@ nav {
 
 .tags ul {
   display: grid;
-    grid-template-columns: repeat(3, 111px);
-    gap: 10px;
-    align-items: flex-start;
-    padding: 0;
-    margin-bottom: 1.5rem;
+  grid-template-columns: repeat(3, 111px);
+  gap: 10px;
+  align-items: flex-start;
+  padding: 0;
+  margin-bottom: 1.5rem;
 }
 
 .tags ul li {
@@ -520,10 +520,7 @@ nav {
   transition: color 0.1s, background-color 0.1s;
   margin-left: 20px;
   transform: scale(1);
-  transition: transform .2s; 
-  box-shadow: 0px 0px 0px #000;
-  transition: box-shadow .2s;
-
+  box-shadow: 0 0 0 #000;
 }
 
 .view-btn:hover {
@@ -532,8 +529,6 @@ nav {
   border-color: #4053fc;
   transform: scale(1.1);
   box-shadow: 2px 2px 2px #000;
-
-
 }
 
 .submit {
@@ -682,19 +677,16 @@ form div {
 
 svg {
   display: block;
-  font: 3.5em 'Montserrat';
-  
+  font: 3.5em 'Montserrat', sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
   .header {
-    
     background: linear-gradient(to right, rgb(177, 225, 255), rgb(34, 193, 195), rgb(253, 187, 45));
     height: 60px;
     position: sticky;
     top: 0;
     z-index: 100;
-
   }
 
   .header-info {
@@ -761,13 +753,12 @@ svg {
     gap: 12px;
     position: absolute;
     width: 762px;
-    left : calc(50% - 762px / 2); 
+    left: calc(50% - 762px / 2);
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
     top: calc(40% - 500px / 2);
     background: linear-gradient(to right, #f3e7e9, #e3eeff);
     border: 1px solid #dfe1e6;
-    border-radius: 16px;
   }
 
   .modal-img {
@@ -791,7 +782,7 @@ svg {
     border: 1px solid #6070ff;
     padding: 10px;
     border-radius: 8px;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -800,11 +791,11 @@ svg {
   }
 
   .see-live:hover {
-  background-color: #4053fc;
-  color: #fff;
-  border-color: #4053fc;
-  transform: scale(1.1);
-  box-shadow: 2px 2px 2px #000;
+    background-color: #4053fc;
+    color: #fff;
+    border-color: #4053fc;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px #000;
   }
 
   .footer-list hr {
@@ -830,9 +821,13 @@ svg {
 
   /* Modal Section End */
   .first-section {
-    background: url("../images/bg_Header.png"),linear-gradient(to right,
-    #fdbb2d,
-    #22c1c3);
+    background:
+      url("../images/bg_Header.png"),
+      linear-gradient(
+        to right,
+        #fdbb2d,
+        #22c1c3
+      );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -892,7 +887,6 @@ svg {
   }
 
   .img {
-    
     background-image: url("../images/big1.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -907,7 +901,6 @@ svg {
   }
 
   .img:hover {
-
     width: auto;
     height: 100%;
     transform: scale(1.1);
@@ -925,7 +918,6 @@ svg {
     line-height: 20px;
     border: none;
     transition: all 0.5s ease-in-out;
-
   }
 
   .view-btn:hover {
@@ -933,8 +925,6 @@ svg {
     transform: scale(1.1);
     box-shadow: 2px 2px 2px #000;
   }
-
-  
 
   @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
 
@@ -1135,6 +1125,12 @@ svg {
     padding-right: 5px;
   }
 
+  span {
+    line-height: 0.7;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+    animation: span 3s ease-in infinite alternate;
+  }
+
   .skill-list li span {
     font-weight: 500;
     font-size: 0.9375rem;
@@ -1158,9 +1154,13 @@ svg {
   }
 
   .form-style {
-    background: url("../images/contact-form-background-shapes.png"),linear-gradient(to right,
-    #fdbb2d,
-    #22c1c3);
+    background:
+      url("../images/contact-form-background-shapes.png"),
+      linear-gradient(
+        to right,
+        #fdbb2d,
+        #22c1c3
+      );
     background-repeat: no-repeat;
     border-radius: 80px 0 0 0;
     background-position: 0 0;
@@ -1196,27 +1196,19 @@ svg {
     margin-top: 10px;
   }
 
-  span {
-    line-height: .7;
-    text-shadow: 0 0 2px rgba(0, 0, 0, .45);
-    animation: span 3s ease-in infinite alternate;
-  }
-
   .letter {
     display: inline-flex;
     height: 11px;
     width: 10px;
-    border: 2.5px solid #FF1EAD;
+    border: 2.5px solid #ff1ead;
     border-radius: 14px;
     box-shadow:
-      0 0 2px rgba(0, 0, 0, .75),
-      inset 0 0 2px rgba(0, 0, 0, .45);
-
+      0 0 2px rgba(0, 0, 0, 0.75),
+      inset 0 0 2px rgba(0, 0, 0, 0.45);
     animation: letter 3s ease-in-out infinite alternate;
   }
 
   @keyframes span {
-
     0%,
     30% {
       margin: 0 15px;
@@ -1229,7 +1221,6 @@ svg {
   }
 
   @keyframes letter {
-
     0%,
     30% {
       width: 27px;
@@ -1240,82 +1231,80 @@ svg {
       width: 30vw;
     }
   }
+
   svg {
     display: block;
-    font: 3.5em 'Montserrat';
+    font: 3.5em 'Montserrat', sans-serif;
     width: 960px;
     height: 160px;
     margin-left: -15%;
     margin-top: -3%;
-    
-}
-.about {
-  color: var(--sub-title-color);
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 30px;
-  padding: 50px 0;
-  margin-left: 20px;
-  margin-right: 20px;
-}
+  }
 
-.contact-me {
-  color: var(--title-color);
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-left: 20px;
-  text-shadow: 1px 1px 1px #000000;
-  font-family: 'Alegreya', serif;
+  .about {
+    color: var(--sub-title-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 50px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-}
+  .contact-me {
+    color: var(--title-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 20px;
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'Alegreya', serif;
+  }
 
-.container {
-  display: flex;
-/*   border:1px solid red; */
-  height: 100%;
-  align-items: center;
-}
+  .container {
+    display: flex;
 
+    /*   border:1px solid red; */
+    height: 100%;
+    align-items: center;
+  }
 
-
-.text-copy {
+  .text-copy {
     fill: none;
     stroke: white;
     stroke-dasharray: 6% 29%;
     stroke-width: 5px;
     stroke-dashoffset: 0%;
     animation: stroke-offset 5.5s infinite linear;
-}
+  }
 
-.text-copy:nth-child(1){
-	stroke: #4D163D;
-	animation-delay: -1;
-}
+  .text-copy:nth-child(1) {
+    stroke: #4d163d;
+    animation-delay: -1;
+  }
 
-.text-copy:nth-child(2){
-	stroke: #840037;
-	animation-delay: -2s;
-}
+  .text-copy:nth-child(2) {
+    stroke: #840037;
+    animation-delay: -2s;
+  }
 
-.text-copy:nth-child(3){
-	stroke: #BD0034;
-	animation-delay: -3s;
-}
+  .text-copy:nth-child(3) {
+    stroke: #bd0034;
+    animation-delay: -3s;
+  }
 
-.text-copy:nth-child(4){
-	stroke: #BD0034;
-	animation-delay: -4s;
-}
+  .text-copy:nth-child(4) {
+    stroke: #bd0034;
+    animation-delay: -4s;
+  }
 
-.text-copy:nth-child(5){
-	stroke: #FDB731;
-	animation-delay: -5s;
-}
+  .text-copy:nth-child(5) {
+    stroke: #fdb731;
+    animation-delay: -5s;
+  }
 
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
-}
-
+  @keyframes stroke-offset {
+    100% { stroke-dashoffset: -35%; }
+  }
 }
 
 /* https://cdn.dribbble.com/users/1192437/screenshots/5039546/media/e31a26852f18b3ec8e4fba56ce343feb.gif */
