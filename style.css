@@ -913,6 +913,29 @@ svg {
     transform: scale(1.1);
   }
 
+  .view-btn {
+    background: #6070ff;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+
+  }
+
+  .view-btn:hover {
+    background: #4053fc;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px #000;
+  }
+
+  
+
   @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
 
   .bird {
