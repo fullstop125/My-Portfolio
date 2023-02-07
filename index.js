@@ -3,7 +3,7 @@ const xIcon = document.getElementById('close-button');
 const listItems1 = document.getElementById('list-items-1');
 const listItems2 = document.getElementById('list-items-2');
 const listItems3 = document.getElementById('list-items-3');
-const form = document.getElementById('form');
+const form = document.querySelector('form');
 const errorMsg = document.querySelector('small');
 const email = document.getElementById('email');
 
@@ -227,14 +227,17 @@ cardData.forEach((items, i) => {
     });
 });
 
+// form validation start
+
 form.addEventListener('submit', (e) => {
   const emailValue = email.value;
-  if (!emailValue.toLowerCase().includes(emailValue)) {
+  if (emailValue !== emailValue.toLowerCase()) {
     e.preventDefault();
     errorMsg.classList.add('display-content');
   }
 });
 
+// form localStorage Setting
 const userName = form.elements.name;
 const userEmail = form.elements.email;
 const userMessage = form.elements.comment;
@@ -250,7 +253,7 @@ function setForm() {
   const storedInput = JSON.parse(localStorage.getItem('userInput'));
   const currentUserName = storedInput.name;
   const currentUserEmail = storedInput.email;
-  const currentMessage = storedInput.comment;
+  const currentMessage = storedInput.message;
   form.elements.name.value = currentUserName;
   form.elements.email.value = currentUserEmail;
   form.elements.comment.value = currentMessage;
@@ -260,6 +263,7 @@ if (!localStorage.getItem('userInput')) {
 } else {
   setForm();
 }
-userName.onChange = populateStorage;
-userEmail.onChange = populateStorage;
-userMessage.onChange = populateStorage;
+userName.onkeypress = populateStorage;
+userEmail.onkeypress = populateStorage;
+userMessage.onkeypress = populateStorage;
+
