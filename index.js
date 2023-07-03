@@ -46,8 +46,8 @@ const cardData = [
     projectDescription:
       'Eventify is web application that allows users to  create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.',
     tags: ['html', 'Tailwind', 'Ruby ', 'react', 'redux', 'jest'],
-    seeLive: 'https://spacehubrocket.netlify.app/',
-    seeSource: 'https://github.com/fullstop125/space-hub',
+    seeLive: 'https://eventify-cap.netlify.app//',
+    seeSource: 'https://github.com/fullstop125/Final-capstone--frontend',
   },
   {
     title: 'Space Travelers Hub',
