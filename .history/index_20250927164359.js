@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     try {
       const response = await fetch('./projects.json');
-      if (!response.ok) throw new Error('Failed to fetch projects.json. Make sure it is in the same folder as your HTML file.');
+      if (!response.ok) throw new Error('Failed to fetch projects.');
       const projects = await response.json();
       
       workCardContainer.innerHTML = projects.map(createWorkCard).join('');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } catch (error) {
       console.error('Error loading projects:', error);
-      workCardContainer.innerHTML = `<p style="color: red; text-align: center;">${error.message}</p>`;
+      workCardContainer.innerHTML = '<p style="color: red; text-align: center;">Failed to load projects.</p>';
     }
   };
 

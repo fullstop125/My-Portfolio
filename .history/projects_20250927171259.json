@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Eventify",
+    "imag": "eventify.png",
+    "role": "Events",
+    "clientName": "Back End Dev",
+    "clientYear": "2023",
+    "projectDescription": "Eventify is web application that allows users to  create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.",
+    "tags": ["html", "Tailwind", "Ruby ", "react", "redux", "jest"],
+    "seeLive": "https://eventify-cap.netlify.app//",
+    "seeSource": "https://github.com/fullstop125/Final-capstone--frontend"
+  },
+  {
+    "title": "Space Travelers Hub",
+    "imag": "spacehub.png",
+    "role": "Space",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.",
+    "tags": ["html", "css", "javascript", "react", "redux", "jest"],
+    "seeLive": "https://spacehubrocket.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/space-hub"
+  },
+  {
+    "title": "Bookstore CMS",
+    "imag": "bookstore.png",
+    "role": "Bookstore",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website that allows you to add and remove books from a list. All data is preserved thanks to the external Bookstore API service.",
+    "tags": ["javascript", "API", "react", "redux", "jest", "bootstrap"],
+    "seeLive": "https://bookstorecmsreact.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/bookstore/"
+  },
+  {
+    "title": "Dynasty Entertainment",
+    "imag": "anime.png",
+    "role": "Entertainment",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website that renders a collecion of animes. It also allows you to like and comment on the animes. Data is preserved thanks to the external Involvement API. Anime data is provided by Animedb API.",
+    "tags": ["html", "css", "javascript", "API", "webpack", "jest"],
+    "seeLive": "https://fullstop125.github.io/capstone-project-anime-db/",
+    "seeSource": "https://github.com/fullstop125/capstone-project-anime-db"
+  },
+  {
+    "title": "Metrics Web App",
+    "imag": "metrics.png",
+    "role": "Metrics",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "This project is a web app that allows users to view and compare metrics for different companies. The app is built using React and Redux.",
+    "tags": ["html", "css", "React", "API"],
+    "seeLive": "https://metrics-app.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/metrics-webapp"
+  },
+  {
+    "title": "MATH MAGICIANS",
+    "imag": "react-app.png",
+    "role": "Mathematics",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.",
+    "tags": ["JavaScript", "react", "redux", "jest"],
+    "seeLive": "https://calculatorappjs.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/math-magicians"
+  },
+  {
+    "title": "Micro-Finance Budget Mobile App",
+    "imag": "micro-finance.png",
+    "role": "Finance",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A mobile app that allows users to create an account, log in, and add budget to their favourite spending. The app is built using Ruby on Rails as the back end .",
+    "tags": ["html", "css", "bootstrap", "rails ", "ruby", "rspec"],
+    "seeLive": "https://micro-finance.herokuapp.com/",
+    "seeSource": "https://github.com/fullstop125/budget-app"
+  },
+  {
+    "title": "Leaderboard",
+    "imag": "leaderboard.png",
+    "role": "performance",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
+    "tags": ["JavaScript", "webpack", "jest", "API", "bootstrap "],
+    "seeLive": "https://fullstop125.github.io/Leader-Board/",
+    "seeSource": "https://github.com/fullstop125/Leader-Board"
+  },
+  {
+    "title": "To-Do-List App",
+    "imag": "todo.png",
+    "role": "Management",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A simple To Do list to track all activities that are completed and those that are yet to be completed.",
+    "tags": ["html", "css", "JavaScript"],
+    "seeLive": "https://fullstop125.github.io/To-Do-List/",
+    "seeSource": "https://github.com/fullstop125/To-Do-List"
+  }
+]
+

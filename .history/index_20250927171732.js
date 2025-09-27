@@ -29,77 +29,75 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeProjectModal = () => {
     if (modal) modal.classList.remove('active');
     if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
   };
 
   const modalCloseBtn = document.getElementById('btn-close');
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeProjectModal);
   if (overlay) overlay.addEventListener('click', closeProjectModal);
 
+  // --- NEW: Creative Modal Population ---
   const populateModal = (data) => {
     if (!modal) return;
+
+    // The modal now has a more creative, two-column layout
+    const modalContent = `
+      <div class="modal-container-new">
+        <button class="btn-close-new" id="btn-close-new">&times;</button>
+        <div class="modal-image-column" style="background-image: url('./images/about-image/${data.imag}')"></div>
+        <div class="modal-details-column">
+          <h2 class="modal-title-new">${data.title}</h2>
+          <div class="modal-info-new">
+            <span>${data.clientName}</span> &bull; <span>${data.role}</span> &bull; <span>${data.clientYear}</span>
+          </div>
+          <p class="modal-desc-new">${data.projectDescription}</p>
+          <ul class="modal-tags-new">
+            ${data.tags.map(tag => `<li>${tag}</li>`).join('')}
+          </ul>
+          <div class="modal-buttons-new">
+            <a href="${data.seeLive}" target="_blank">
+              <span>See Live</span>
+              <img src="./images/live-icon.svg" alt="Live Icon"/>
+            </a>
+            <a href="${data.seeSource}" target="_blank">
+              <span>See Source</span>
+              <img src="./images/git-icon.svg" alt="Source Icon"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
     
-    // Select elements inside the modal
-    const modalTitle = modal.querySelector('#modal-title');
-    const role = modal.querySelector('#role');
-    const clientName = modal.querySelector('#client-name');
-    const clientYear = modal.querySelector('#client-year');
-    const modalImage = modal.querySelector('#modal-image');
-    const modalDesc = modal.querySelector('#modal-desc');
-    const techList = modal.querySelector('#ul');
-    const seeLiveLink = modal.querySelector('#see-live');
-    const seeSourceLink = modal.querySelector('#see-source');
-
-    if (modalTitle) modalTitle.innerText = data.title;
-    if (role) role.innerText = data.role;
-    if (clientName) clientName.innerText = data.clientName;
-    if (clientYear) clientYear.innerText = data.clientYear;
-    if (modalImage) modalImage.src = `./images/about-image/${data.imag}`;
-    if (modalDesc) modalDesc.innerText = data.projectDescription;
-    if (seeLiveLink) seeLiveLink.href = data.seeLive;
-    if (seeSourceLink) seeSourceLink.href = data.seeSource;
-
-    // Populate technologies
-    if (techList) {
-      techList.innerHTML = ''; // Clear previous tags
-      data.tags.forEach(tag => {
-        techList.innerHTML += `<li>${tag}</li>`;
-      });
-    }
+    modal.innerHTML = modalContent;
+    
+    // Add event listener to the new close button
+    const newCloseBtn = document.getElementById('btn-close-new');
+    if(newCloseBtn) newCloseBtn.addEventListener('click', closeProjectModal);
 
     modal.classList.add('active');
     overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Disable scrolling when modal is open
   };
-
+  
+  // --- NEW: Elegant Project Card Creation ---
   const createWorkCard = (project, index) => {
-    // This HTML structure is taken directly from your original JS file
-    // to ensure it matches your style.css perfectly.
+    const isReversed = index % 2 !== 0; // Alternate layout
     return `
-    <div class="project-container">
-      <div style="background-image:url(./images/about-image/${project.imag});" class="project-img img"></div>
-      <div class="about-project">
-        <div class="project-title">
-          <h4>${project.title}</h4>
+    <div class="project-card-new ${isReversed ? 'reversed' : ''}" data-id="${index}">
+      <div class="project-image-wrapper">
+        <img src="./images/about-image/${project.imag}" alt="${project.title}" class="project-image" />
+        <div class="project-image-overlay"></div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title-new">${project.title}</h3>
+        <div class="project-info-new">
+          <span>${project.clientName}</span> &bull; <span>${project.role}</span> &bull; <span>${project.clientYear}</span>
         </div>
-        <div class="project-info">
-          <ul>
-            <li class="role">${project.role}</li>
-            <li><img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" /></li>
-            <li class="client-name">${project.clientName}</li>
-            <li><img src="./images/about-image/Counter.png" class="small-dot" alt="counter.png" /></li>
-            <li class="client-year">${project.clientYear}</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>${project.projectDescription}</p>
-        </div>
-        <div class="tags">
-          <ul>
-            ${project.tags.map(tag => `<li>${tag}</li>`).join('')}
-          </ul>
-        </div>
-        <div class="btn-container">
-          <button type="button" class="view-btn" data-id="${index}">See Project</button>
-        </div>
+        <p class="project-description-new">${project.projectDescription}</p>
+        <ul class="project-tags-new">
+          ${project.tags.map(tag => `<li>${tag}</li>`).join('')}
+        </ul>
+        <button type="button" class="view-btn-new" data-id="${index}">View Project Details</button>
       </div>
     </div>
     `;
@@ -112,15 +110,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     try {
       const response = await fetch('./projects.json');
-      if (!response.ok) throw new Error('Failed to fetch projects.json. Make sure it is in the same folder as your HTML file.');
+      if (!response.ok) throw new Error('Failed to fetch projects.json.');
       const projects = await response.json();
       
       workCardContainer.innerHTML = projects.map(createWorkCard).join('');
 
-      // Add event listeners after cards are created
+      // Use event delegation for project clicks
       workCardContainer.addEventListener('click', (e) => {
-        if (e.target.matches('.view-btn')) {
-          const projectIndex = e.target.getAttribute('data-id');
+        const targetButton = e.target.closest('.view-btn-new, .project-image-wrapper');
+        if (targetButton) {
+          const projectIndex = targetButton.getAttribute('data-id') || targetButton.closest('.project-card-new').getAttribute('data-id');
           if (projects[projectIndex]) {
             populateModal(projects[projectIndex]);
           }
@@ -129,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } catch (error) {
       console.error('Error loading projects:', error);
-      workCardContainer.innerHTML = `<p style="color: red; text-align: center;">${error.message}</p>`;
+      workCardContainer.innerHTML = '<p style="color: red; text-align: center;">Failed to load projects.</p>';
     }
   };
 
@@ -172,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
       userName.addEventListener('input', populateStorage);
       email.addEventListener('input', populateStorage);
       userMessage.addEventListener('input', populateStorage);
-      setFormFromStorage(); // Load saved data on page load
+      setFormFromStorage();
   }
 
   // --- Initial Script Calls ---

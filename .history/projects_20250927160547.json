@@ -1,0 +1,84 @@
+[
+  {
+    "id": "1",
+    "title": "Eventify",
+    "image": "./images/eventify.png",
+    "description": "Eventify is web application that allows users to  create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.",
+    "technologies": ["html", "Tailwind", "Ruby", "react", "redux", "jest"],
+    "liveLink": "https://eventify-cap.netlify.app//",
+    "sourceLink": "https://github.com/fullstop125/Final-capstone--frontend"
+  },
+  {
+    "id": "2",
+    "title": "Space Travelers Hub",
+    "image": "./images/spacehub.png",
+    "description": "A website for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.",
+    "technologies": ["html", "css", "javascript", "react", "redux", "jest"],
+    "liveLink": "https://spacehubrocket.netlify.app/",
+    "sourceLink": "https://github.com/fullstop125/space-hub"
+  },
+  {
+    "id": "3",
+    "title": "Bookstore CMS",
+    "image": "./images/bookstore.png",
+    "description": "A website that allows you to add and remove books from a list. All data is preserved thanks to the external Bookstore API service.",
+    "technologies": ["javascript", "API", "react", "redux", "jest", "bootstrap"],
+    "liveLink": "https://bookstorecmsreact.netlify.app/",
+    "sourceLink": "https://github.com/fullstop125/bookstore/"
+  },
+  {
+    "id": "4",
+    "title": "Dynasty Entertainment",
+    "image": "./images/anime.png",
+    "description": "A website that renders a collecion of animes. It also allows you to like and comment on the animes. Data is preserved thanks to the external Involvement API. Anime data is provided by Animedb API.",
+    "technologies": ["html", "css", "javascript", "API", "webpack", "jest"],
+    "liveLink": "https://fullstop125.github.io/capstone-project-anime-db/",
+    "sourceLink": "https://github.com/fullstop125/capstone-project-anime-db"
+  },
+  {
+    "id": "5",
+    "title": "Metrics Web App",
+    "image": "./images/metrics.png",
+    "description": "This project is a web app that allows users to view and compare metrics for different companies. The app is built using React and Redux.",
+    "technologies": ["html", "css", "React", "API"],
+    "liveLink": "https://metrics-app.netlify.app/",
+    "sourceLink": "https://github.com/fullstop125/metrics-webapp"
+  },
+  {
+    "id": "6",
+    "title": "MATH MAGICIANS",
+    "image": "./images/react-app.png",
+    "description": "A website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.",
+    "technologies": ["JavaScript", "react", "redux", "jest"],
+    "liveLink": "https://calculatorappjs.netlify.app/",
+    "sourceLink": "https://github.com/fullstop125/math-magicians"
+  },
+  {
+    "id": "7",
+    "title": "Micro-Finance Budget Mobile App",
+    "image": "./images/micro-finance.png",
+    "description": "A mobile app that allows users to create an account, log in, and add budget to their favourite spending. The app is built using Ruby on Rails as the back end .",
+    "technologies": ["html", "css", "bootstrap", "rails", "ruby", "rspec"],
+    "liveLink": "https://micro-finance.herokuapp.com/",
+    "sourceLink": "https://github.com/fullstop125/budget-app"
+  },
+  {
+    "id": "8",
+    "title": "Leaderboard",
+    "image": "./images/leaderboard.png",
+    "description": "A website that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
+    "technologies": ["JavaScript", "webpack", "jest", "API", "bootstrap"],
+    "liveLink": "https://fullstop125.github.io/Leader-Board/",
+    "sourceLink": "https://github.com/fullstop125/Leader-Board"
+  },
+  {
+    "id": "9",
+    "title": "To-Do-List App",
+    "image": "./images/todo.png",
+    "description": "A simple To Do list to track all activities that are completed and those that are yet to be completed.",
+    "technologies": ["html", "css", "JavaScript"],
+    "liveLink": "https://fullstop125.github.io/To-Do-List/",
+    "sourceLink": "https://github.com/fullstop125/To-Do-List"
+  }
+]
+

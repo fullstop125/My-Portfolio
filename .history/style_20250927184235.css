@@ -1462,3 +1462,164 @@ svg {
   box-shadow: none;
 }
 
+/* =================================================================== */
+/* === NEW IMMERSIVE & ANIMATED CONTACT SECTION (ADD TO END OF CSS) === */
+/* =================================================================== */
+
+/* --- 1. Full-Section Animated Background --- */
+.reach-out {
+  background: linear-gradient(135deg, #5b21b6, #3b82f6, #ec4899, #f59e0b);
+  background-size: 400% 400%;
+  animation: background-gradient 20s ease infinite;
+  padding: 100px 24px; /* More vertical space */
+  border-radius: 0;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes background-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- 2. Floating "Glassmorphism" Form Card --- */
+.form-style {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* --- 3. Decorative Floating Shapes --- */
+.reach-out::before,
+.reach-out::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  animation: float 25s infinite linear;
+  z-index: 1;
+}
+
+.reach-out::before {
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  left: -150px;
+}
+
+.reach-out::after {
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  right: -200px;
+  animation-delay: -10s; /* Make them move out of sync */
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(40px, 60px); }
+  50% { transform: translate(-20px, -30px); }
+  75% { transform: translate(30px, -50px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* --- 4. Enhanced Typography & Form Elements --- */
+.contact-me {
+  color: #ffffff;
+  font-family: 'Alegreya', serif;
+  font-size: 48px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-top: 0;
+}
+
+.cont-input {
+  color: #e2e8f0;
+  text-align: center;
+  max-width: 500px;
+  margin: 16px auto 40px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+form {
+  width: 100%;
+}
+
+.username, .email, .comment {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-family: var(--main-font-family);
+  padding: 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.username::placeholder,
+.email::placeholder,
+.comment::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.username:focus,
+.email:focus,
+.comment:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.submit {
+  background: #ffffff;
+  color: var(--main-bg-color);
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #f0f3ff;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+.submit:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 5. Responsive Layout for Desktop --- */
+@media only screen and (min-width: 768px) {
+  .form-style {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Two columns */
+    gap: 48px;
+    align-items: center;
+    text-align: left;
+    padding: 48px;
+  }
+
+  .contact-me,
+  .cont-input {
+    text-align: left;
+    margin: 0;
+  }
+}
+

@@ -1304,137 +1304,109 @@ svg {
 }
 
 /* https://cdn.dribbble.com/users/1192437/screenshots/5039546/media/e31a26852f18b3ec8e4fba56ce343feb.gif */
-/* =================================================================== */
-/* === NEW CREATIVE & ANIMATED PROJECT STYLES (ADD TO END OF CSS) === */
-/* =================================================================== */
+/* ====================================================== */
+/* === NEW ELEGANT PROJECT & MODAL STYLES START HERE === */
+/* === Add this entire block to the END of your file === */
+/* ====================================================== */
 
-/* --- 1. Redesigned Project Cards with Animations --- */
+/* --- 1. Elegant Project Card Redesign --- */
 
+/* Overriding the main container for a cleaner, more professional look */
 .project-container {
-  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-  background-size: 200% 200%; /* Make gradient larger for animation */
-  animation: gradient-animation 15s ease infinite; /* Slow, subtle animation */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px); /* For Safari */
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  overflow: hidden;
-  position: relative; /* Needed for the pseudo-element glow */
-}
-
-/* Add a cool "glow" effect on hover */
-.project-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), rgba(255,255,255,0) 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  transform: scale(1.5);
+  display: flex; /* Using flexbox for better alignment control */
+  flex-direction: column; /* Default stack for mobile */
+  background: #ffffff; /* A clean white background is more modern */
+  border: 1px solid #e7e7e7; /* Softer border color */
+  border-radius: 24px; /* Softer corners */
+  padding: 24px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden; /* Ensures content stays within the rounded corners */
 }
 
 .project-container:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(31, 38, 135, 0.2);
+  transform: translateY(-8px); /* Subtle lift effect on hover */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.08);
 }
 
-.project-container:hover::before {
-  opacity: 1;
-}
-
-@keyframes gradient-animation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Image container with zoom effect */
+/* Styling the project image */
 .project-img {
-  border-radius: 16px;
-  margin: 0; /* Override old margin */
-  overflow: hidden; /* Important for the zoom effect */
-  transition: transform 0.4s ease; /* Ensure this is here if not already */
+  height: 250px; /* A bit taller for more impact */
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px; /* Match the softer corners */
+  margin: -24px -24px 24px -24px; /* Make the image bleed to the card edges on mobile */
 }
 
-.project-container:hover .project-img {
-  transform: scale(1.05); /* Zoom in effect on parent hover */
+/* Styling the text content area for better readability */
+.about-project {
+  gap: 16px; /* Adjust spacing between text elements */
 }
-
-/* --- 2. Enhanced Typography and Buttons --- */
 
 .project-title h4 {
-  font-family: 'Alegreya', serif;
-  font-size: 32px;
-  color: #1a202c;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-size: 28px; /* Larger, more impactful title */
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+.project-info ul {
+  column-gap: 16px; /* More space between role, client, etc. */
 }
 
 .tags ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* Use flexbox for tags */
+  flex-wrap: wrap; /* Allow tags to wrap gracefully */
   gap: 8px;
+  margin-bottom: 24px;
 }
 
 .tags ul li {
-  background-color: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(5px);
-  border-radius: 20px;
+  background-color: #f0f3ff; /* Lighter tag background for a softer feel */
+  color: #4a5cde;
+  font-size: 12px;
   font-weight: 500;
-  color: var(--title-color);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 4px 12px;
 }
 
+/* Improved "See Project" button */
 .view-btn {
   background: var(--main-bg-color);
   color: white;
   border: none;
   font-weight: 500;
   padding: 12px 24px;
-  margin-left: 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  z-index: 1; /* Ensure button is on top */
+  margin-left: 0; /* Remove old margin */
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
 }
 
 .view-btn:hover {
-  background-color: #4a5cde;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px) scale(1.05); /* Button lifts and grows on hover */
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  background-color: #4a5cde; /* Darker shade on hover */
 }
 
-/* --- 3. Unique "Glassmorphism" Modal Redesign --- */
 
+/* --- 2. Unique Project Detail Modal Redesign --- */
+
+/* Full-screen overlay with a modern backdrop blur */
 .overlay.active {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  mix-blend-mode: normal;
+  background: rgba(23, 43, 77, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  mix-blend-mode: normal; /* Override old blend mode */
 }
 
-.modal-container {
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
+/* Smooth entrance animation for the modal */
 .modal.active .modal-container {
-  animation: modal-swoop 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeInScaleUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-@keyframes modal-swoop {
+@keyframes fadeInScaleUp {
   from {
     opacity: 0;
-    transform: translate(-50%, -40%) scale(0.9);
+    transform: translate(-50%, -45%) scale(0.95);
   }
   to {
     opacity: 1;
@@ -1442,23 +1414,100 @@ svg {
   }
 }
 
-.modal-title, .modal-desc, .header-list ul, .see-live {
-  color: #2D3748; /* Darker text for readability on glass */
+/* Main modal container redesign */
+.modal-container {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 800px; /* Wider modal for a more cinematic feel on desktop */
+  width: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Precise centering */
+  max-height: 90vh; /* Prevent modal from being taller than the screen */
+  overflow-y: auto; /* Allow scrolling for long content */
 }
 
-.btn-close {
-  color: #4A5568;
+.modal-img {
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
-.see-live {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  color: var(--main-bg-color);
-  font-weight: 600;
+/* New layout for modal footer to be used with desktop media query */
+.modal-footer {
+  display: block; /* Override flex for the new layout */
 }
 
-.see-live:hover {
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: none;
+
+/* --- 3. Responsive Desktop Enhancements --- */
+
+@media only screen and (min-width: 768px) {
+  /* Side-by-side layout for project cards on desktop */
+  .project-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 0; /* Remove padding to let image and text touch edges */
+  }
+  
+  /* Alternate layout for even-numbered cards */
+  .project-container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .project-img {
+    flex: 1.2; /* Make image slightly larger than text area */
+    height: 400px;
+    margin: 0;
+    border-radius: 0; /* Remove radius to align with card edges */
+  }
+
+  /* Make the image align perfectly with the card edges */
+  .project-container:nth-child(odd) .project-img {
+    border-radius: 24px 0 0 24px;
+  }
+  .project-container:nth-child(even) .project-img {
+     border-radius: 0 24px 24px 0;
+  }
+
+  .about-project {
+    flex: 1; /* Text area takes up remaining space */
+    padding: 48px;
+  }
+
+  /* Creative two-column modal layout for desktop */
+  .modal-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 for description, 1/3 for tech/links */
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .footer-desc {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .see-live {
+    display: flex; /* Align icon and text inside button */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .see-live:hover {
+    background: #f0f3ff; /* Light hover state for buttons */
+  }
 }
 

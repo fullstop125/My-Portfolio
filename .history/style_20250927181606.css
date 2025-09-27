@@ -1462,3 +1462,9 @@ svg {
   box-shadow: none;
 }
 
+/* --- 4. Stylish Project Image Overlays --- */
+.project-img {
+  position: relative; /* Required for the overlay */
+  overflow: hidden; /* Keeps the overlay within the rounded corners */
+}
+
