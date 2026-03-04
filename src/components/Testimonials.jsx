@@ -4,16 +4,40 @@ import { FaQuoteLeft } from 'react-icons/fa';
 
 const testimonials = [
   {
-    name: "Ahmad Zaki Yousufi",
-    role: "Full-Stack Developer",
-    text: "Hassan is a fantastic JavaScript developer. We worked together on several complex projects at Microverse, and his ability to solve problems quickly and write clean, maintainable code is truly impressive. He is a great team player.",
-    avatar: "https://ui-avatars.com/api/?name=Ahmad+Zaki&background=6070ff&color=fff"
+    name: "Sami Ullah",
+    role: "Full-Stack Software Developer",
+    text: "There is no better colleague than Momanyi Hassan. He is one of the most dedicated professionals I’ve worked with and is willing to put in that extra help whenever you need it. His expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects.",
+    avatar: "https://ui-avatars.com/api/?name=Sami+Ullah&background=6070ff&color=fff"
   },
   {
-    name: "Jane Doe",
-    role: "Senior Engineer",
-    text: "Working with Momanyi was a game-changer for our architecture. He has a deep understanding of how to build scalable backend systems while keeping the frontend performant and accessible.",
-    avatar: "https://ui-avatars.com/api/?name=Jane+Doe&background=22c1c3&color=fff"
+    name: "Abel Gebeyehu",
+    role: "Software Engineer",
+    text: "Having worked with Hassan together on several projects, I find him a highly skilled and dedicated professional. His calm nature and positive vibe make him a joy to work with. I have no hesitation in recommending him to potential employers.",
+    avatar: "https://ui-avatars.com/api/?name=Abel+Gebeyehu&background=22c1c3&color=fff"
+  },
+  {
+    name: "Saeqa Sultani",
+    role: "Software Developer",
+    text: "I worked alongside Hassan while building several JavaScript and React projects, and in that time, he consistently gave great effort to the team... Watching him adapt to our ever-changing environment was an inspiration! His ability to overcome challenges with a smile made him stand out. Any company would be lucky to have Hassan.",
+    avatar: "https://ui-avatars.com/api/?name=Saeqa+Sultani&background=fdbb2d&color=fff"
+  },
+  {
+    name: "Marvellous Ibironke",
+    role: "Senior Software Engineer",
+    text: "Having worked with Hassan, I would recommend him as a person with profound knowledge and great abilities in full-stack web development. He is goal-oriented, focused, and highly ambitious. His knowledge is vast and extensive, and he possesses exceptional leadership skills.",
+    avatar: "https://ui-avatars.com/api/?name=Marvellous+Ibironke&background=ff1ead&color=fff"
+  },
+  {
+    name: "Aamir khan",
+    role: "Software Engineer",
+    text: "Momanyi Hassan is a stunning Leader. He is amazingly determined, educated, and strives to transform his vision into the real world. What makes his initiative exceptional is his certified energy for helping other people and needing every one of us to succeed.",
+    avatar: "https://ui-avatars.com/api/?name=Aamir+khan&background=6070ff&color=fff"
+  },
+  {
+    name: "Hamid Ali",
+    role: "Full-stack Developer",
+    text: "Hassan is a great software developer who is very driven in the execution of his tasks. I can also attest that he is a very fast learner and his desire to learn more and develop his skills is insatiable. I strongly recommend him for any position that matches his skills.",
+    avatar: "https://ui-avatars.com/api/?name=Hamid+Ali&background=22c1c3&color=fff"
   },
 ];
 
