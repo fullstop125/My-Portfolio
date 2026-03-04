@@ -4,9 +4,10 @@ import {
   SiJavascript, SiHtml5, SiCss3, SiRuby, SiPython, 
   SiReact, SiRubyonrails, SiTailwindcss, SiBootstrap, 
   SiGit, SiGithub, SiJest, SiWebpack,
-  SiPostgresql, SiMysql, SiRedux, SiDocker
+  SiPostgresql, SiMysql, SiRedux, SiDocker,
+  SiExpress, SiNextdotjs, SiCisco, SiMongodb, SiHuawei
 } from 'react-icons/si';
-import { FaCertificate, FaGraduationCap, FaTrophy } from 'react-icons/fa';
+import { FaGraduationCap, FaCode, FaVideo } from 'react-icons/fa';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('Languages');
@@ -21,8 +22,10 @@ const About = () => {
     ],
     Frameworks: [
       { name: 'React', icon: <SiReact className="text-[#61DAFB]" /> },
+      { name: 'Next.js', icon: <SiNextdotjs className="text-black" /> },
       { name: 'Redux', icon: <SiRedux className="text-[#764ABC]" /> },
       { name: 'Ruby on Rails', icon: <SiRubyonrails className="text-[#CC0000]" /> },
+      { name: 'Express', icon: <SiExpress className="text-black" /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-[#06B6D4]" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-[#7952B3]" /> },
     ],
@@ -35,14 +38,14 @@ const About = () => {
       { name: 'Docker', icon: <SiDocker className="text-[#2496ED]" /> },
     ],
     Certifications: [
-      { name: 'Software Development', icon: <FaGraduationCap className="text-[#4CAF50]" />, issuer: 'Microverse' },
-      { name: 'CCNA', icon: <FaCertificate className="text-[#049fd9]" />, issuer: 'Cisco' },
-      { name: 'CyberOps Associate', icon: <FaCertificate className="text-[#049fd9]" />, issuer: 'Cisco' },
-      { name: 'Cybersecurity', icon: <FaCertificate className="text-[#049fd9]" />, issuer: 'Cisco' },
-      { name: 'Atlas Security', icon: <FaTrophy className="text-[#47A248]" />, issuer: 'MongoDB' },
-      { name: 'Media & Entertainment (2D/3D)', icon: <FaCertificate className="text-[#8e44ad]" />, issuer: 'Nelium Systems' },
-      { name: 'Python Web Development', icon: <FaCertificate className="text-[#3776AB]" />, issuer: 'Nelium Systems' },
-      { name: 'Big Data', icon: <FaTrophy className="text-[#e61d2b]" />, issuer: 'Huawei' },
+      { name: 'Software Development', icon: <img src={`${import.meta.env.BASE_URL}images/microverse-logo.jpg`} alt="Microverse Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Microverse' },
+      { name: 'CCNA', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
+      { name: 'CyberOps Associate', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
+      { name: 'Cybersecurity', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
+      { name: 'Atlas Security', icon: <SiMongodb className="text-[#47A248]" />, issuer: 'MongoDB' },
+      { name: 'Media & Entertainment (2D/3D)', icon: <img src={`${import.meta.env.BASE_URL}images/nelium-logo.jpg`} alt="Nelium Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Nelium Systems' },
+      { name: 'Python Web Development', icon: <img src={`${import.meta.env.BASE_URL}images/nelium-logo.jpg`} alt="Nelium Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Nelium Systems' },
+      { name: 'Big Data', icon: <SiHuawei className="text-[#e61d2b]" />, issuer: 'Huawei' },
     ]
   };
 
