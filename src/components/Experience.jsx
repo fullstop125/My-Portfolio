@@ -19,10 +19,17 @@ const experiences = [
   },
   {
     type: 'education',
-    title: 'Diploma in Crop Protection',
-    company: 'University of Nairobi',
-    date: '2018',
-    description: 'Developed a strong foundation in research, analytical thinking, and systematic problem-solving before transitioning fully into software engineering.',
+    title: 'Computer Software Engineering',
+    company: 'Microverse',
+    date: 'Jun 2022 - Feb 2023',
+    description: 'Gained expertise in HTML, CSS, JavaScript, ReactJS, and Ruby on Rails. Achieved multiple certifications including Full-Stack Web Development, focusing on responsive design, REST APIs, and collaborative remote pair-programming.',
+  },
+  {
+    type: 'education',
+    title: 'Bachelor of Science in Information Technology',
+    company: 'Zetech University',
+    date: 'Graduated',
+    description: 'Developed a comprehensive understanding of programming, data management, networking, and software development. Prepared for diverse IT roles by learning to design, develop, and implement systems using various modern technologies.',
   },
 ];
 
