@@ -56,8 +56,18 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-[12%] bg-secondary text-white relative">
-      <div className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/bg_Header.png)` }}></div>
+    <section id="contact" className="py-24 px-6 md:px-[12%] bg-secondary text-white relative overflow-hidden transition-colors duration-300">
+      {/* Background with dedicated shapes and gradient */}
+      <div 
+        className="absolute inset-0 opacity-20 dark:opacity-10 mix-blend-overlay"
+        style={{ 
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/contact-form-background-shapes.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/90 dark:from-blue-900/80 dark:to-slate-900/90 pointer-events-none"></div>
       
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
