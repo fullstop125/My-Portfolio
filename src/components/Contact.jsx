@@ -20,24 +20,11 @@ const Contact = () => {
     const newFormData = { ...formData, [e.target.name]: e.target.value };
     setFormData(newFormData);
     localStorage.setItem('contactForm', JSON.stringify(newFormData));
-    
-    if (e.target.name === 'email_address') {
-      if (e.target.value !== e.target.value.toLowerCase()) {
-        setError('Please enter your email address in lowercase only.');
-      } else {
-        setError('');
-      }
-    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (formData.email_address !== formData.email_address.toLowerCase()) {
-      setError('Form not sent! Please enter your email address in lowercase.');
-      return;
-    }
-
     setIsSubmitting(true);
     setError('');
 
@@ -126,11 +113,10 @@ const Contact = () => {
                 name="email_address"
                 value={formData.email_address}
                 onChange={handleChange}
-                placeholder="Email Address (lowercase)"
+                placeholder="Email Address"
                 required
-                className={`w-full bg-white/5 border ${error && error.includes('lowercase') ? 'border-red-400' : 'border-white/20'} rounded-xl px-5 py-4 text-white placeholder-white/50 outline-none focus:border-primary focus:bg-white/10 transition-all`}
+                className="w-full bg-white/5 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/50 outline-none focus:border-primary focus:bg-white/10 transition-all"
               />
-              {error && error.includes('lowercase') && <p className="text-red-300 text-sm mt-2 font-medium">{error}</p>}
             </div>
 
             <div>
@@ -145,7 +131,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            {error && !error.includes('lowercase') && (
+            {error && (
               <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm">
                 {error}
               </div>
