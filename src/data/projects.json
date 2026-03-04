@@ -5,7 +5,15 @@
     "role": "Events",
     "clientName": "Back End Dev",
     "clientYear": "2023",
-    "projectDescription": "Eventify is web application that allows users to  create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.",
+    "projectDescription": "Eventify is web application that allows users to create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.",
+    "challengesOvercome": "Managing complex state across multiple nested components required implementing a robust Redux store. Additionally, ensuring the backend API could handle concurrent event creations required optimizing database indexing and query structures.",
+    "architectureDecisions": "Chose React with Redux for state management on the front-end to ensure predictable state updates. The backend is powered by Ruby on Rails, providing a rapid development environment with built-in security features and MVC architecture.",
+    "keyFeatures": [
+      "User Authentication & Authorization",
+      "Real-time event creation and tracking",
+      "Interactive dashboard for event management",
+      "Responsive design for mobile and desktop"
+    ],
     "tags": ["html", "Tailwind", "Ruby ", "react", "redux", "jest"],
     "seeLive": "https://eventify-cap.netlify.app//",
     "seeSource": "https://github.com/fullstop125/Final-capstone--frontend"

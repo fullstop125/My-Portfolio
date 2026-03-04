@@ -37,9 +37,43 @@ const Modal = ({ project, onClose }) => {
         />
 
         <div className="flex flex-col sm:flex-row gap-8">
-          <p className="sm:w-2/3 text-tertiary dark:text-gray-300 text-base leading-relaxed">
-            {project.projectDescription}
-          </p>
+          <div className="sm:w-2/3 flex flex-col gap-6">
+            <div>
+              <h3 className="text-xl font-bold font-alegreya text-secondary dark:text-white mb-2">Overview</h3>
+              <p className="text-tertiary dark:text-gray-300 text-base leading-relaxed">
+                {project.projectDescription}
+              </p>
+            </div>
+
+            {project.keyFeatures && (
+              <div>
+                <h3 className="text-xl font-bold font-alegreya text-secondary dark:text-white mb-2">Key Features</h3>
+                <ul className="list-disc list-inside text-tertiary dark:text-gray-300 text-base leading-relaxed space-y-1">
+                  {project.keyFeatures.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {project.challengesOvercome && (
+              <div>
+                <h3 className="text-xl font-bold font-alegreya text-secondary dark:text-white mb-2">Challenges Overcome</h3>
+                <p className="text-tertiary dark:text-gray-300 text-base leading-relaxed">
+                  {project.challengesOvercome}
+                </p>
+              </div>
+            )}
+
+            {project.architectureDecisions && (
+              <div>
+                <h3 className="text-xl font-bold font-alegreya text-secondary dark:text-white mb-2">Architecture</h3>
+                <p className="text-tertiary dark:text-gray-300 text-base leading-relaxed">
+                  {project.architectureDecisions}
+                </p>
+              </div>
+            )}
+          </div>
 
           <div className="sm:w-1/3 flex flex-col">
             <ul className="flex flex-wrap gap-2 mb-6">
