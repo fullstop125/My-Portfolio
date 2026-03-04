@@ -4,14 +4,14 @@ import projectsData from '../data/projects.json';
 
 const Portfolio = ({ onOpenModal }) => {
   return (
-    <section id="work-card" className="py-24 px-6 md:px-[12%] bg-white">
+    <section id="work-card" className="py-24 px-6 md:px-[12%] bg-white dark:bg-slate-900 transition-colors duration-300">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary mb-4">Featured Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4">Featured Projects</h2>
         <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
       </motion.div>
       
@@ -23,7 +23,7 @@ const Portfolio = ({ onOpenModal }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="group relative bg-[#f8f9fa] rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full"
+            className="group relative bg-[#f8f9fa] dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-slate-700 flex flex-col h-full"
           >
             {/* Image Container */}
             <div className="relative h-64 md:h-80 w-full overflow-hidden">
@@ -33,33 +33,33 @@ const Portfolio = ({ onOpenModal }) => {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 dark:from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
             </div>
             
             {/* Content Container */}
-            <div className="p-8 flex flex-col flex-grow bg-white z-10 -mt-6 rounded-t-3xl border-t border-gray-100">
-              <h4 className="text-2xl font-bold font-alegreya text-secondary mb-2 group-hover:text-primary transition-colors">{project.title}</h4>
+            <div className="p-8 flex flex-col flex-grow bg-white dark:bg-slate-800 z-10 -mt-6 rounded-t-3xl border-t border-gray-100 dark:border-slate-700">
+              <h4 className="text-2xl font-bold font-alegreya text-secondary dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">{project.title}</h4>
               
-              <ul className="flex flex-wrap items-center text-xs font-semibold uppercase tracking-wider mb-4 space-x-2 text-gray-500">
-                <li className="text-primary">{project.role}</li>
+              <ul className="flex flex-wrap items-center text-xs font-semibold uppercase tracking-wider mb-4 space-x-2 text-gray-500 dark:text-gray-400">
+                <li className="text-primary dark:text-blue-400">{project.role}</li>
                 <li>•</li>
                 <li>{project.clientName}</li>
                 <li>•</li>
                 <li>{project.clientYear}</li>
               </ul>
               
-              <p className="text-tertiary text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
+              <p className="text-tertiary dark:text-gray-300 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
                 {project.projectDescription}
               </p>
               
               <ul className="flex flex-wrap gap-2 mb-8">
                 {project.tags.slice(0, 4).map((tag, i) => (
-                  <li key={i} className="bg-primary/5 border border-primary/20 text-primary px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm hover:bg-primary hover:text-white transition-colors cursor-default">
+                  <li key={i} className="bg-primary/5 dark:bg-blue-900/20 border border-primary/20 dark:border-blue-400/30 text-primary dark:text-blue-300 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm hover:bg-primary hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors cursor-default">
                     {tag}
                   </li>
                 ))}
                 {project.tags.length > 4 && (
-                  <li className="bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                  <li className="bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-gray-300 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
                     +{project.tags.length - 4}
                   </li>
                 )}
@@ -67,7 +67,7 @@ const Portfolio = ({ onOpenModal }) => {
               
               <button 
                 onClick={() => onOpenModal(project)}
-                className="w-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 rounded-xl font-semibold transition-colors duration-300 shadow-sm"
+                className="w-full bg-white dark:bg-slate-800 border-2 border-primary dark:border-blue-500 text-primary dark:text-blue-400 hover:bg-primary dark:hover:bg-blue-500 hover:text-white dark:hover:text-white py-3 rounded-xl font-semibold transition-colors duration-300 shadow-sm"
               >
                 View Details
               </button>

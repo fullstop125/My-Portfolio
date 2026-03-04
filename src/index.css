@@ -7,10 +7,16 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-poppins bg-[#f8f9fa] text-tertiary m-0 p-0 overflow-x-hidden;
+    @apply font-poppins bg-[#f8f9fa] text-tertiary m-0 p-0 overflow-x-hidden transition-colors duration-300;
+  }
+  .dark body {
+    @apply bg-[#0f172a] text-gray-300;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-alegreya text-secondary;
+  }
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-white;
   }
 }
 

@@ -50,10 +50,10 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 px-6 md:px-[12%] bg-[#f8f9fa] relative overflow-hidden">
+    <section id="about" className="py-24 px-6 md:px-[12%] bg-[#f8f9fa] dark:bg-slate-800 relative overflow-hidden transition-colors duration-300">
       
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 dark:from-blue-500/5 to-transparent pointer-events-none"></div>
 
       <div className="flex flex-col lg:flex-row gap-16 relative z-10">
         
@@ -65,19 +65,19 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="w-full lg:w-1/2"
         >
-          <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary mb-6 leading-tight">
-            About <br /><span className="text-primary">Myself</span>
+          <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-6 leading-tight">
+            About <br /><span className="text-primary dark:text-blue-400">Myself</span>
           </h2>
           
-          <p className="text-tertiary text-lg mb-6 leading-relaxed">
+          <p className="text-tertiary dark:text-gray-300 text-lg mb-6 leading-relaxed">
             I am a passionate Full-Stack Software Developer trained in a global, remote-first environment. I specialize in building robust, scalable applications using modern web technologies like React, Ruby on Rails, and JavaScript. 
           </p>
 
-          <p className="text-tertiary text-lg mb-6 leading-relaxed">
+          <p className="text-tertiary dark:text-gray-300 text-lg mb-6 leading-relaxed">
             My engineering journey is backed by rigorous technical certifications, extensive pair-programming experience, and a proven track record of solving complex problems collaboratively. I understand system architecture from the database layer to the user interface.
           </p>
 
-          <p className="text-tertiary text-lg mb-10 leading-relaxed">
+          <p className="text-tertiary dark:text-gray-300 text-lg mb-10 leading-relaxed">
             Whether it's architecting a backend API, optimizing database performance, or crafting an intuitive front-end experience, my goal is to deliver clean, maintainable code that drives real business value.
           </p>
 
@@ -85,7 +85,7 @@ const About = () => {
             href="https://drive.google.com/file/d/1s5E3axBAA_pQnh1pFBc_ffdewD4ZFhb9/view?usp=sharing" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-[#4053fc] hover:-translate-y-1 transition-all duration-300"
+            className="inline-block bg-primary dark:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-[#4053fc] dark:hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300"
           >
             Get My Resume
           </a>
@@ -99,24 +99,24 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="w-full lg:w-1/2"
         >
-          <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 min-h-[400px] flex flex-col">
-            <h3 className="text-2xl font-bold font-alegreya text-secondary mb-6">Capabilities & Certifications</h3>
+          <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-700 min-h-[400px] flex flex-col">
+            <h3 className="text-2xl font-bold font-alegreya text-secondary dark:text-white mb-6">Capabilities & Certifications</h3>
             
             {/* Tabs */}
-            <div className="flex flex-wrap gap-2 md:gap-4 border-b border-gray-100 mb-6">
+            <div className="flex flex-wrap gap-2 md:gap-4 border-b border-gray-100 dark:border-slate-700 mb-6">
               {Object.keys(skillCategories).map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveTab(category)}
                   className={`pb-3 px-2 md:px-4 font-semibold text-sm md:text-base transition-colors relative ${
-                    activeTab === category ? 'text-primary' : 'text-gray-400 hover:text-gray-600'
+                    activeTab === category ? 'text-primary dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                   }`}
                 >
                   {category}
                   {activeTab === category && (
                     <motion.div 
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 w-full h-[3px] bg-primary rounded-t-md"
+                      className="absolute bottom-0 left-0 w-full h-[3px] bg-primary dark:bg-blue-400 rounded-t-md"
                     />
                   )}
                 </button>
@@ -138,14 +138,14 @@ const About = () => {
                     <motion.div 
                       key={index}
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/30 hover:bg-white hover:shadow-md transition-all cursor-default"
+                      className="flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-primary/30 dark:hover:border-blue-400/30 hover:bg-white dark:hover:bg-slate-700 hover:shadow-md transition-all cursor-default"
                     >
                       <div className="text-4xl mb-3 drop-shadow-sm">
                         {skill.icon}
                       </div>
-                      <span className="font-semibold text-secondary text-sm text-center">{skill.name}</span>
+                      <span className="font-semibold text-secondary dark:text-gray-200 text-sm text-center">{skill.name}</span>
                       {skill.issuer && (
-                        <span className="text-xs text-gray-500 mt-1">{skill.issuer}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">{skill.issuer}</span>
                       )}
                     </motion.div>
                   ))}
