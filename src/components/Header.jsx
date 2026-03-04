@@ -50,9 +50,14 @@ const Header = () => {
       </nav>
 
       {/* Mobile Menu Icon */}
-      <div className="md:hidden z-50 cursor-pointer text-primary text-2xl" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      <button 
+        className="md:hidden z-50 cursor-pointer text-primary text-2xl bg-transparent border-none p-2 flex items-center justify-center rounded-lg hover:bg-primary/5 transition-colors" 
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+        aria-expanded={isMenuOpen}
+      >
+        {isMenuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+      </button>
 
       {/* Mobile Nav Overlay */}
       <AnimatePresence>

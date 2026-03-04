@@ -27,11 +27,13 @@ const Portfolio = ({ onOpenModal }) => {
           >
             {/* Image Container */}
             <div className="relative h-64 md:h-80 w-full overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/about-image/${project.imag})` }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <img 
+                src={`${import.meta.env.BASE_URL}images/about-image/${project.imag}`}
+                alt={`Screenshot of ${project.title}`}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
             </div>
             
             {/* Content Container */}
