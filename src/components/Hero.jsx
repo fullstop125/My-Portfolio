@@ -12,7 +12,16 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 px-6 md:px-[12%] bg-mesh overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center pt-20 px-6 md:px-[12%] overflow-hidden rounded-b-[2%] shadow-sm"
+      style={{
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/bg_Header.png), linear-gradient(to right, #fdbb2d, #22c1c3)`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'bottom',
+        backgroundColor: '#b1e1ff'
+      }}
+    >
       
       {/* Birds Animation */}
       <div className="absolute inset-0 pointer-events-none opacity-50 md:opacity-100 z-0 overflow-hidden">
@@ -33,11 +42,12 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="drop-shadow-sm"
         >
-          <h2 className="text-5xl md:text-7xl font-alegreya text-secondary font-bold mb-2 tracking-tight">
-            Hey, I'm <span className="text-gradient">Momanyi</span>
+          <h2 className="text-5xl md:text-7xl font-alegreya text-[#172b4d] font-bold mb-2 tracking-tight">
+            Hey, I'm <span className="text-gradient drop-shadow-sm">Momanyi</span>
           </h2>
-          <h3 className="text-3xl md:text-5xl font-alegreya text-secondary font-medium mb-8">
+          <h3 className="text-3xl md:text-5xl font-alegreya text-[#172b4d] font-medium mb-8">
             Glad to see you!
           </h3>
         </motion.div>
@@ -46,7 +56,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-tertiary text-lg md:text-xl leading-relaxed mb-10"
+          className="text-[#344563] text-lg md:text-xl leading-relaxed mb-10 drop-shadow-sm"
         >
           I am a versatile and experienced software developer with a passion for delivering innovative solutions. With a deep understanding of technologies like <strong>React, Ruby on Rails, Python,</strong> and <strong>Big Data</strong>, I am equipped to tackle a wide range of projects and bring ideas to life with precision and creativity.
         </motion.p>

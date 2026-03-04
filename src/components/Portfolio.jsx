@@ -52,12 +52,12 @@ const Portfolio = ({ onOpenModal }) => {
               
               <ul className="flex flex-wrap gap-2 mb-8">
                 {project.tags.slice(0, 4).map((tag, i) => (
-                  <li key={i} className="bg-primary/10 text-primary px-3 py-1 rounded-md text-xs font-semibold">
+                  <li key={i} className="bg-primary/5 border border-primary/20 text-primary px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm hover:bg-primary hover:text-white transition-colors cursor-default">
                     {tag}
                   </li>
                 ))}
                 {project.tags.length > 4 && (
-                  <li className="bg-gray-100 text-gray-600 px-3 py-1 rounded-md text-xs font-semibold">
+                  <li className="bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
                     +{project.tags.length - 4}
                   </li>
                 )}

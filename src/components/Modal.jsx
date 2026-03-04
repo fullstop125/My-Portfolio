@@ -44,7 +44,7 @@ const Modal = ({ project, onClose }) => {
           <div className="sm:w-1/3 flex flex-col">
             <ul className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag, i) => (
-                <li key={i} className="bg-[#ebebff] text-primary px-3 py-1 rounded-lg text-sm font-medium">
+                <li key={i} className="bg-primary/10 border border-primary/20 text-primary px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
                   {tag}
                 </li>
               ))}

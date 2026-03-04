@@ -21,7 +21,7 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-gradient-to-r from-[#b1e1ff] via-[#22c1c3] to-[#fdbb2d] shadow-md py-3' : 'bg-transparent py-5'
       } px-6 md:px-16 flex justify-between items-center`}
     >
       <div className="logo cursor-pointer text-secondary font-bold text-2xl tracking-widest z-50">
