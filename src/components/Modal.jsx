@@ -69,9 +69,6 @@ const Modal = ({ project, onClose }) => {
                   <li>{project.clientYear}</li>
                 </ul>
               </div>
-              <div className="flex items-center gap-2 bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-green-200 dark:border-green-500/20">
-                <FaCheckCircle /> Status: Deployed
-              </div>
             </div>
 
             {/* Image */}

@@ -54,7 +54,7 @@ const Hero = () => {
             className="flex items-center gap-2 mb-4 bg-white/20 dark:bg-black/20 w-fit px-4 py-2 rounded-full backdrop-blur-sm border border-white/30"
           >
             <FaTerminal className="text-[#172b4d] dark:text-[#fdbb2d]" />
-            <span className="text-[#172b4d] dark:text-white font-mono text-sm font-bold tracking-widest uppercase">System Online</span>
+            <span className="text-[#172b4d] dark:text-white font-mono text-sm font-bold tracking-widest uppercase">Developer Online</span>
           </motion.div>
 
           <motion.div
