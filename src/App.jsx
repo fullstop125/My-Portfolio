@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Stats from './components/Stats';
+import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import GitHubActivity from './components/GitHubActivity';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Modal from './components/Modal';
 
 function App() {
@@ -20,12 +23,15 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Stats />
+        <Services />
         <Portfolio onOpenModal={openModal} />
         <Experience />
         <About />
         <Testimonials />
         <GitHubActivity />
         <Contact />
+        <Footer />
       </main>
       
       {/* Conditionally render Modal */}

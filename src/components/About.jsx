@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Marquee from 'react-fast-marquee';
 import { terminalReveal, glitchItem } from '../utils/transitions';
-import { 
-  SiJavascript, SiHtml5, SiCss3, SiRuby, SiPython, 
-  SiReact, SiRubyonrails, SiTailwindcss, SiBootstrap, 
-  SiGit, SiGithub, SiJest, SiWebpack,
+import GlitchText from './GlitchText';
+import {
+  SiJavascript, SiHtml5, SiCss3, SiRuby, SiPython,
+  SiReact, SiRubyonrails, SiTailwindcss, SiBootstrap,
+  SiGithub, SiJest, SiWebpack,
   SiPostgresql, SiMysql, SiRedux, SiDocker,
   SiExpress, SiNextdotjs, SiCisco, SiMongodb, SiHuawei
 } from 'react-icons/si';
-import { FaGraduationCap, FaCode, FaVideo } from 'react-icons/fa';
+import { FaShieldAlt, FaTerminal, FaBug, FaServer, FaLock, FaEye, FaNetworkWired, FaRoute, FaPlug, FaLayerGroup } from 'react-icons/fa';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('Languages');
@@ -38,6 +40,23 @@ const About = () => {
       { name: 'Webpack', icon: <SiWebpack className="text-[#8DD6F9]" /> },
       { name: 'Docker', icon: <SiDocker className="text-[#2496ED]" /> },
     ],
+    'Security Tools': [
+      { name: 'Wireshark', icon: <FaEye className="text-[#1679A7]" /> },
+      { name: 'Nmap', icon: <FaTerminal className="text-[#e61d2b]" /> },
+      { name: 'Burp Suite', icon: <FaBug className="text-[#FF6633]" /> },
+      { name: 'Metasploit', icon: <FaShieldAlt className="text-[#2A2E3F]" /> },
+      { name: 'pfSense', icon: <FaServer className="text-[#212a46]" /> },
+      { name: 'Fail2Ban', icon: <FaLock className="text-[#CC342D]" /> },
+    ],
+    Networking: [
+      { name: 'MikroTik', icon: <FaServer className="text-[#293B8A]" /> },
+      { name: 'EPON/GPON', icon: <FaNetworkWired className="text-[#22c1c3]" /> },
+      { name: 'OSPF/BGP', icon: <FaRoute className="text-[#6070ff]" /> },
+      { name: 'PPPoE', icon: <FaPlug className="text-[#fdbb2d]" /> },
+      { name: 'Cisco IOS', icon: <SiCisco className="text-[#049fd9]" /> },
+      { name: 'VLANs', icon: <FaLayerGroup className="text-[#172b4d]" /> },
+      { name: 'Huawei OptiX', icon: <SiHuawei className="text-[#e61d2b]" /> },
+    ],
     Certifications: [
       { name: 'Software Development', icon: <img src={`${import.meta.env.BASE_URL}images/microverse-logo.jpg`} alt="Microverse Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Microverse' },
       { name: 'CCNA', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
@@ -50,11 +69,37 @@ const About = () => {
     ]
   };
 
+  // Flatten all tech icons for the background marquee
+  const allIcons = useMemo(() => {
+    return Object.values(skillCategories)
+      .flat()
+      .filter(skill => typeof skill.icon.type !== 'string'); // Filter out image tags from certs
+  }, []);
+
   return (
-    <section id="about" className="py-24 px-6 md:px-[12%] bg-[#f8f9fa] dark:bg-slate-800 relative overflow-hidden transition-colors duration-300">
+    <section id="about" className="py-16 md:py-24 px-6 md:px-[12%] bg-[#f8f9fa] dark:bg-slate-800 relative overflow-hidden transition-colors duration-300">
       
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 dark:from-blue-500/5 to-transparent pointer-events-none"></div>
+      {/* Background Decor & Marquee */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 dark:from-blue-500/5 to-transparent pointer-events-none z-0"></div>
+      
+      <div className="absolute top-[20%] left-0 w-full opacity-[0.03] dark:opacity-[0.05] pointer-events-none z-0 -rotate-3 scale-110">
+        <Marquee speed={30} gradient={false} autoFill>
+          {allIcons.map((skill, i) => (
+            <div key={i} className="text-8xl mx-8 grayscale">
+              {skill.icon}
+            </div>
+          ))}
+        </Marquee>
+      </div>
+      <div className="absolute top-[60%] left-0 w-full opacity-[0.03] dark:opacity-[0.05] pointer-events-none z-0 rotate-3 scale-110">
+        <Marquee speed={25} direction="right" gradient={false} autoFill>
+          {allIcons.map((skill, i) => (
+            <div key={i} className="text-8xl mx-8 grayscale">
+              {skill.icon}
+            </div>
+          ))}
+        </Marquee>
+      </div>
 
       <div className="flex flex-col lg:flex-row gap-16 relative z-10">
         
@@ -66,9 +111,10 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="w-full lg:w-1/2"
         >
-          <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-6 leading-tight uppercase tracking-wider">
-            About <br /><span className="text-primary dark:text-blue-400">Myself</span>
-          </h2>
+          <div className="mb-6">
+             <GlitchText as="h2" text="About Myself" className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white leading-tight uppercase tracking-wider" />
+             <div className="w-24 h-1 bg-primary mt-2"></div>
+          </div>
           
           <p className="text-tertiary dark:text-gray-300 text-lg mb-6 leading-relaxed">
             I am a passionate Full-Stack Software Developer trained in a global, remote-first environment. I specialize in building robust, scalable applications using modern web technologies like React, Ruby on Rails, and JavaScript. 
@@ -104,12 +150,12 @@ const About = () => {
             <h3 className="text-2xl font-bold font-alegreya text-secondary dark:text-white mb-6">Capabilities & Certifications</h3>
             
             {/* Tabs */}
-            <div className="flex flex-wrap gap-2 md:gap-4 border-b border-gray-100 dark:border-slate-700 mb-6">
+            <div className="flex gap-2 md:gap-3 border-b border-gray-100 dark:border-slate-700 mb-6 overflow-x-auto pb-px no-scrollbar">
               {Object.keys(skillCategories).map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveTab(category)}
-                  className={`pb-3 px-2 md:px-4 font-semibold text-sm md:text-base transition-colors relative ${
+                  className={`pb-3 px-2 md:px-3 font-semibold text-xs sm:text-sm md:text-base transition-colors relative whitespace-nowrap flex-shrink-0 ${
                     activeTab === category ? 'text-primary dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                   }`}
                 >

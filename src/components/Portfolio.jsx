@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import projectsData from '../data/projects.json';
 import { terminalReveal, glitchItem } from '../utils/transitions';
+import GlitchText from './GlitchText';
 
 const Portfolio = ({ onOpenModal }) => {
   return (
@@ -14,7 +15,7 @@ const Portfolio = ({ onOpenModal }) => {
         viewport={{ once: true, amount: 0.2 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4 uppercase tracking-wider">Featured Projects</h2>
+        <GlitchText as="h2" text="Featured Projects" className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4 uppercase tracking-wider" />
         <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
       </motion.div>
       
@@ -32,16 +33,21 @@ const Portfolio = ({ onOpenModal }) => {
             className="group relative bg-[#f8f9fa] dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-gray-100 dark:border-slate-700 hover:border-primary/30 dark:hover:border-blue-500/50 flex flex-col h-full"
           >
             {/* Image Container with Interactive Overlay */}
-            <div 
-              className="relative h-64 md:h-80 w-full overflow-hidden cursor-pointer"
+            <div
+              className="relative h-52 sm:h-64 md:h-80 w-full overflow-hidden cursor-pointer"
               onClick={() => onOpenModal(project)}
             >
-              <img 
+              <img
                 src={`${import.meta.env.BASE_URL}images/about-image/${project.imag}`}
                 alt={`Screenshot of ${project.title}`}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
+              {project.comingSoon && (
+                <div className="absolute top-4 right-4 z-10 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg tracking-widest uppercase">
+                  Deployed
+                </div>
+              )}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 dark:group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center backdrop-blur-[0px] group-hover:backdrop-blur-sm">
                 <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 bg-white dark:bg-slate-900 text-primary dark:text-blue-400 font-bold py-3 px-6 rounded-full shadow-lg flex items-center gap-2">
                   View Details <FaArrowRight />
@@ -60,7 +66,7 @@ const Portfolio = ({ onOpenModal }) => {
               <ul className="flex flex-wrap items-center text-[11px] font-bold uppercase tracking-widest mb-5 space-x-2 text-gray-500 dark:text-gray-400">
                 <li className="text-primary dark:text-blue-400">{project.role}</li>
                 <li className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-slate-600"></li>
-                <li>{project.clientName}</li>
+                <li>{project.category || project.clientName}</li>
                 <li className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-slate-600"></li>
                 <li>{project.clientYear}</li>
               </ul>

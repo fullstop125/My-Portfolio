@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import { terminalReveal, glitchItem, dataTrace } from '../utils/transitions';
+import GlitchText from './GlitchText';
 
 const experiences = [
   {
@@ -64,7 +65,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 md:px-[12%] bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
+    <section id="experience" className="py-16 md:py-24 px-6 md:px-[12%] bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
       <motion.div 
         variants={terminalReveal}
         initial="hidden"
@@ -72,7 +73,7 @@ const Experience = () => {
         viewport={{ once: true, amount: 0.2 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4 uppercase tracking-wider">System Logs: Experience</h2>
+        <GlitchText as="h2" text="System Logs: Experience" className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4 uppercase tracking-wider" />
         <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
       </motion.div>
 
