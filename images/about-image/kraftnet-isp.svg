@@ -1,0 +1,314 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="sidebar-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="primary-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6070ff"/>
+      <stop offset="100%" stop-color="#4053fc"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c1c3"/>
+      <stop offset="100%" stop-color="#16a3a5"/>
+    </linearGradient>
+    <linearGradient id="pink-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff1ead"/>
+      <stop offset="100%" stop-color="#d4169c"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fdbb2d"/>
+      <stop offset="100%" stop-color="#e8a820"/>
+    </linearGradient>
+    <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6070ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6070ff" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="1200" height="750" fill="#0d1117"/>
+
+  <!-- Grid overlay -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
+  </pattern>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+
+  <!-- Sidebar -->
+  <rect width="220" height="750" fill="url(#sidebar-grad)"/>
+  <rect x="219" width="1" height="750" fill="#30363d"/>
+
+  <!-- Sidebar logo -->
+  <rect x="20" y="18" width="180" height="44" rx="8" fill="#6070ff" fill-opacity="0.12"/>
+  <rect x="20" y="18" width="4" height="44" rx="2" fill="url(#primary-grad)"/>
+  <text x="36" y="36" fill="#6070ff" font-size="11" font-weight="700" font-family="'Courier New', monospace" letter-spacing="2">KRAFTNET</text>
+  <text x="36" y="52" fill="#8b949e" font-size="9" font-family="'Courier New', monospace" letter-spacing="1">ISP MANAGEMENT v2.1</text>
+
+  <!-- Sidebar nav items -->
+  <rect x="12" y="82" width="196" height="36" rx="6" fill="#6070ff" fill-opacity="0.15"/>
+  <rect x="12" y="82" width="3" height="36" rx="1.5" fill="url(#primary-grad)"/>
+  <circle cx="30" cy="100" r="7" fill="#6070ff" fill-opacity="0.3"/>
+  <text x="44" y="104" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif" font-weight="600">Dashboard</text>
+
+  <rect x="12" y="126" width="196" height="36" rx="6" fill="transparent"/>
+  <circle cx="30" cy="144" r="7" fill="#30363d"/>
+  <text x="44" y="148" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">Clients</text>
+
+  <rect x="12" y="170" width="196" height="36" rx="6" fill="transparent"/>
+  <circle cx="30" cy="188" r="7" fill="#30363d"/>
+  <text x="44" y="192" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">Billing</text>
+
+  <rect x="12" y="214" width="196" height="36" rx="6" fill="transparent"/>
+  <circle cx="30" cy="232" r="7" fill="#30363d"/>
+  <text x="44" y="236" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">Network</text>
+
+  <rect x="12" y="258" width="196" height="36" rx="6" fill="transparent"/>
+  <circle cx="30" cy="276" r="7" fill="#30363d"/>
+  <text x="44" y="280" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">Provisioning</text>
+
+  <rect x="12" y="302" width="196" height="36" rx="6" fill="transparent"/>
+  <circle cx="30" cy="320" r="7" fill="#30363d"/>
+  <text x="44" y="324" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">Reports</text>
+
+  <!-- Sidebar bottom: user -->
+  <rect x="12" y="690" width="196" height="44" rx="8" fill="#21262d"/>
+  <circle cx="34" cy="712" r="12" fill="url(#primary-grad)"/>
+  <text x="34" y="716" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="Arial">M</text>
+  <text x="52" y="708" fill="#e6edf3" font-size="11" font-weight="600" font-family="Arial">Admin</text>
+  <text x="52" y="722" fill="#8b949e" font-size="9" font-family="Arial">Kraftnet Kenya</text>
+
+  <!-- Main content area -->
+  <!-- Top header bar -->
+  <rect x="220" y="0" width="980" height="58" fill="#161b22"/>
+  <rect x="220" y="57" width="980" height="1" fill="#30363d"/>
+  <text x="244" y="23" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">root@kraftnet:~$</text>
+  <text x="358" y="23" fill="#22c1c3" font-size="10" font-family="'Courier New', monospace">dashboard --live</text>
+
+  <!-- Search bar -->
+  <rect x="700" y="14" width="200" height="30" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="716" y="33" fill="#8b949e" font-size="11" font-family="Arial">Search clients...</text>
+
+  <!-- Notification dot -->
+  <circle cx="940" cy="29" r="13" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="940" y="33" text-anchor="middle" fill="#8b949e" font-size="12">&#9776;</text>
+  <circle cx="948" cy="20" r="5" fill="#ff1ead"/>
+  <text x="948" y="23" text-anchor="middle" fill="white" font-size="7" font-weight="700">3</text>
+
+  <!-- Avatar -->
+  <circle cx="985" cy="29" r="15" fill="url(#primary-grad)"/>
+  <text x="985" y="33" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="Arial">MH</text>
+
+  <!-- Page title -->
+  <text x="244" y="95" fill="#e6edf3" font-size="20" font-weight="700" font-family="Arial, sans-serif">Overview</text>
+  <text x="244" y="114" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">Last updated: 2 minutes ago</text>
+  <!-- Live indicator -->
+  <circle cx="440" cy="106" r="5" fill="#22c1c3" filter="url(#glow)"/>
+  <text x="450" y="110" fill="#22c1c3" font-size="10" font-family="Arial" font-weight="600">LIVE</text>
+
+  <!-- ===== STAT CARDS ===== -->
+  <!-- Card 1: Total Clients -->
+  <rect x="244" y="128" width="218" height="110" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <rect x="244" y="128" width="218" height="4" rx="2" fill="url(#primary-grad)"/>
+  <text x="260" y="158" fill="#8b949e" font-size="10" font-family="Arial" text-transform="uppercase" letter-spacing="1">TOTAL CLIENTS</text>
+  <text x="260" y="196" fill="#e6edf3" font-size="32" font-weight="700" font-family="Arial">127</text>
+  <rect x="260" y="210" width="80" height="16" rx="4" fill="#6070ff" fill-opacity="0.15"/>
+  <text x="268" y="222" fill="#6070ff" font-size="9" font-weight="600" font-family="Arial">▲ 12 this month</text>
+
+  <!-- Card 2: Active -->
+  <rect x="474" y="128" width="218" height="110" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <rect x="474" y="128" width="218" height="4" rx="2" fill="url(#teal-grad)"/>
+  <text x="490" y="158" fill="#8b949e" font-size="10" font-family="Arial">ACTIVE CONNECTIONS</text>
+  <text x="490" y="196" fill="#e6edf3" font-size="32" font-weight="700" font-family="Arial">118</text>
+  <rect x="490" y="210" width="80" height="16" rx="4" fill="#22c1c3" fill-opacity="0.15"/>
+  <text x="498" y="222" fill="#22c1c3" font-size="9" font-weight="600" font-family="Arial">92.9% uptime</text>
+
+  <!-- Card 3: Bandwidth -->
+  <rect x="704" y="128" width="218" height="110" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <rect x="704" y="128" width="218" height="4" rx="2" fill="url(#pink-grad)"/>
+  <text x="720" y="158" fill="#8b949e" font-size="10" font-family="Arial">BANDWIDTH USAGE</text>
+  <text x="720" y="196" fill="#e6edf3" font-size="32" font-weight="700" font-family="Arial">4.2 <tspan font-size="18" fill="#8b949e">Gbps</tspan></text>
+  <rect x="720" y="210" width="90" height="16" rx="4" fill="#ff1ead" fill-opacity="0.12"/>
+  <text x="728" y="222" fill="#ff1ead" font-size="9" font-weight="600" font-family="Arial">▲ 18% peak load</text>
+
+  <!-- Card 4: Revenue -->
+  <rect x="934" y="128" width="218" height="110" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <rect x="934" y="128" width="218" height="4" rx="2" fill="url(#gold-grad)"/>
+  <text x="950" y="158" fill="#8b949e" font-size="10" font-family="Arial">MONTHLY REVENUE</text>
+  <text x="950" y="196" fill="#e6edf3" font-size="32" font-weight="700" font-family="Arial">KES <tspan font-size="24">184K</tspan></text>
+  <rect x="950" y="210" width="80" height="16" rx="4" fill="#fdbb2d" fill-opacity="0.15"/>
+  <text x="958" y="222" fill="#fdbb2d" font-size="9" font-weight="600" font-family="Arial">▲ 8% vs last month</text>
+
+  <!-- ===== CHART SECTION ===== -->
+  <rect x="244" y="256" width="480" height="220" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="262" y="282" fill="#e6edf3" font-size="13" font-weight="600" font-family="Arial">Bandwidth Usage (7 days)</text>
+  <text x="680" y="282" fill="#6070ff" font-size="10" font-family="Arial">● PPPoE</text>
+  <text x="710" y="282" fill="#22c1c3" font-size="10" font-family="Arial">● Static</text>
+
+  <!-- Chart axes -->
+  <line x1="276" y1="440" x2="706" y2="440" stroke="#30363d" stroke-width="1"/>
+  <line x1="276" y1="296" x2="276" y2="440" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Y-axis labels -->
+  <text x="264" y="300" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="end">5G</text>
+  <text x="264" y="335" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="end">4G</text>
+  <text x="264" y="370" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="end">3G</text>
+  <text x="264" y="405" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="end">2G</text>
+
+  <!-- Grid lines -->
+  <line x1="276" y1="300" x2="706" y2="300" stroke="#30363d" stroke-width="0.5" stroke-dasharray="4"/>
+  <line x1="276" y1="335" x2="706" y2="335" stroke="#30363d" stroke-width="0.5" stroke-dasharray="4"/>
+  <line x1="276" y1="370" x2="706" y2="370" stroke="#30363d" stroke-width="0.5" stroke-dasharray="4"/>
+  <line x1="276" y1="405" x2="706" y2="405" stroke="#30363d" stroke-width="0.5" stroke-dasharray="4"/>
+
+  <!-- Area chart fill -->
+  <polygon points="276,420 337,380 398,350 459,390 520,320 581,300 642,340 703,310 703,440 276,440" fill="url(#chart-grad)"/>
+  <!-- Chart line -->
+  <polyline points="276,420 337,380 398,350 459,390 520,320 581,300 642,340 703,310" fill="none" stroke="#6070ff" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Teal line -->
+  <polyline points="276,435 337,420 398,415 459,425 520,410 581,405 642,418 703,400" fill="none" stroke="#22c1c3" stroke-width="2" stroke-linejoin="round" stroke-dasharray="5,3"/>
+  <!-- Data points -->
+  <circle cx="276" cy="420" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+  <circle cx="337" cy="380" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+  <circle cx="398" cy="350" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+  <circle cx="459" cy="390" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+  <circle cx="520" cy="320" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+  <circle cx="581" cy="300" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="642" cy="340" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+  <circle cx="703" cy="310" r="4" fill="#6070ff" stroke="#0d1117" stroke-width="2"/>
+
+  <!-- X-axis labels -->
+  <text x="276" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Mon</text>
+  <text x="337" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Tue</text>
+  <text x="398" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Wed</text>
+  <text x="459" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Thu</text>
+  <text x="520" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Fri</text>
+  <text x="581" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Sat</text>
+  <text x="642" y="455" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Sun</text>
+  <text x="703" y="455" fill="#e6edf3" font-size="9" font-family="Arial" text-anchor="middle" font-weight="600">Today</text>
+
+  <!-- Tooltip at peak -->
+  <rect x="553" y="284" width="76" height="32" rx="4" fill="#6070ff"/>
+  <text x="591" y="297" fill="white" font-size="9" font-family="Arial" text-anchor="middle" font-weight="700">Peak: 4.8Gbps</text>
+  <text x="591" y="309" fill="#c0c8ff" font-size="8" font-family="Arial" text-anchor="middle">Saturday 14:32</text>
+  <polygon points="591,316 586,326 596,326" fill="#6070ff"/>
+
+  <!-- ===== NETWORK STATUS PANEL ===== -->
+  <rect x="740" y="256" width="412" height="220" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="758" y="282" fill="#e6edf3" font-size="13" font-weight="600" font-family="Arial">Network Infrastructure</text>
+
+  <!-- OLT Status -->
+  <rect x="758" y="292" width="376" height="40" rx="6" fill="#0d1117"/>
+  <text x="772" y="308" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">EPON OLT-01</text>
+  <text x="772" y="324" fill="#e6edf3" font-size="9" font-family="Arial">Huawei OptiX MA5800 · 64 ports</text>
+  <rect x="1072" y="302" width="52" height="18" rx="9" fill="#22c1c3" fill-opacity="0.2"/>
+  <circle cx="1084" cy="311" r="4" fill="#22c1c3"/>
+  <text x="1090" y="315" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ONLINE</text>
+
+  <!-- MikroTik Router -->
+  <rect x="758" y="340" width="376" height="40" rx="6" fill="#0d1117"/>
+  <text x="772" y="356" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">CORE-ROUTER-01</text>
+  <text x="772" y="372" fill="#e6edf3" font-size="9" font-family="Arial">MikroTik CCR2004 · BGP/OSPF · AS65001</text>
+  <rect x="1072" y="350" width="52" height="18" rx="9" fill="#22c1c3" fill-opacity="0.2"/>
+  <circle cx="1084" cy="359" r="4" fill="#22c1c3"/>
+  <text x="1090" y="363" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ONLINE</text>
+
+  <!-- PPPoE Server -->
+  <rect x="758" y="388" width="376" height="40" rx="6" fill="#0d1117"/>
+  <text x="772" y="404" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">PPPOE-SERVER</text>
+  <text x="772" y="420" fill="#e6edf3" font-size="9" font-family="Arial">Active sessions: 118 / 256 · Pool: 10.10.0.0/16</text>
+  <rect x="1072" y="398" width="52" height="18" rx="9" fill="#22c1c3" fill-opacity="0.2"/>
+  <circle cx="1084" cy="407" r="4" fill="#22c1c3"/>
+  <text x="1090" y="411" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ONLINE</text>
+
+  <!-- Firewall -->
+  <rect x="758" y="436" width="376" height="30" rx="6" fill="#0d1117"/>
+  <text x="772" y="452" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">FIREWALL</text>
+  <text x="870" y="452" fill="#e6edf3" font-size="9" font-family="Arial">pfSense 2.7 · Fail2Ban active · 0 threats/hr</text>
+  <circle cx="1116" cy="451" r="4" fill="#22c1c3"/>
+
+  <!-- ===== CLIENT TABLE ===== -->
+  <rect x="244" y="492" width="908" height="240" rx="10" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="262" y="518" fill="#e6edf3" font-size="13" font-weight="600" font-family="Arial">Recent Client Activity</text>
+
+  <!-- Table header -->
+  <rect x="244" y="526" width="908" height="30" fill="#161b22" rx="0"/>
+  <text x="270" y="545" fill="#8b949e" font-size="10" font-family="Arial" font-weight="600" letter-spacing="1">CLIENT ID</text>
+  <text x="370" y="545" fill="#8b949e" font-size="10" font-family="Arial" font-weight="600" letter-spacing="1">NAME</text>
+  <text x="520" y="545" fill="#8b949e" font-size="10" font-family="Arial" font-weight="600" letter-spacing="1">PLAN</text>
+  <text x="640" y="545" fill="#8b949e" font-size="10" font-family="Arial" font-weight="600" letter-spacing="1">IP ADDRESS</text>
+  <text x="770" y="545" fill="#8b949e" font-size="10" font-family="Arial" font-weight="600" letter-spacing="1">STATUS</text>
+  <text x="880" y="545" fill="#8b949e" font-size="10" font-family="Arial" font-weight="600" letter-spacing="1">EXPIRES</text>
+
+  <!-- Table rows -->
+  <!-- Row 1 -->
+  <rect x="244" y="556" width="908" height="34" fill="#21262d"/>
+  <line x1="244" y1="590" x2="1152" y2="590" stroke="#30363d" stroke-width="0.5"/>
+  <text x="270" y="578" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">KFN-001</text>
+  <text x="370" y="578" fill="#e6edf3" font-size="11" font-family="Arial">James Mwangi</text>
+  <text x="520" y="578" fill="#e6edf3" font-size="10" font-family="Arial">10Mbps Fiber</text>
+  <text x="640" y="578" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">10.10.1.24</text>
+  <rect x="770" y="566" width="54" height="16" rx="8" fill="#22c1c3" fill-opacity="0.15"/>
+  <circle cx="782" cy="574" r="3" fill="#22c1c3"/>
+  <text x="788" y="578" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ACTIVE</text>
+  <text x="880" y="578" fill="#8b949e" font-size="10" font-family="Arial">Mar 31, 2025</text>
+
+  <!-- Row 2 -->
+  <rect x="244" y="590" width="908" height="34" fill="#1a1f27"/>
+  <line x1="244" y1="624" x2="1152" y2="624" stroke="#30363d" stroke-width="0.5"/>
+  <text x="270" y="612" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">KFN-002</text>
+  <text x="370" y="612" fill="#e6edf3" font-size="11" font-family="Arial">Sarah Njeri</text>
+  <text x="520" y="612" fill="#e6edf3" font-size="10" font-family="Arial">20Mbps Fiber</text>
+  <text x="640" y="612" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">10.10.1.47</text>
+  <rect x="770" y="600" width="54" height="16" rx="8" fill="#22c1c3" fill-opacity="0.15"/>
+  <circle cx="782" cy="608" r="3" fill="#22c1c3"/>
+  <text x="788" y="612" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ACTIVE</text>
+  <text x="880" y="612" fill="#8b949e" font-size="10" font-family="Arial">Apr 15, 2025</text>
+
+  <!-- Row 3 -->
+  <rect x="244" y="624" width="908" height="34" fill="#21262d"/>
+  <line x1="244" y1="658" x2="1152" y2="658" stroke="#30363d" stroke-width="0.5"/>
+  <text x="270" y="646" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">KFN-047</text>
+  <text x="370" y="646" fill="#e6edf3" font-size="11" font-family="Arial">Tech Vault Ltd.</text>
+  <text x="520" y="646" fill="#e6edf3" font-size="10" font-family="Arial">100Mbps Business</text>
+  <text x="640" y="646" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">10.10.2.11</text>
+  <rect x="770" y="634" width="54" height="16" rx="8" fill="#22c1c3" fill-opacity="0.15"/>
+  <circle cx="782" cy="642" r="3" fill="#22c1c3"/>
+  <text x="788" y="646" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ACTIVE</text>
+  <text x="880" y="646" fill="#8b949e" font-size="10" font-family="Arial">Jun 1, 2025</text>
+
+  <!-- Row 4 -->
+  <rect x="244" y="658" width="908" height="34" fill="#1a1f27"/>
+  <line x1="244" y1="692" x2="1152" y2="692" stroke="#30363d" stroke-width="0.5"/>
+  <text x="270" y="680" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">KFN-083</text>
+  <text x="370" y="680" fill="#e6edf3" font-size="11" font-family="Arial">Peter Kamau</text>
+  <text x="520" y="680" fill="#e6edf3" font-size="10" font-family="Arial">5Mbps Home</text>
+  <text x="640" y="680" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">—</text>
+  <rect x="770" y="668" width="64" height="16" rx="8" fill="#fdbb2d" fill-opacity="0.12"/>
+  <circle cx="782" cy="676" r="3" fill="#fdbb2d"/>
+  <text x="788" y="680" fill="#fdbb2d" font-size="9" font-weight="700" font-family="Arial">EXPIRED</text>
+  <text x="880" y="680" fill="#ff1ead" font-size="10" font-family="Arial">Mar 01, 2025</text>
+
+  <!-- Row 5 -->
+  <rect x="244" y="692" width="908" height="34" fill="#21262d"/>
+  <text x="270" y="714" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">KFN-105</text>
+  <text x="370" y="714" fill="#e6edf3" font-size="11" font-family="Arial">Amina Odhiambo</text>
+  <text x="520" y="714" fill="#e6edf3" font-size="10" font-family="Arial">10Mbps Fiber</text>
+  <text x="640" y="714" fill="#8b949e" font-size="10" font-family="'Courier New', monospace">10.10.1.92</text>
+  <rect x="770" y="702" width="54" height="16" rx="8" fill="#22c1c3" fill-opacity="0.15"/>
+  <circle cx="782" cy="710" r="3" fill="#22c1c3"/>
+  <text x="788" y="714" fill="#22c1c3" font-size="9" font-weight="700" font-family="Arial">ACTIVE</text>
+  <text x="880" y="714" fill="#8b949e" font-size="10" font-family="Arial">May 10, 2025</text>
+
+  <!-- Table footer -->
+  <rect x="244" y="726" width="908" height="6" rx="0" fill="#161b22" rx="0 0 10 10"/>
+  <text x="750" y="737" fill="#8b949e" font-size="9" font-family="Arial" text-anchor="middle">Showing 5 of 127 clients · Page 1 of 26</text>
+
+  <!-- Decorative corner accent -->
+  <circle cx="1180" cy="30" r="120" fill="#6070ff" fill-opacity="0.03"/>
+  <circle cx="240" cy="750" r="100" fill="#22c1c3" fill-opacity="0.03"/>
+</svg>
