@@ -1,6 +1,25 @@
 [
   {
-    "title": "Eventify",
+    "title": "ISP Billing System",
+    "imag": "isp-billing-system.png",
+    "role": "Full-Stack Engineer",
+    "clientName": "Kraftnet",
+    "clientYear": "2024",
+    "projectDescription": "A comprehensive ISP Management and Billing platform designed to streamline operations for Internet Service Providers. It handles automated client provisioning, subscription management, payment tracking, and network integration with MikroTik routers.",
+    "challengesOvercome": "Designing a system that could securely and instantly provision PPPoE profiles on network hardware upon successful payment required complex asynchronous job processing and robust error handling to prevent service interruptions.",
+    "architectureDecisions": "Built a scalable React front-end to provide administrators with a real-time dashboard. The backend architecture utilizes secure APIs to communicate directly with ISP hardware (MikroTik OLTs/Routers) while maintaining strict data consistency for financial transactions.",
+    "keyFeatures": [
+      "Automated Payment & Invoice Generation",
+      "Direct MikroTik Router API Integration",
+      "PPPoE & Static IP Client Provisioning",
+      "Real-time Subscription & Revenue Dashboard"
+    ],
+    "tags": ["React", "Tailwind CSS", "API Integration", "Network Automation", "Billing"],
+    "seeLive": "https://app.kraftnet.co.ke",
+    "seeSource": "https://github.com/fullstop125/isp_billing_frontend.git"
+  },
+  {
+    "title": "Space Travelers Hub",
     "imag": "eventify.png",
     "role": "Events",
     "clientName": "Back End Dev",
@@ -46,7 +65,7 @@
     "role": "Entertainment",
     "clientName": "Back End Dev",
     "clientYear": "2022",
-    "projectDescription": "A website that renders a collecion of animes. It also allows you to like and comment on the animes. Data is preserved thanks to the external Involvement API. Anime data is provided by Animedb API.",
+    "projectDescription": "A website that renders a collection of animes. It also allows you to like and comment on the animes. Data is preserved thanks to the external Involvement API. Anime data is provided by Animedb API.",
     "tags": ["html", "css", "javascript", "API", "webpack", "jest"],
     "seeLive": "https://fullstop125.github.io/capstone-project-anime-db/",
     "seeSource": "https://github.com/fullstop125/capstone-project-anime-db"
