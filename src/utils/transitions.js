@@ -1,19 +1,17 @@
 export const terminalReveal = {
   hidden: { 
-    opacity: 0, 
-    clipPath: "inset(0% 0% 100% 0%)",
-    y: 10
+    opacity: 0,
+    y: 20
   },
   visible: { 
-    opacity: 1, 
-    clipPath: "inset(0% 0% 0% 0%)",
+    opacity: 1,
     y: 0,
     transition: { 
       type: "spring", 
       stiffness: 50, 
       damping: 15,
       duration: 0.8,
-      staggerChildren: 0.1 
+      staggerChildren: 0.2 
     }
   }
 };
