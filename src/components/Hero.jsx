@@ -51,10 +51,12 @@ const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 mb-4 bg-white/20 dark:bg-black/20 w-fit px-4 py-2 rounded-full backdrop-blur-sm border border-white/30"
+            className="flex items-center gap-3 mb-4 flex-wrap"
           >
-            <FaTerminal className="text-[#172b4d] dark:text-[#fdbb2d]" />
-            <span className="text-[#172b4d] dark:text-white font-mono text-sm font-bold tracking-widest uppercase">Developer Online</span>
+            <div className="flex items-center gap-2 bg-white/20 dark:bg-black/20 w-fit px-4 py-2 rounded-full backdrop-blur-sm border border-white/30">
+              <FaTerminal className="text-[#172b4d] dark:text-[#fdbb2d]" />
+              <span className="text-[#172b4d] dark:text-white font-mono text-sm font-bold tracking-widest uppercase">Developer Online</span>
+            </div>
           </motion.div>
 
           <motion.div
@@ -63,10 +65,10 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="drop-shadow-sm"
           >
-            <h2 className="text-5xl md:text-7xl font-alegreya text-[#172b4d] font-extrabold mb-2 tracking-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-alegreya text-[#172b4d] font-extrabold mb-2 tracking-tight">
               Hey, I'm <span className="text-gradient drop-shadow-sm">Momanyi</span>
             </h2>
-            <h3 className="text-3xl md:text-4xl font-mono text-[#172b4d] font-bold mb-8 h-[40px] md:h-[50px]">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-mono text-[#172b4d] font-bold mb-8 h-[36px] sm:h-[40px] md:h-[50px]">
               <span className="text-white drop-shadow-md">{'> '}</span>
               <Typewriter
                 words={['Cybersecurity Expert', 'Full-Stack Developer', 'Network Architect', 'System Engineer']}
@@ -89,16 +91,15 @@ const Hero = () => {
             I engineer secure, scalable, and high-performance digital ecosystems. From architecting ISP networks and hardening security perimeters to deploying full-stack React and Rails applications, I bridge the gap between infrastructure and innovation.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col space-y-5"
           >
-            <p className="uppercase text-[#172b4d] font-extrabold tracking-widest text-sm drop-shadow-sm">Establish Connection</p>
             <ul className="flex space-x-6 text-[#505f79] text-2xl">
               {socialLinks.map((link, i) => (
-                <motion.li 
+                <motion.li
                   key={i}
                   whileHover={{ scale: 1.2, color: '#6070ff', rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -109,6 +110,22 @@ const Hero = () => {
                 </motion.li>
               ))}
             </ul>
+            <div className="flex flex-wrap gap-4 pt-2">
+              <a
+                href="https://drive.google.com/file/d/1s5E3axBAA_pQnh1pFBc_ffdewD4ZFhb9/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-[#172b4d] dark:bg-blue-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-primary dark:hover:bg-blue-500 hover:-translate-y-0.5 transition-all duration-300 text-sm"
+              >
+                Download Resume ↓
+              </a>
+              <a
+                href="#work-card"
+                className="inline-flex items-center gap-2 bg-white/80 dark:bg-white/10 backdrop-blur-md text-[#172b4d] dark:text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-white dark:hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-300 border border-white/50 text-sm"
+              >
+                View My Work ↓
+              </a>
+            </div>
           </motion.div>
         </div>
 
@@ -117,7 +134,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-full md:w-[40%] h-[400px] md:h-[600px] mt-10 md:mt-0 relative z-20"
+          className="w-full md:w-[40%] h-[280px] sm:h-[360px] md:h-[600px] mt-6 md:mt-0 relative z-20"
         >
           <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
             <ambientLight intensity={0.5} />

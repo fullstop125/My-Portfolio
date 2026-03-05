@@ -65,7 +65,7 @@ const Header = () => {
           scrolled ? 'bg-gradient-to-r from-[#b1e1ff] via-[#22c1c3] to-[#fdbb2d] shadow-md py-3 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800' : 'bg-transparent py-5'
         } px-6 md:px-16 flex justify-between items-center`}
       >
-        <div className="logo cursor-pointer font-bold text-2xl tracking-widest z-50">
+        <div className="logo cursor-pointer font-bold text-2xl tracking-widest z-50 flex items-center gap-3">
           <a href="#" className="flex items-center group">
             <span className="text-primary dark:text-blue-400 group-hover:text-[#4053fc] transition-colors">M</span>
             <span className="inline-block w-3 h-3 bg-gradient-to-r from-[#ff1ead] to-primary rounded-full mx-1 shadow-lg group-hover:scale-125 transition-transform"></span>
@@ -76,22 +76,36 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-10">
           <ul className="flex space-x-10 text-[16px] font-semibold text-tertiary dark:text-gray-200">
-            {['Portfolio', 'About', 'Contact'].map((item) => (
-              <li key={item}>
-                <a 
-                  href={`#${item === 'Portfolio' ? 'work-card' : item.toLowerCase()}`} 
+            {[
+              { label: 'Portfolio', href: '#work-card' },
+              { label: 'Experience', href: '#experience' },
+              { label: 'About', href: '#about' },
+              { label: 'Contact', href: '#contact' },
+            ].map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
                   className="relative group hover:text-primary dark:hover:text-blue-400 transition-colors"
                 >
-                  {item}
+                  {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
                 </a>
               </li>
             ))}
           </ul>
-          
+
+          <a
+            href="https://drive.google.com/file/d/1s5E3axBAA_pQnh1pFBc_ffdewD4ZFhb9/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-primary dark:bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-[#4053fc] dark:hover:bg-blue-500 transition-all shadow-md whitespace-nowrap"
+          >
+            Resume ↓
+          </a>
+
           {/* Dark Mode Toggle Desktop */}
-          <button 
-            onClick={toggleDarkMode} 
+          <button
+            onClick={toggleDarkMode}
             className="text-xl text-secondary dark:text-yellow-400 hover:text-primary transition-colors p-2 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-md shadow-sm"
             aria-label="Toggle Dark Mode"
           >
@@ -132,19 +146,24 @@ const Header = () => {
               className="fixed inset-0 bg-primary/95 dark:bg-slate-900/95 backdrop-blur-xl flex flex-col pt-32 px-8 z-40"
             >
               <ul className="flex flex-col space-y-8 font-bold text-4xl text-white">
-                {['Portfolio', 'About', 'Contact'].map((item, i) => (
-                  <motion.li 
-                    key={item}
+                {[
+                  { label: 'Portfolio', href: '#work-card' },
+                  { label: 'Experience', href: '#experience' },
+                  { label: 'About', href: '#about' },
+                  { label: 'Contact', href: '#contact' },
+                ].map((item, i) => (
+                  <motion.li
+                    key={item.label}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 + 0.2 }}
                   >
-                    <a 
-                      href={`#${item === 'Portfolio' ? 'work-card' : item.toLowerCase()}`} 
+                    <a
+                      href={item.href}
                       onClick={closeMenu}
                       className="hover:text-blue-300 transition-colors block border-b border-white/20 pb-4"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   </motion.li>
                 ))}

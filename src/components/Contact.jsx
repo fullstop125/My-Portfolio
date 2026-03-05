@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-[12%] bg-secondary text-white relative overflow-hidden transition-colors duration-300">
+    <section id="contact" className="py-16 md:py-24 px-6 md:px-[12%] bg-secondary text-white relative overflow-hidden transition-colors duration-300">
       {/* Background with dedicated shapes and gradient */}
       <div 
         className="absolute inset-0 opacity-20 dark:opacity-10 mix-blend-overlay"
@@ -78,10 +78,26 @@ const Contact = () => {
       >
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-white mb-4">Let's work together</h2>
-          <p className="text-white/80 text-lg mb-8 leading-relaxed">
+          <p className="text-white/80 text-lg mb-6 leading-relaxed">
             I'm currently looking for new opportunities. Whether you have a project to discuss or just want to say hi, my inbox is open!
           </p>
-          <div className="w-16 h-1 bg-primary rounded-full mb-8"></div>
+          <div className="w-16 h-1 bg-primary rounded-full mb-6"></div>
+          <div className="flex flex-col gap-3">
+            <a
+              href="mailto:hassanmoses125@gmail.com"
+              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-medium"
+            >
+              <span className="text-primary">✉</span> hassanmoses125@gmail.com
+            </a>
+            <a
+              href="https://medium.com/@momanyihassan"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-medium"
+            >
+              <span className="text-primary">✍</span> Read my thoughts on Medium →
+            </a>
+          </div>
         </div>
 
         <div className="w-full md:w-1/2 relative">

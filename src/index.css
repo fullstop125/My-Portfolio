@@ -120,3 +120,13 @@ body::after {
   60% { transform: translateY(0) translateX(110vw) scale(0.6); }
   100% { transform: translateY(0) translateX(110vw) scale(0.6); }
 }
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Custom scrollbar for modal content */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #c1c7d0; border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #6070ff; }

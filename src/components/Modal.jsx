@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaTimes, FaExternalLinkAlt, FaGithub, FaTerminal, FaCheckCircle } from 'react-icons/fa';
+import { FaTimes, FaExternalLinkAlt, FaGithub, FaTerminal } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Modal = ({ project, onClose }) => {
@@ -63,9 +63,9 @@ const Modal = ({ project, onClose }) => {
                 </h2>
                 <ul className="flex flex-wrap items-center text-xs font-mono font-semibold uppercase tracking-widest gap-3 text-gray-500 dark:text-gray-400">
                   <li className="text-primary dark:text-blue-400 bg-primary/10 dark:bg-blue-400/10 px-2 py-1 rounded">{project.role}</li>
-                  <li>//</li>
-                  <li>{project.clientName}</li>
-                  <li>//</li>
+                  <li>{'//'}</li>
+                  <li>{project.category || project.clientName}</li>
+                  <li>{'//'}</li>
                   <li>{project.clientYear}</li>
                 </ul>
               </div>
@@ -76,7 +76,7 @@ const Modal = ({ project, onClose }) => {
               <img 
                 src={`${import.meta.env.BASE_URL}images/about-image/${project.imag}`} 
                 alt={project.title} 
-                className="w-full h-auto max-h-[450px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-auto max-h-[220px] sm:max-h-[320px] md:max-h-[450px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
