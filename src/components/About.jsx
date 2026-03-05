@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { terminalReveal, glitchItem } from '../utils/transitions';
 import { 
   SiJavascript, SiHtml5, SiCss3, SiRuby, SiPython, 
   SiReact, SiRubyonrails, SiTailwindcss, SiBootstrap, 
@@ -59,13 +60,13 @@ const About = () => {
         
         {/* Left Column - Text */}
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={terminalReveal}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
           className="w-full lg:w-1/2"
         >
-          <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-6 leading-tight uppercase tracking-wider">
             About <br /><span className="text-primary dark:text-blue-400">Myself</span>
           </h2>
           
@@ -93,10 +94,10 @@ const About = () => {
 
         {/* Right Column - Tech Stack Tabs */}
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={terminalReveal}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
           className="w-full lg:w-1/2"
         >
           <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-700 min-h-[400px] flex flex-col">
@@ -128,15 +129,16 @@ const About = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
+                  variants={terminalReveal}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
                   className="grid grid-cols-2 sm:grid-cols-3 gap-4"
                 >
                   {skillCategories[activeTab].map((skill, index) => (
                     <motion.div 
                       key={index}
+                      variants={glitchItem}
                       whileHover={{ scale: 1.05, y: -5 }}
                       className="flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-primary/30 dark:hover:border-blue-400/30 hover:bg-white dark:hover:bg-slate-700 hover:shadow-md transition-all cursor-default"
                     >

@@ -51,6 +51,26 @@
   background-clip: text;
 }
 
+/* --- Global CRT Scanline Overlay --- */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 100;
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.dark body::after {
+  opacity: 0.6;
+}
+
 /* --- Bird Animations --- */
 .bird {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg");

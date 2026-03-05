@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import { terminalReveal, glitchItem, dataTrace } from '../utils/transitions';
 
 const experiences = [
   {
@@ -63,28 +64,37 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 md:px-[12%] bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section id="experience" className="py-24 px-6 md:px-[12%] bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        variants={terminalReveal}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4">Experience & Education</h2>
+        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4 uppercase tracking-wider">System Logs: Experience</h2>
         <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
       </motion.div>
 
-      <div className="relative max-w-4xl mx-auto">
-        {/* Timeline Line */}
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-slate-700 md:-translate-x-1/2"></div>
+      <motion.div 
+        variants={terminalReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="relative max-w-4xl mx-auto"
+      >
+        {/* Animated Data Trace Timeline Line */}
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-slate-800 md:-translate-x-1/2">
+          <motion.div 
+            variants={dataTrace}
+            className="w-full bg-gradient-to-b from-primary via-[#ff1ead] to-transparent rounded-full shadow-[0_0_10px_#4053fc]"
+          />
+        </div>
 
         {experiences.map((exp, index) => (
           <motion.div 
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            variants={glitchItem}
             className={`relative flex flex-col md:flex-row items-start mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
           >
             {/* Timeline Dot */}
@@ -105,7 +115,7 @@ const Experience = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

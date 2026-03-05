@@ -2,28 +2,33 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import projectsData from '../data/projects.json';
+import { terminalReveal, glitchItem } from '../utils/transitions';
 
 const Portfolio = ({ onOpenModal }) => {
   return (
     <section id="work-card" className="py-24 px-6 md:px-[12%] bg-white dark:bg-slate-900 transition-colors duration-300">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        variants={terminalReveal}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4">Featured Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-alegreya font-bold text-secondary dark:text-white mb-4 uppercase tracking-wider">Featured Projects</h2>
         <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
       </motion.div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <motion.div 
+        variants={terminalReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10"
+      >
         {projectsData.map((project, index) => (
           <motion.div 
             key={index} 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            variants={glitchItem}
             className="group relative bg-[#f8f9fa] dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-gray-100 dark:border-slate-700 hover:border-primary/30 dark:hover:border-blue-500/50 flex flex-col h-full"
           >
             {/* Image Container with Interactive Overlay */}
@@ -87,7 +92,7 @@ const Portfolio = ({ onOpenModal }) => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
