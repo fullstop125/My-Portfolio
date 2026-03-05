@@ -6,13 +6,6 @@ import { FaGithub, FaLinkedin, FaTwitter, FaMedium, FaAngellist } from 'react-ic
 const Footer = () => {
   const [isInView, setIsInView] = useState(false);
 
-  const navLinks = [
-    { label: 'Portfolio', href: '#work-card' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
   const socialLinks = [
     { icon: <FaGithub />, url: 'https://github.com/fullstop125', label: 'GitHub' },
     { icon: <FaLinkedin />, url: 'https://linkedin.com/in/momanyi-hassan-32a489180', label: 'LinkedIn' },
@@ -29,27 +22,13 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.3 }}
       className="bg-slate-900 border-t border-slate-800 transition-colors duration-300"
     >
-      {/* Top Row: Logo + Nav */}
-      <div className="px-6 md:px-[12%] pt-12 pb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-slate-800">
+      {/* Top Row: Logo */}
+      <div className="px-6 md:px-[12%] pt-12 pb-8 flex justify-center border-b border-slate-800">
         <a href="#" className="flex items-center font-bold text-2xl tracking-widest group">
           <span className="text-primary group-hover:text-[#4053fc] transition-colors">M</span>
           <span className="inline-block w-3 h-3 bg-gradient-to-r from-[#ff1ead] to-primary rounded-full mx-1 shadow-lg group-hover:scale-125 transition-transform"></span>
           <span className="text-white">MANYI</span>
         </a>
-        <nav>
-          <ul className="flex flex-wrap gap-6 text-sm font-semibold text-gray-400">
-            {navLinks.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="hover:text-white transition-colors"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </div>
 
       {/* Middle Row: Social Icons */}
