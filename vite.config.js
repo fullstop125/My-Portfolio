@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/My-Portfolio/', // Important for GitHub Pages deployment
+  base: '/', // Important for custom domain deployment
   build: {
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
