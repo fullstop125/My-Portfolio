@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="#0f172a" />
+  
+  <!-- The M -->
+  <text x="50" y="70" font-family="'Poppins', sans-serif" font-size="60" font-weight="bold" fill="#6070ff" text-anchor="middle">M</text>
+  
+  <!-- The dot -->
+  <circle cx="75" cy="70" r="8" fill="#ff1ead" />
+</svg>
