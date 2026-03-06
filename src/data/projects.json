@@ -1,0 +1,129 @@
+[
+  {
+    "title": "ISP Billing System",
+    "imag": "isp-billing-system.png",
+    "role": "Full-Stack Engineer",
+    "clientName": "Kraftnet",
+    "clientYear": "2024",
+    "projectDescription": "A comprehensive ISP Management and Billing platform designed to streamline operations for Internet Service Providers. It handles automated client provisioning, subscription management, payment tracking, and network integration with MikroTik routers.",
+    "challengesOvercome": "Designing a system that could securely and instantly provision PPPoE profiles on network hardware upon successful payment required complex asynchronous job processing and robust error handling to prevent service interruptions.",
+    "architectureDecisions": "Built a scalable React front-end to provide administrators with a real-time dashboard. The backend architecture utilizes secure APIs to communicate directly with ISP hardware (MikroTik OLTs/Routers) while maintaining strict data consistency for financial transactions.",
+    "keyFeatures": [
+      "Automated Payment & Invoice Generation",
+      "Direct MikroTik Router API Integration",
+      "PPPoE & Static IP Client Provisioning",
+      "Real-time Subscription & Revenue Dashboard"
+    ],
+    "tags": ["React", "Tailwind CSS", "API Integration", "Network Automation", "Billing"],
+    "seeLive": "https://app.kraftnet.co.ke",
+    "seeSource": "https://github.com/fullstop125/isp_billing_frontend.git"
+  },
+  {
+    "title": "Space Travelers Hub",
+    "imag": "eventify.png",
+    "role": "Events",
+    "clientName": "Back End Dev",
+    "clientYear": "2023",
+    "projectDescription": "Eventify is web application that allows users to create, view, and manage events. Users can create an event by providing details such as the event name, location, date, and time. Users can also delete events they no longer want to host.",
+    "challengesOvercome": "Managing complex state across multiple nested components required implementing a robust Redux store. Additionally, ensuring the backend API could handle concurrent event creations required optimizing database indexing and query structures.",
+    "architectureDecisions": "Chose React with Redux for state management on the front-end to ensure predictable state updates. The backend is powered by Ruby on Rails, providing a rapid development environment with built-in security features and MVC architecture.",
+    "keyFeatures": [
+      "User Authentication & Authorization",
+      "Real-time event creation and tracking",
+      "Interactive dashboard for event management",
+      "Responsive design for mobile and desktop"
+    ],
+    "tags": ["html", "Tailwind", "Ruby ", "react", "redux", "jest"],
+    "seeLive": "https://eventify-cap.netlify.app//",
+    "seeSource": "https://github.com/fullstop125/Final-capstone--frontend"
+  },
+  {
+    "title": "Space Travelers Hub",
+    "imag": "spacehub.png",
+    "role": "Space",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.",
+    "tags": ["html", "css", "javascript", "react", "redux", "jest"],
+    "seeLive": "https://spacehubrocket.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/space-hub"
+  },
+  {
+    "title": "Bookstore CMS",
+    "imag": "bookstore.png",
+    "role": "Bookstore",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website that allows you to add and remove books from a list. All data is preserved thanks to the external Bookstore API service.",
+    "tags": ["javascript", "API", "react", "redux", "jest", "bootstrap"],
+    "seeLive": "https://bookstorecmsreact.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/bookstore/"
+  },
+  {
+    "title": "Dynasty Entertainment",
+    "imag": "anime.png",
+    "role": "Entertainment",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website that renders a collection of animes. It also allows you to like and comment on the animes. Data is preserved thanks to the external Involvement API. Anime data is provided by Animedb API.",
+    "tags": ["html", "css", "javascript", "API", "webpack", "jest"],
+    "seeLive": "https://fullstop125.github.io/capstone-project-anime-db/",
+    "seeSource": "https://github.com/fullstop125/capstone-project-anime-db"
+  },
+  {
+    "title": "Metrics Web App",
+    "imag": "metrics.png",
+    "role": "Metrics",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "This project is a web app that allows users to view and compare metrics for different companies. The app is built using React and Redux.",
+    "tags": ["html", "css", "React", "API"],
+    "seeLive": "https://metrics-app.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/metrics-webapp"
+  },
+  {
+    "title": "MATH MAGICIANS",
+    "imag": "react-app.png",
+    "role": "Mathematics",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.",
+    "tags": ["JavaScript", "react", "redux", "jest"],
+    "seeLive": "https://calculatorappjs.netlify.app/",
+    "seeSource": "https://github.com/fullstop125/math-magicians"
+  },
+  {
+    "title": "Micro-Finance Budget Mobile App",
+    "imag": "micro-finance.png",
+    "role": "Finance",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A mobile app that allows users to create an account, log in, and add budget to their favourite spending. The app is built using Ruby on Rails as the back end .",
+    "tags": ["html", "css", "bootstrap", "rails ", "ruby", "rspec"],
+    "seeLive": "https://micro-finance.herokuapp.com/",
+    "seeSource": "https://github.com/fullstop125/budget-app"
+  },
+  {
+    "title": "Leaderboard",
+    "imag": "leaderboard.png",
+    "role": "performance",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A website that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
+    "tags": ["JavaScript", "webpack", "jest", "API", "bootstrap "],
+    "seeLive": "https://fullstop125.github.io/Leader-Board/",
+    "seeSource": "https://github.com/fullstop125/Leader-Board"
+  },
+  {
+    "title": "To-Do-List App",
+    "imag": "todo.png",
+    "role": "Management",
+    "clientName": "Back End Dev",
+    "clientYear": "2022",
+    "projectDescription": "A simple To Do list to track all activities that are completed and those that are yet to be completed.",
+    "tags": ["html", "css", "JavaScript"],
+    "seeLive": "https://fullstop125.github.io/To-Do-List/",
+    "seeSource": "https://github.com/fullstop125/To-Do-List"
+  }
+]
+
