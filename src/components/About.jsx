@@ -12,62 +12,62 @@ import {
 } from 'react-icons/si';
 import { FaShieldAlt, FaTerminal, FaBug, FaServer, FaLock, FaEye, FaNetworkWired, FaRoute, FaPlug, FaLayerGroup } from 'react-icons/fa';
 
+const skillCategories = {
+  Languages: [
+    { name: 'JavaScript', icon: <SiJavascript className="text-[#F7DF1E]" /> },
+    { name: 'Ruby', icon: <SiRuby className="text-[#CC342D]" /> },
+    { name: 'Python', icon: <SiPython className="text-[#3776AB]" /> },
+    { name: 'HTML5', icon: <SiHtml5 className="text-[#E34F26]" /> },
+    { name: 'CSS3', icon: <SiCss3 className="text-[#1572B6]" /> },
+  ],
+  Frameworks: [
+    { name: 'React', icon: <SiReact className="text-[#61DAFB]" /> },
+    { name: 'Next.js', icon: <SiNextdotjs className="text-black" /> },
+    { name: 'Redux', icon: <SiRedux className="text-[#764ABC]" /> },
+    { name: 'Ruby on Rails', icon: <SiRubyonrails className="text-[#CC0000]" /> },
+    { name: 'Express', icon: <SiExpress className="text-black" /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+    { name: 'Bootstrap', icon: <SiBootstrap className="text-[#7952B3]" /> },
+  ],
+  'Tools & DBs': [
+    { name: 'PostgreSQL', icon: <SiPostgresql className="text-[#4169E1]" /> },
+    { name: 'MySQL', icon: <SiMysql className="text-[#4479A1]" /> },
+    { name: 'Git & GitHub', icon: <SiGithub className="text-[#181717]" /> },
+    { name: 'Jest', icon: <SiJest className="text-[#C21325]" /> },
+    { name: 'Webpack', icon: <SiWebpack className="text-[#8DD6F9]" /> },
+    { name: 'Docker', icon: <SiDocker className="text-[#2496ED]" /> },
+  ],
+  'Security Tools': [
+    { name: 'Wireshark', icon: <FaEye className="text-[#1679A7]" /> },
+    { name: 'Nmap', icon: <FaTerminal className="text-[#e61d2b]" /> },
+    { name: 'Burp Suite', icon: <FaBug className="text-[#FF6633]" /> },
+    { name: 'Metasploit', icon: <FaShieldAlt className="text-[#2A2E3F]" /> },
+    { name: 'pfSense', icon: <FaServer className="text-[#212a46]" /> },
+    { name: 'Fail2Ban', icon: <FaLock className="text-[#CC342D]" /> },
+  ],
+  Networking: [
+    { name: 'MikroTik', icon: <FaServer className="text-[#293B8A]" /> },
+    { name: 'EPON/GPON', icon: <FaNetworkWired className="text-[#22c1c3]" /> },
+    { name: 'OSPF/BGP', icon: <FaRoute className="text-[#6070ff]" /> },
+    { name: 'PPPoE', icon: <FaPlug className="text-[#fdbb2d]" /> },
+    { name: 'Cisco IOS', icon: <SiCisco className="text-[#049fd9]" /> },
+    { name: 'VLANs', icon: <FaLayerGroup className="text-[#172b4d]" /> },
+    { name: 'Huawei OptiX', icon: <SiHuawei className="text-[#e61d2b]" /> },
+  ],
+  Certifications: [
+    { name: 'Software Development', icon: <img src={`${import.meta.env.BASE_URL}images/microverse-logo.jpg`} alt="Microverse Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Microverse' },
+    { name: 'CCNA', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
+    { name: 'CyberOps Associate', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
+    { name: 'Cybersecurity', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
+    { name: 'Atlas Security', icon: <SiMongodb className="text-[#47A248]" />, issuer: 'MongoDB' },
+    { name: 'Media & Entertainment (2D/3D)', icon: <img src={`${import.meta.env.BASE_URL}images/nelium-logo.jpg`} alt="Nelium Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Nelium Systems' },
+    { name: 'Python Web Development', icon: <img src={`${import.meta.env.BASE_URL}images/nelium-logo.jpg`} alt="Nelium Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Nelium Systems' },
+    { name: 'Big Data', icon: <SiHuawei className="text-[#e61d2b]" />, issuer: 'Huawei' },
+  ]
+};
+
 const About = () => {
   const [activeTab, setActiveTab] = useState('Languages');
-
-  const skillCategories = {
-    Languages: [
-      { name: 'JavaScript', icon: <SiJavascript className="text-[#F7DF1E]" /> },
-      { name: 'Ruby', icon: <SiRuby className="text-[#CC342D]" /> },
-      { name: 'Python', icon: <SiPython className="text-[#3776AB]" /> },
-      { name: 'HTML5', icon: <SiHtml5 className="text-[#E34F26]" /> },
-      { name: 'CSS3', icon: <SiCss3 className="text-[#1572B6]" /> },
-    ],
-    Frameworks: [
-      { name: 'React', icon: <SiReact className="text-[#61DAFB]" /> },
-      { name: 'Next.js', icon: <SiNextdotjs className="text-black" /> },
-      { name: 'Redux', icon: <SiRedux className="text-[#764ABC]" /> },
-      { name: 'Ruby on Rails', icon: <SiRubyonrails className="text-[#CC0000]" /> },
-      { name: 'Express', icon: <SiExpress className="text-black" /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-      { name: 'Bootstrap', icon: <SiBootstrap className="text-[#7952B3]" /> },
-    ],
-    'Tools & DBs': [
-      { name: 'PostgreSQL', icon: <SiPostgresql className="text-[#4169E1]" /> },
-      { name: 'MySQL', icon: <SiMysql className="text-[#4479A1]" /> },
-      { name: 'Git & GitHub', icon: <SiGithub className="text-[#181717]" /> },
-      { name: 'Jest', icon: <SiJest className="text-[#C21325]" /> },
-      { name: 'Webpack', icon: <SiWebpack className="text-[#8DD6F9]" /> },
-      { name: 'Docker', icon: <SiDocker className="text-[#2496ED]" /> },
-    ],
-    'Security Tools': [
-      { name: 'Wireshark', icon: <FaEye className="text-[#1679A7]" /> },
-      { name: 'Nmap', icon: <FaTerminal className="text-[#e61d2b]" /> },
-      { name: 'Burp Suite', icon: <FaBug className="text-[#FF6633]" /> },
-      { name: 'Metasploit', icon: <FaShieldAlt className="text-[#2A2E3F]" /> },
-      { name: 'pfSense', icon: <FaServer className="text-[#212a46]" /> },
-      { name: 'Fail2Ban', icon: <FaLock className="text-[#CC342D]" /> },
-    ],
-    Networking: [
-      { name: 'MikroTik', icon: <FaServer className="text-[#293B8A]" /> },
-      { name: 'EPON/GPON', icon: <FaNetworkWired className="text-[#22c1c3]" /> },
-      { name: 'OSPF/BGP', icon: <FaRoute className="text-[#6070ff]" /> },
-      { name: 'PPPoE', icon: <FaPlug className="text-[#fdbb2d]" /> },
-      { name: 'Cisco IOS', icon: <SiCisco className="text-[#049fd9]" /> },
-      { name: 'VLANs', icon: <FaLayerGroup className="text-[#172b4d]" /> },
-      { name: 'Huawei OptiX', icon: <SiHuawei className="text-[#e61d2b]" /> },
-    ],
-    Certifications: [
-      { name: 'Software Development', icon: <img src={`${import.meta.env.BASE_URL}images/microverse-logo.jpg`} alt="Microverse Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Microverse' },
-      { name: 'CCNA', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
-      { name: 'CyberOps Associate', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
-      { name: 'Cybersecurity', icon: <SiCisco className="text-[#049fd9]" />, issuer: 'Cisco' },
-      { name: 'Atlas Security', icon: <SiMongodb className="text-[#47A248]" />, issuer: 'MongoDB' },
-      { name: 'Media & Entertainment (2D/3D)', icon: <img src={`${import.meta.env.BASE_URL}images/nelium-logo.jpg`} alt="Nelium Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Nelium Systems' },
-      { name: 'Python Web Development', icon: <img src={`${import.meta.env.BASE_URL}images/nelium-logo.jpg`} alt="Nelium Logo" className="w-9 h-9 object-contain rounded-sm" />, issuer: 'Nelium Systems' },
-      { name: 'Big Data', icon: <SiHuawei className="text-[#e61d2b]" />, issuer: 'Huawei' },
-    ]
-  };
 
   // Flatten all tech icons for the background marquee
   const allIcons = useMemo(() => {
